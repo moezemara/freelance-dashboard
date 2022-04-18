@@ -1,0 +1,18 @@
+/*use master;
+CREATE DATABASE FREELANCO_1;
+GO
+
+use FREELANCO_1;
+GO
+CREATE SCHEMA FREELANCO_Schema_1;
+*/
+
+
+CREATE TABLE ACCOUNTS (
+
+FName varchar(15),
+LName varchar(15),
+
+
+);
+
