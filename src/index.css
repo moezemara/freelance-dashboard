@@ -1,0 +1,24 @@
+.navbar{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .links{
+  margin-left: auto;
+}
+
+.navbar a{
+  color:white;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover{
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
