@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 .navbar{
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px;
   display: flex;
+  max-width: 800px;
   align-items: center;
+  border-bottom: 5px solid #f2f2f2;
+  margin: 0 auto;
 }
 
 .navbar .links{
@@ -11,14 +16,67 @@
 }
 
 .navbar a{
-  color:white;
+  color: black;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
 }
 
-.navbar a:hover{
-  background-color: white;
-  color: black;
+.navbar h2:hover {
+  background-color: black;
+  color: white;
   border-radius: 8px;
+}
+.navbar a:hover{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+
+}
+
+.signup, .login {
+
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+
+  border: dashed;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.signup label, .login label {
+
+  text-align: left;
+
+  display: block;
+
+}
+
+.signup h2, .login h2{
+
+  font-size: 20px;
+
+  color: black;
+
+  margin-bottom: 30px;
+
+}
+
+.signup input, .login input{
+
+  width: 100%;
+
+  padding: 6px 10px;
+
+  margin: 10px 0;
+
+  border: 1px solid #ddd;
+
+  box-sizing: border-box;
+
+  display: block;
+
 }
