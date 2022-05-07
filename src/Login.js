@@ -3,11 +3,9 @@ const Login = () => {
         <div className="login">
             <h2>Login</h2>
             <form>
-                <label>Username:</label>
-                <input type="text"/>
-                <label>Password:</label>
-                <input type="text"/>
-
+                <input type="text" placeholder="Username"/>
+                <input type="text" placeholder="Password"/>
+                <button>Login</button>
             </form>
         </div>
     );

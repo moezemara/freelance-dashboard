@@ -42,7 +42,7 @@
 
 
   border: dashed;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 
 }
@@ -79,4 +79,20 @@
 
   display: block;
 
+}
+
+.signup button, .login button{
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+}
+
+.name_part {
+  color: gray;
+  text-align: center;
+  align-content: center;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
 }
