@@ -88,6 +88,30 @@
   background-color: black;
 }
 
+.jobcard{
+  display: flex;
+  border-radius: 7px;
+  border-color: gray;
+  max-width: 600px;
+  border-width: 5px;
+  border: solid;
+  color: black;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+}
+
+.jobcardmain {
+  min-width:500px;
+  border-right: 5px solid #f2f2f2;
+}
+
+.jobcard button{
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+}
+
 .name_part {
   color: gray;
   text-align: center;
@@ -96,3 +120,4 @@
   display: flex;
   align-items: center;
 }
+

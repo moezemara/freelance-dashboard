@@ -4,6 +4,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import SignUp from './SignUp';
 import Login from './Login';
+import JobCard from './JobCard';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <Home/>
+                <JobCard title="job" price='2000'/>
               </Route>
               <Route exact path="/signup">
                 <SignUp/>
@@ -21,7 +23,6 @@ function App() {
               <Route exact path="/login"> 
                 <Login/>
               </Route> 
-            
             </Switch>
           </div>
         </div>
