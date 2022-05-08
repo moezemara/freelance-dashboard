@@ -4,6 +4,8 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import SignUp from './SignUp';
 import Login from './Login';
+import JobCard from './JobCard';
+import PostJob from './PostJob';
 
 function App() {
     return (
@@ -13,7 +15,7 @@ function App() {
           <div className='content'>
             <Switch>
               <Route exact path="/">
-                <Home/>
+                <PostJob/>
               </Route>
               <Route exact path="/signup">
                 <SignUp/>
@@ -21,7 +23,6 @@ function App() {
               <Route exact path="/login"> 
                 <Login/>
               </Route> 
-            
             </Switch>
           </div>
         </div>

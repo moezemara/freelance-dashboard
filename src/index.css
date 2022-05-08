@@ -55,7 +55,7 @@
 
 }
 
-.signup h2, .login h2{
+.signup h2, .login h2, .postjob h2{
 
   font-size: 20px;
 
@@ -65,7 +65,7 @@
 
 }
 
-.signup input, .login input{
+.signup input, .login input, .postjob input{
 
   width: 100%;
 
@@ -81,11 +81,35 @@
 
 }
 
-.signup button, .login button{
+.signup button, .login button, .postjob button{
   margin-top: 10px;
   border-radius: 4px;
   color: white;
   background-color: black;
+}
+
+.jobcard{
+  display: flex;
+  border-radius: 7px;
+  border-color: gray;
+  max-width: 600px;
+  border-width: 5px;
+  border: solid;
+  color: black;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+}
+
+.jobcardmain {
+  min-width:500px;
+  border-right: 5px solid #f2f2f2;
+}
+
+.jobcard button{
+  color: white;
+  background-color: black;
+  border-radius: 4px;
 }
 
 .name_part {
@@ -95,4 +119,19 @@
   max-height: fit-content;
   display: flex;
   align-items: center;
+}
+
+
+.postjob {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border: dashed gray;
+}
+
+.postjob label{
+  padding-right: 20px;
 }
