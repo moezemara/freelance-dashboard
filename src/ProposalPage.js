@@ -1,6 +1,6 @@
 const ProposalPage = () => {
     return ( 
-        <div className="propsalpage">
+        <div className="proposalpage">
             
         </div>
      );
