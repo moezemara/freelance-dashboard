@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignUp from './SignUp';
 import Login from './Login';
 import JobCard from './JobCard';
+import PostJob from './PostJob';
 
 function App() {
     return (
@@ -14,8 +15,7 @@ function App() {
           <div className='content'>
             <Switch>
               <Route exact path="/">
-                <Home/>
-                <JobCard title="job" price='2000'/>
+                <PostJob/>
               </Route>
               <Route exact path="/signup">
                 <SignUp/>
