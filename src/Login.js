@@ -21,7 +21,7 @@ const Login = () => {
                 <input type="text" name="username" placeholder="Username"/>
                 <input type="text" name="password" placeholder="Password"/>
                 <input type="text" name="g-recaptcha-response" placeholder="Password" value="bypass"/>
-                <button onclick={handleLogin} >Login</button>
+                <button onlick="{handleLogin}; return false" >Login</button>
             </form>
         </div>
     );
