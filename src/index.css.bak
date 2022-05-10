@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.navbar{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+  border-bottom: 5px solid #f2f2f2;
+  margin: 0 auto;
+}
+
+.navbar .links{
+  margin-left: auto;
+}
+
+.navbar a{
+  color: black;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar h2:hover {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+.navbar a:hover{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+
+}
+
+.signup, .login {
+
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+
+  border: dashed;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.signup label, .login label, .proposalpage input {
+
+  text-align: left;
+
+  display: block;
+
+}
+
+.signup h2, .login h2, .postjob h2{
+
+  font-size: 20px;
+
+  color: black;
+
+  margin-bottom: 30px;
+
+}
+
+.signup input, .login input, .postjob input, .proposalpage input{
+
+  width: 100%;
+
+  padding: 6px 10px;
+
+  margin: 10px 0;
+
+  border: 1px solid #ddd;
+
+  box-sizing: border-box;
+
+  display: block;
+
+}
+
+.signup button, .login button, .postjob button, .proposalpage button{
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+}
+
+.jobcard{
+  display: flex;
+  border-radius: 7px;
+  border-color: gray;
+  max-width: 600px;
+  border-width: 5px;
+  border: solid;
+  color: black;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+}
+
+.jobcardmain {
+  min-width:500px;
+  border-right: 5px solid #f2f2f2;
+}
+
+.jobcard button{
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+}
+
+.name_part {
+  color: gray;
+  text-align: center;
+  align-content: center;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+
+.postjob, .proposalpage{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border: dashed gray;
+}
+
+.postjob label{
+  padding-right: 20px;
+}
+
+
+.proposal input {
+  text-align: center;
+  align-content: center;
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px dashed rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 20px 30px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+hr {
+  opacity: 0;
+  height: 10px;
+}
+
+.propsalarea textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.signup select{
+
+background-color: rgba(0, 0, 0, 0);
+color: rgb(134, 134, 134);
+border : 55;
+height: 5555;
+width: 100%;
+padding: 6px 10px;
+margin: 10px 0;
+border: 1px solid rgb(221, 221, 221);
+box-sizing: border-box;
+display: block;
+
+
+}
+
+.page404 {
+  padding: 100px;
+  text-align: center;
+  align-content: center;
+}
+
+<<<<<<< HEAD
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  align-content: center;
+  width: 100%;
+}
+
+#home-img {
+  align-self: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  height: 500px;
+  width: 100%;
+  background-image: url('/public/home-image.jpg');
+}
+#home-img-txt-1{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+}
+#home-img-txt-2{
+  font-size: 80px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+}
+#home-img-txt-3{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+
+}
+#home-img-txt-4{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 300px 0px 30px;
+
+}
+
+#home-btn-1 {
+  margin: 0px 0px 0px 35px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  background-color: rgb(255, 255, 255);
+  height:35px;
+  width:180px;
+}
+#home-btn-2{
+  margin: 0px 0px 0px 25px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 3px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0);
+  height:35px;
+  width:180px;
+=======
+
+.clientprofileview{
+  display: flex;
+}
+
+.clientsidebar {
+  border-radius: 8px;
+  margin-left: auto;
+  background-color: rgb(180, 178, 178);
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+
+}
+
+.profileimg {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+>>>>>>> 6fbf0c6f5dacd7c1eba195b1b6897ad7c3898928
+}
