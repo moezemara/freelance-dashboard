@@ -97,7 +97,6 @@ const SignUp = () => {
 <option value="Iran">Iran</option>
 <option value="Iraq">Iraq</option>
 <option value="Ireland Republic">Ireland Republic</option>
-<option value="Israel">Israel</option>
 <option value="Italy">Italy</option>
 <option value="Ivory Coast">Ivory Coast</option>
 <option value="Jamaica">Jamaica</option>

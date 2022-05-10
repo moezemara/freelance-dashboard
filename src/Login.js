@@ -8,8 +8,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [recaptcha, setRecaptcha] = useState('')
-
+    
     async function handleLogin(){
         console.log(process.env.BASE_API_URL)
         const data = {
