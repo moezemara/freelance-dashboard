@@ -13,20 +13,30 @@ const ProposalPage = () => {
 
         <div className="proposalpage">
             <div></div>
-            <h1>sara</h1>
+            <h1>Proposal</h1>
+            <hr />
 
-            <label>Description</label>
+            <label>Cover Letter<br/></label>
                 <div>
-                    <textarea rows = "5" cols = "60"></textarea>
+                    <textarea placeholder="write your cover letter here"
+                    rows = "5" cols = "100"></textarea>
                 </div>
                 
-                <hr />
-                <hr /><hr /><hr />
-
-            <label>Drag or upload project files</label>
+<hr />
+            <label>Drag or upload project files </label>
+            <div className="proposal-attachments">
             <input type="file"></input>
+            </div>
+
+            <div className="proposal-details">
+                    <input type="text" style={{marginRight:10}} placeholder="First name"/>
+                    <input type="text" placeholder="Last name"/>
+                </div>
+        
+
+
+
             <button>Sign Up</button>
-            
         </div>
 </div>
         

@@ -13,11 +13,11 @@ const SignUp = () => {
                 <input placeholder="Email"/>
                 
                 <div className="name_part">
-                    <input type="text" style={{marginRight:10}} placeholder="Username"/>
-                    <select>
-                        <option value="" disabled selected hidden>Choose Your Country</option>
-                        
-                        <option value="Afghanistan">Afghanistan</option>
+                <input type="text" style={{marginRight:10}} placeholder="Username"/>
+                
+<select>
+<option value="" disabled selected hidden>Choose Your Country</option>                        
+<option value="Afghanistan">Afghanistan</option>
 <option value="Albania">Albania</option>
 <option value="Algeria">Algeria</option>
 <option value="Andorra">Andorra</option>
