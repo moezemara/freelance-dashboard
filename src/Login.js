@@ -37,6 +37,7 @@ const Login = () => {
                 <input type="text" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
                 <ReCAPTCHA ref={recaptchaRef} sitekey="6Lct6dgfAAAAAOOx11KQeH7HSS9QVDwlFuAYsQh5"/>
                 <button type="button" onClick={handleLogin}>Login</button>
+                <p style={{color:"gray"}}>Don't have an account?<a style={{color:"gray"}} href="/signup">Create One</a></p>
             </form>
         </div>
     );
