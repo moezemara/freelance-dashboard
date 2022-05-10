@@ -6,6 +6,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import JobCard from './JobCard';
 import PostJob from './PostJob';
+import Page404 from './Page404';
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
               <Route exact path="/login"> 
                 <Login/>
               </Route> 
+              <Route exact path="*">
+                <Page404/>
+              </Route>
             </Switch>
           </div>
         </div>
