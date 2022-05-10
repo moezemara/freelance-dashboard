@@ -48,6 +48,13 @@
 
 }
 
+.signup label, .login label, .proposalpage input {
+
+  text-align: left;
+
+  display: block;
+
+}
 
 .signup h2, .login h2, .postjob h2{
 
@@ -59,7 +66,7 @@
 
 }
 
-.signup input, .login input, .postjob input, .proposalpage input, .profilesettings input{
+.signup input, .login input, .postjob input, .proposalpage input{
 
   width: 100%;
 
@@ -75,7 +82,7 @@
 
 }
 
-.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{
+.signup button, .login button, .postjob button, .proposalpage button{
   margin-top: 10px;
   border-radius: 4px;
   color: white;
@@ -116,7 +123,7 @@
 }
 
 
-.postjob, .proposalpage, .profilesettings{
+.postjob, .proposalpage{
   max-width: 800px;
   margin: 0 auto;
   margin-top: 100px;
@@ -126,16 +133,12 @@
   border: dashed gray;
 }
 
-.profilesettings div{
-  padding-top: 1%;
-}
-
 .postjob label{
   padding-right: 20px;
 }
 
 
-.proposal input{
+.proposal input {
   text-align: center;
   align-content: center;
   content: 'Select some files';
@@ -191,6 +194,7 @@ display: block;
   align-content: center;
 }
 
+<<<<<<< HEAD
 .home {
   max-width: 800px;
   margin: 0 auto;
@@ -249,7 +253,7 @@ display: block;
   background-color: rgba(255, 255, 255, 0);
   height:35px;
   width:180px;
-}
+=======
 
 .clientprofileview{
   display: flex;
@@ -269,4 +273,5 @@ display: block;
   width: 200px;
   height: 250px;
   border-radius: 50%;
+>>>>>>> 6fbf0c6f5dacd7c1eba195b1b6897ad7c3898928
 }
