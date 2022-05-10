@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .navbar{
   background-color: white;
@@ -191,4 +192,64 @@ display: block;
   padding: 100px;
   text-align: center;
   align-content: center;
+}
+
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  align-content: center;
+  width: 100%;
+}
+
+#home-img {
+  align-self: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  height: 500px;
+  width: 100%;
+  background-image: url('/public/home-image.jpg');
+}
+#home-img-txt-1{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+}
+#home-img-txt-2{
+  font-size: 80px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+}
+#home-img-txt-3{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px 30px 0px 30px;
+
+}
+#home-img-txt-4{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 300px 0px 30px;
+
+}
+
+#home-btn-1 {
+  margin: 0px 0px 0px 35px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  background-color: rgb(255, 255, 255);
+  height:35px;
+  width:180px;
+}
+#home-btn-2{
+  margin: 0px 0px 0px 25px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 3px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0);
+  height:35px;
+  width:180px;
 }

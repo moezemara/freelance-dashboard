@@ -7,8 +7,6 @@ import Login from './Login';
 import JobCard from './JobCard';
 import PostJob from './PostJob';
 import Page404 from './Page404';
-
-
 import ProposalPage from './ProposalPage'
 
 
@@ -19,7 +17,10 @@ function App() {
           <Navbar/>
           <div className='content'>
             <Switch>
-              <Route exact path="/" component={PostJob}>
+            <Route exact path="/">
+                <Home/>
+              </Route>
+              <Route exact path="/postjob" component={PostJob}>
                 <PostJob/>
               </Route>
               <Route exact path="/signup">
