@@ -7,27 +7,42 @@ import Login from './Login';
 import JobCard from './JobCard';
 import PostJob from './PostJob';
 import Page404 from './Page404';
-
-
 import ProposalPage from './ProposalPage'
+import ClientNavbar from './ClientNavbar';
+import ClientProfileView from './ClientProfileView';
+import ProfileSettings from './ProfileSettings';
 
 
 function App() {
     return (
       <Router>
         <div className="App">
-          <Navbar/>
           <div className='content'>
             <Switch>
               <Route exact path="/" component={PostJob}>
+                <Navbar/>
                 <PostJob/>
               </Route>
               <Route exact path="/signup">
+                <Navbar/>
                 <SignUp/>
               </Route>
               <Route exact path="/login"> 
+                <Navbar/>
                 <Login/>
               </Route> 
+              <Route exact path="/clientprofile">
+                <ClientNavbar/>
+                <ClientProfileView/>
+              </Route>
+              <Route exact path="/postjob">
+                <ClientNavbar/>
+                <PostJob/>
+              </Route>
+              <Route exact path="/profilesettings">
+                <ClientNavbar/>
+                <ProfileSettings/>
+              </Route>
               <Route exact path="/proposalpage"> 
                 <ProposalPage/>
               </Route> 
