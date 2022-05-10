@@ -9,7 +9,7 @@ import PostJob from './PostJob';
 import Page404 from './Page404';
 import ProposalPage from './ProposalPage'
 import ClientNavbar from './ClientNavbar';
-import ClientProfileView from './ClientProfileView';
+import ClientMainPage from './ClientMainPage';
 import ProfileSettings from './ProfileSettings';
 
 
@@ -33,7 +33,7 @@ function App() {
               </Route> 
               <Route exact path="/clientprofile">
                 <ClientNavbar/>
-                <ClientProfileView/>
+                <ClientMainPage/>
               </Route>
               <Route exact path="/postjob">
                 <ClientNavbar/>

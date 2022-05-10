@@ -192,3 +192,24 @@ display: block;
   text-align: center;
   align-content: center;
 }
+
+
+.clientprofileview{
+  display: flex;
+}
+
+.clientsidebar {
+  border-radius: 8px;
+  margin-left: auto;
+  background-color: rgb(180, 178, 178);
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+
+}
+
+.profileimg {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+}
