@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 const PostJob = () => {
+
+    useEffect(()=>{});
+
     return (
         <div className="postjob">
             <h2>Post a Job</h2>
