@@ -7,6 +7,10 @@ import Login from './Login';
 import JobCard from './JobCard';
 import PostJob from './PostJob';
 
+
+import ProposalPage from './ProposalPage'
+
+
 function App() {
     return (
       <Router>
@@ -22,6 +26,9 @@ function App() {
               </Route>
               <Route exact path="/login"> 
                 <Login/>
+              </Route> 
+              <Route exact path="/proposalpage"> 
+                <ProposalPage/>
               </Route> 
             </Switch>
           </div>
