@@ -77,6 +77,10 @@
 
 .signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{
   margin-top: 10px;
+  height:30px;
+  width:100px;
+  font-size: 15px;
+  margin-top: 20px;
   border-radius: 4px;
   color: white;
   background-color: black;
@@ -90,6 +94,7 @@
   border-width: 5px;
   border: solid;
   color: black;
+  margin-top: 20px;
   padding: 20px;
   align-self: center;
   align-items: center;
@@ -191,8 +196,9 @@ display: block;
   align-content: center;
 }
 
-.home {
+.home, .browsejobs {
   max-width: 800px;
+  font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
   width: 100%;
@@ -201,9 +207,8 @@ display: block;
 #home-img {
   align-self: center;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
   color: rgb(255, 255, 255);
-  height: 500px;
+  height: 465px;
   width: 100%;
   background-image: url('/public/home-image.jpg');
 }
@@ -250,6 +255,20 @@ display: block;
   height:35px;
   width:180px;
 }
+#trusted-by img{
+  margin: 0px 0px 0px 20px;
+}
+#trusted-by p{
+  text-align: center;
+  font-size:20px;
+  margin: 10px 30px 20px 20px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;  
+}
+.home h2{
+  font-size: 45px;
+  font-weight:bolder;
+}
 
 .clientprofileview{
   display: flex;
@@ -269,4 +288,35 @@ display: block;
   width: 200px;
   height: 250px;
   border-radius: 50%;
+}
+
+#join-client-freelancer {
+  margin: 10px 180px 0px 10px;
+}
+#join-client-freelancer input {
+  margin: px 0px 0px 20px;
+}
+.different-skills table{
+  width: 100%;
+}
+.footer {
+
+  max-width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+background-color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+
+}
+
+.footer a{
+  color: rgb(255, 255, 255);
+  align: left;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  margin-left: auto;
 }

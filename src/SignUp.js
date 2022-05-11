@@ -219,12 +219,10 @@ const SignUp = () => {
                 <input placeholder="Password"/>
                 <input placeholder="Confirm Password"/>
 
-                <div className="name_part">
+                <div id = "join-client-freelancer" className="name_part">
                     <label>Join</label>
-                    <input type="radio" value="client" name="joinAs"/>
-                    <label>Client</label>
-                    <input type="radio" value="freelancer" name="joinAs"/>
-                    <label>Freelancer</label>
+                    <input type="radio" value="client" name="joinAs"/>client
+                    <input type="radio" value="freelancer" name="joinAs"/>freelancer
                 </div>
 
                 <div className="name_part">
