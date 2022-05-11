@@ -17,8 +17,6 @@ const Home = () => {
             <a href="/signup"><button id="home-btn-1" >Have your job done</button></a>
             <a href="/signup"><button id="home-btn-2">Earn money now</button></a>
 
-
-
         </div>
 
 <hr />

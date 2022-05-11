@@ -288,3 +288,10 @@ display: block;
   height: 250px;
   border-radius: 50%;
 }
+
+#join-client-freelancer {
+  margin: 10px 180px 0px 10px;
+}
+#join-client-freelancer input {
+  margin: px 0px 0px 20px;
+}
