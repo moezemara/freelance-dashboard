@@ -196,6 +196,7 @@ display: block;
 
 .home {
   max-width: 800px;
+  max-height: 400px;
   margin: 0 auto;
   align-content: center;
   width: 100%;
@@ -252,6 +253,16 @@ display: block;
   background-color: rgba(255, 255, 255, 0);
   height:35px;
   width:180px;
+}
+#trusted-by img{
+  margin: 0px 0px 0px 30px;
+}
+#trusted-by p{
+  text-align: center;
+  font-size:25px;
+  margin: 10px 0px 0px 0px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;  
 }
 
 .clientprofileview{
