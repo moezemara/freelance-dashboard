@@ -2,7 +2,7 @@ import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";
 import img4 from "./src-images/logo4.png";
-
+import serviceImage from './src-images/service-logo.png'
 const Home = () => {
   return (
     <div className="home">
@@ -132,61 +132,61 @@ const Home = () => {
         <table>
           <tr>
             <td>
-              <h3>Feature</h3>
+              <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <h3>Feature</h3>
-            </td>
-            <td>
-              <h3>Feature</h3>
-            </td>
-            <td>
-              <h3>Feature</h3>
-            </td>
-            <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
           </tr>
 
           <tr>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
           </tr>
 
           <tr>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
             <td>
-              <h3>Feature</h3>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+            </td>
+            <td>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+            </td>
+            <td>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+            </td>
+            <td>
+             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
             </td>
           </tr>
         </table>
