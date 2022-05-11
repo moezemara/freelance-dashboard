@@ -13,20 +13,24 @@ const Home = () => {
             <p id="home-img-txt-3">here, for any job you need.</p>
             <p id="home-img-txt-4">Tens of users used our FreeLanco website to hire freelancers to have their job done. Try it now!</p>
             <p> </p>
-<button id="home-btn-1">Have your job done</button>
+            
+<button id="home-btn-1" >Have your job done</button>
 <button id="home-btn-2">Earn money now</button>
 
         </div>
 
 <hr />
 <div id="trusted-by">
-<p>Trusted by</p>
-<img src={img1}  height="90" alt="xnx" />
-<img src={img2}  height="90" alt="xnx" />
-<img src={img3}  height="90" alt="xnx" />
-<img src={img4}  height="90" alt="xnx" />
-</div>
 
+<table border="0" cellspacing="0" cellpadding="2">
+    <tr>
+<td><p>Trusted by</p></td>
+<td><img src={img1}  height="80" alt="logo" /></td>
+<td><img src={img2}  height="80" alt="logo" /></td>
+<td><img src={img3}  height="80" alt="logo" /></td>
+<td><img src={img4}  height="80" alt="logo" /></td>
+</tr></table>
+</div>
 <hr />
 
             <div className="need-sth">
