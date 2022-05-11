@@ -6,7 +6,6 @@ import img4 from './src-images/logo4.png'
 const Home = () => {
     return (  
         <div className="home">
-
         <div id="home-img">
             <p> <br /><br /></p>
             <p id="home-img-txt-1">Hire the world-best</p>
@@ -19,16 +18,28 @@ const Home = () => {
 
         </div>
 
-
+<hr />
 <div id="trusted-by">
 <p>Trusted by</p>
 <img src={img1}  height="90" alt="xnx" />
 <img src={img2}  height="90" alt="xnx" />
 <img src={img3}  height="90" alt="xnx" />
 <img src={img4}  height="90" alt="xnx" />
-
 </div>
-            <p>x</p>
+
+<hr />
+
+            <div className="need-sth">
+                <h2>Need something?</h2>
+            </div>
+
+            <div className="why-using-us">
+                <h2>Why using us?</h2>
+            </div>
+
+            <div className="different-skills">
+                <h2>We have different skills and services</h2>
+            </div>
 
         </div>
 

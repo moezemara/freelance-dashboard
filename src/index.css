@@ -197,6 +197,7 @@ display: block;
 .home {
   max-width: 800px;
   max-height: 400px;
+  font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
   width: 100%;
@@ -205,7 +206,6 @@ display: block;
 #home-img {
   align-self: center;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
   color: rgb(255, 255, 255);
   height: 500px;
   width: 100%;
@@ -259,10 +259,14 @@ display: block;
 }
 #trusted-by p{
   text-align: center;
-  font-size:25px;
-  margin: 10px 0px 0px 0px;
+  font-size:30px;
+  margin: 10px 0px 20px 0px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;  
+}
+.home h2{
+  font-size: 45px;
+  font-weight:bolder;
 }
 
 .clientprofileview{
