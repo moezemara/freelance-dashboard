@@ -48,13 +48,6 @@
 
 }
 
-.signup label, .login label, .proposalpage input {
-
-  text-align: left;
-
-  display: block;
-
-}
 
 .signup h2, .login h2, .postjob h2{
 
@@ -66,7 +59,7 @@
 
 }
 
-.signup input, .login input, .postjob input, .proposalpage input{
+.signup input, .login input, .postjob input, .proposalpage input, .profilesettings input{
 
   width: 100%;
 
@@ -82,7 +75,8 @@
 
 }
 
-.signup button, .login button, .postjob button, .proposalpage button{
+.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{
+  margin-top: 10px;
   height:30px;
   width:100px;
   font-size: 15px;
@@ -100,6 +94,7 @@
   border-width: 5px;
   border: solid;
   color: black;
+  margin-top: 20px;
   padding: 20px;
   align-self: center;
   align-items: center;
@@ -126,7 +121,7 @@
 }
 
 
-.postjob, .proposalpage{
+.postjob, .proposalpage, .profilesettings{
   max-width: 800px;
   margin: 0 auto;
   margin-top: 100px;
@@ -136,12 +131,16 @@
   border: dashed gray;
 }
 
+.profilesettings div{
+  padding-top: 1%;
+}
+
 .postjob label{
   padding-right: 20px;
 }
 
 
-.proposal input {
+.proposal input{
   text-align: center;
   align-content: center;
   content: 'Select some files';
@@ -197,7 +196,7 @@ display: block;
   align-content: center;
 }
 
-.home {
+.home, .browsejobs {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
