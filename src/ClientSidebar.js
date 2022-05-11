@@ -1,4 +1,4 @@
-import pImg from "./profile.png"
+import pImg from "./src-images/profile.png"
 const ClientSidebar = () => {
     return ( 
         <div className="clientsidebar">
