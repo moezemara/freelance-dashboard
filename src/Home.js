@@ -13,9 +13,11 @@ const Home = () => {
             <p id="home-img-txt-3">here, for any job you need.</p>
             <p id="home-img-txt-4">Tens of users used our FreeLanco website to hire freelancers to have their job done. Try it now!</p>
             <p> </p>
-            
-<button id="home-btn-1" >Have your job done</button>
-<button id="home-btn-2">Earn money now</button>
+
+            <a href="/signup"><button id="home-btn-1" >Have your job done</button></a>
+            <a href="/signup"><button id="home-btn-2">Earn money now</button></a>
+
+
 
         </div>
 
