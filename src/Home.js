@@ -35,17 +35,133 @@ const Home = () => {
 
             <div className="need-sth">
                 <h2>Need something?</h2>
+                <table>
+<tr>
+<td>
+<h3>Post a job</h3>
+</td>
+<td>
+<h3>Post a job</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident perferendis repudiandae enim odio, aut, necessitatibus vel quo quidem placeat eligendi amet cumque. </p>
+</td>
+<td>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident perferendis repudiandae enim odio, aut, necessitatibus vel quo quidem placeat eligendi amet cumque. </p>
+</td>
+</tr>
+
+                </table>
             </div>
 
             <div className="why-using-us">
                 <h2>Why using us?</h2>
+
+<table>
+                <tr>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident perferendis repudiandae enim odio, aut, necessitatibus vel quo quidem placeat eligendi amet cumque. </p>
+</td>
+<td>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident perferendis repudiandae enim odio, aut, necessitatibus vel quo quidem placeat eligendi amet cumque. </p>
+</td>
+<td>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident perferendis repudiandae enim odio, aut, necessitatibus vel quo quidem placeat eligendi amet cumque. </p>
+</td>
+</tr>
+</table>
             </div>
 
             <div className="different-skills">
                 <h2>We have different skills and services</h2>
-            </div>
+
+            <table>
+                <tr>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+</tr>
+
+<tr>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+<td>
+<h3>Feature</h3>
+</td>
+</tr>
+
+</table>
+</div>
+
+
+<div><br /><br /><br /><br /><br /><br /></div>
 
         </div>
+
+
+
+
 
     );
 }

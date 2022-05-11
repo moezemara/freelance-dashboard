@@ -298,3 +298,6 @@ display: block;
 #join-client-freelancer input {
   margin: px 0px 0px 20px;
 }
+.different-skills table{
+  width: 100%;
+}
