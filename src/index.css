@@ -199,7 +199,6 @@ display: block;
 
 .home {
   max-width: 800px;
-  max-height: 400px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
@@ -300,4 +299,25 @@ display: block;
 }
 .different-skills table{
   width: 100%;
+}
+.footer {
+
+  max-width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+background-color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+
+}
+
+.footer a{
+  color: rgb(255, 255, 255);
+  align: left;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  margin-left: auto;
 }

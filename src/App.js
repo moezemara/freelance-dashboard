@@ -11,7 +11,7 @@ import ProposalPage from './ProposalPage'
 import ClientNavbar from './ClientNavbar';
 import ClientMainPage from './ClientMainPage';
 import ProfileSettings from './ProfileSettings';
-
+import Footer from './footer';
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
           <div className='content'>
             <Switch>
             <Route exact path="/">
-				<Navbar/>
+				        <Navbar/>
                 <Home/>
              </Route>
               <Route exact path="/postjob" component={PostJob}>
@@ -55,6 +55,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          <Footer/>
         </div>
       </Router>
     );
