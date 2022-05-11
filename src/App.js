@@ -12,6 +12,8 @@ import ClientNavbar from './ClientNavbar';
 import ClientMainPage from './ClientMainPage';
 import ProfileSettings from './ProfileSettings';
 import Footer from './footer';
+import FreelancerNavbar from './FreelancerNavbar';
+import BrowseJobs from './BrowseJobs';
 
 function App() {
     return (
@@ -50,6 +52,10 @@ function App() {
               <Route exact path="/proposalpage"> 
                 <ProposalPage/>
               </Route> 
+              <Route exact path="/browsejobs">
+                <FreelancerNavbar/>
+                <BrowseJobs/>
+              </Route>
               <Route path="*">
                     <Page404/>
               </Route>

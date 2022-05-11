@@ -2,21 +2,30 @@ const ProfileSettings = () => {
     return (  
         <div className="profilesettings">
             <form>
-                <label>Job Title</label>
-                <input type="text"/>
-                <label>Category</label>
-                <option>
-                    <select value=""  disabled selected hidden>Choose Category</select>
-                </option>
-                <label>Description</label>
-                <input type="text"/>
-                <label>Skills</label>
-                <input type="text"/>
-                <label>Pay Rate ($/hour)</label>
-                <input type="text"/>
-                <label>Attachments</label>
+                <div>
+                    <input type="text" placeholder="Job Title"/>
+                </div>
+                <div>
+                    <select>
+                        <option value=""  disabled selected hidden>Choose Category</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="Description"/>
+                </div>
+                <div>
+                    <input type="text" placeholder="Skills"/>
+                </div>
+                <div>
+                    <input type="text" placeholder="Pay rate($/hr)"/>
+                </div>
+                <div className="profile-attachmenents">
+                    <input type="file"/>
+                </div>                
                 <button>Done</button>
+
             </form>
+
         </div>
     );
 }
