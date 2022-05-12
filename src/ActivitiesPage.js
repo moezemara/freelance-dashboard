@@ -4,7 +4,7 @@ import ProposalCard from "./ProposalCard";
 import ProfileCard from "./ProfileCard";
 
 const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
-const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',description:'job description should be written here',price:'500'}]
+const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'}]
 
 const ActivitiesPage = () => {
 
@@ -12,7 +12,7 @@ const ActivitiesPage = () => {
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
 
-    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''}) 
+    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
 
     const [content, setContent] = useState('appliedproposals');
 
@@ -66,7 +66,7 @@ const ActivitiesPage = () => {
             <ProfileCard title="Job Card Example" price="1800" description="job description"/>
             </div>
             <div className="activitiesNavbar">
-                <button id={buttonsClasses['appliedproposlas']} onClick={()=>{handleBtnClick('appliedproposlas');}}>Applied proposals</button>
+                <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>
                 <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>
                 <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
                 <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
