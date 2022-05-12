@@ -14,6 +14,7 @@ import Footer from './footer';
 import FreelancerNavbar from './FreelancerNavbar';
 import BrowseJobs from './BrowseJobs';
 import ActivitiesPage from './ActivitiesPage';
+import AppliedProposals from './AppliedProposals';
 
 function App() {
     return (
@@ -61,6 +62,14 @@ function App() {
                 <ClientNavbar/>
                 <ActivitiesPage/>
               </Route>
+
+
+              <Route exact path="/applied-proposals">
+                <ClientNavbar/>
+                <AppliedProposals/>
+              </Route>
+
+
               <Route path="*">
                     <Page404/>
               </Route>
