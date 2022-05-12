@@ -1,29 +1,94 @@
+<<<<<<< HEAD
+import Navbar from "./Navbar";
+import Home from "./Home";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SignUp from "./SignUp";
+import Login from "./Login";
+import PostJob from "./PostJob";
+import Page404 from "./Page404";
+import ProposalPage from "./ProposalPage";
+import ClientNavbar from "./ClientNavbar";
+import ClientMainPage from "./ClientMainPage";
+import ProfileSettings from "./ProfileSettings";
+import Footer from "./footer";
+import FreelancerNavbar from "./FreelancerNavbar";
+import BrowseJobs from "./BrowseJobs";
+import ActivitiesPage from "./ActivitiesPage";
+import AppliedProposals from "./AppliedProposals";
+=======
 import Navbar  from './Navbar';
 import Home from './Home';
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import SignUp from './SignUp';
 import Login from './Login';
-import JobCard from './JobCard';
 import PostJob from './PostJob';
 import Page404 from './Page404';
 import ProposalPage from './ProposalPage'
 import ClientNavbar from './ClientNavbar';
 import ClientMainPage from './ClientMainPage';
 import ProfileSettings from './ProfileSettings';
-
+import Footer from './footer';
+import FreelancerNavbar from './FreelancerNavbar';
+import BrowseJobs from './BrowseJobs';
+import ActivitiesPage from './ActivitiesPage';
+import ClientContractPage from './ClientContractPage';
+import AppliedProposals from './AppliedProposals';
+>>>>>>> 63ddd552f4ea606adef462af8870c7fc9fcd34ce
 
 function App() {
-    return (
-      <Router>
-        <div className="App">
-          <div className='content'>
-            <Switch>
+  return (
+    <Router>
+      <div className="App">
+        <div className="content">
+          <Switch>
             <Route exact path="/">
+<<<<<<< HEAD
+              <Navbar />
+              <Home />
+            </Route>
+            <Route exact path="/postjob" component={PostJob}>
+              <Navbar />
+              <PostJob />
+            </Route>
+            <Route exact path="/signup">
+              <Navbar />
+              <SignUp />
+            </Route>
+            <Route exact path="/login">
+              <Navbar />
+              <Login />
+            </Route>
+            <Route exact path="/clientprofile">
+              <ClientNavbar />
+              <ClientMainPage />
+            </Route>
+            <Route exact path="/postjob">
+              <ClientNavbar />
+              <PostJob />
+            </Route>
+            <Route exact path="/profilesettings">
+              <ClientNavbar />
+              <ProfileSettings />
+            </Route>
+            <Route exact path="/proposalpage">
+              <FreelancerNavbar />
+              <ProposalPage />
+            </Route>
+            <Route exact path="/browsejobs">
+              <FreelancerNavbar />
+              <BrowseJobs />
+            </Route>
+            <Route exact path="/client-activities">
+              <ClientNavbar />
+              <ActivitiesPage />
+            </Route>
+=======
+				        <Navbar/>
                 <Home/>
-              </Route>
+             </Route>
               <Route exact path="/postjob" component={PostJob}>
-              <Route exact path="/" component={PostJob}>
                 <Navbar/>
                 <PostJob/>
               </Route>
@@ -48,16 +113,37 @@ function App() {
                 <ProfileSettings/>
               </Route>
               <Route exact path="/proposalpage"> 
+              <FreelancerNavbar/>
                 <ProposalPage/>
               </Route> 
-              <Route path="*">
-                    <Page404/>
+              <Route exact path="/browsejobs">
+                <FreelancerNavbar/>
+                <BrowseJobs/>
               </Route>
-            </Switch>
-          </div>
+              <Route exact path="/client-activities">
+                <ClientNavbar/>
+                <ActivitiesPage/>
+              </Route>
+              <Route exct path="/testpendingcontract">
+                <ClientContractPage/>
+              </Route>
+>>>>>>> 63ddd552f4ea606adef462af8870c7fc9fcd34ce
+
+            <Route exact path="/applied-proposals">
+              <ClientNavbar />
+              <AppliedProposals />
+            </Route>
+
+            <Route path="*">
+              <Navbar />
+              <Page404 />
+            </Route>
+          </Switch>
         </div>
-      </Router>
-    );
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
