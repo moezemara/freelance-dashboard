@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import ContractCard from "./ContractCard";
 import ProposalCard from "./ProposalCard";
 
 
-const arr = [{'id':1,title:'Proposal 1',freelancerName:'mark',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
+const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
+const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',description:'job description should be written here',price:'500'}]
 
 const ActivitiesPage = () => {
 
     
     const [proposals,setProposals] = useState([]);
+    const [contracts,setContractss] = useState([]);
 
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''}) 
 
@@ -15,6 +18,7 @@ const ActivitiesPage = () => {
 
     useEffect(()=>{
         setProposals(arr);
+        setContractss(my_contracts);
     });
 
     const handleBtnClick = (btnState)=>{
@@ -32,19 +36,25 @@ const ActivitiesPage = () => {
       );
     }
 
+    const getContractsList = (mycontracts)=>{
+        return (  
+            mycontracts.map((contract)=>(<ContractCard contract={contract}/>))
+     );
+   }
+
     
 
     let pageContent;
 
     switch(content){
         case 'joboffers':
-            pageContent = <h1>job offers</h1>;
+            pageContent = getContractsList(contracts);
             break;
         case 'activecontracts':
-            pageContent = <h1>activecontracts</h1>;
+            pageContent = getContractsList(contracts);
             break;
         case 'finishedcontracts':
-            pageContent = <h1>finished contracts</h1>;
+            pageContent = getContractsList(contracts);
             break;
         default:
             pageContent=getProposalsList(proposals);

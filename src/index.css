@@ -114,11 +114,11 @@
   
 }
 
-.proposalcard a{
+.proposalcard a, .contractcard a{
   margin-left: auto;
 }
 
-.proposalcard img{
+.proposalcard img, .contractcard img{
   margin-left:auto;
   width:40px;
   height:20px;
