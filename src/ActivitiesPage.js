@@ -71,7 +71,7 @@ const ActivitiesPage = () => {
                 <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
                 <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
             </div>
-            <div>
+            <div className='activities-page-content'>
                 {pageContent}
             </div>
         </div>
