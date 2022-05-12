@@ -216,6 +216,21 @@ const SignUp = () => {
                     </select>
                 </div>
 
+
+                <input placeholder="address"/>
+
+                <div className="name_part">
+                <input type="text" style={{marginRight:10}} placeholder="phone"/>
+                
+<select>
+<option value="" disabled selected hidden>Gender</option>                        
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="others">others</option>
+</select>
+                </div>
+
+
                 <input placeholder="Password"/>
                 <input placeholder="Confirm Password"/>
 
