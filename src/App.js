@@ -15,6 +15,7 @@ import FreelancerNavbar from './FreelancerNavbar';
 import BrowseJobs from './BrowseJobs';
 import ActivitiesPage from './ActivitiesPage';
 import ClientContractPage from './ClientContractPage';
+import AppliedProposals from './AppliedProposals';
 
 function App() {
     return (
@@ -65,6 +66,14 @@ function App() {
               <Route exct path="/testpendingcontract">
                 <ClientContractPage/>
               </Route>
+
+
+              <Route exact path="/applied-proposals">
+                <ClientNavbar/>
+                <AppliedProposals/>
+              </Route>
+
+
               <Route path="*">
                     <Page404/>
               </Route>

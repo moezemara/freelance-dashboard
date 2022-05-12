@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ContractCard from "./ContractCard";
 import ProposalCard from "./ProposalCard";
-
+import ProfileCard from "./ProfileCard";
 
 const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
 const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'}]
@@ -62,6 +62,9 @@ const ActivitiesPage = () => {
 
     return (
         <div className="activitiespage">
+            <div>
+            <ProfileCard title="Job Card Example" price="1800" description="job description"/>
+            </div>
             <div className="activitiesNavbar">
                 <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>
                 <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>

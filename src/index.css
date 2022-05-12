@@ -141,6 +141,26 @@ border-radius: 20px;
   color: white;
   background-color: black;
 }
+
+.accept-proposal{
+  text-align: center;
+}
+
+/*big buttons*/
+ .accept-proposal button{
+  align-items: center;
+  align-self: center;
+  margin-top: 10px;
+  height:30px;
+  font-size: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+}
+
+
+
 .proposal-details input {
   background-color: #f8f8f8;
   align-items: left;
@@ -217,6 +237,28 @@ border-radius: 20px;
   text-align: center;
   align-items: center;
   border: dashed gray;
+}
+
+.appliedproposals{
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 200px 0px 200px;
+}
+.attachments-buttons{
+  background-color: #f0f0f0;
+  color: black;
+  padding: 1% 2% 1% 2%;
+  border: 0px;
+  border-radius: 20px;
+  margin-right: 20px;
+
+}
+
+
+.appliedproposals h1, .appliedproposals h2{
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .profilesettings div{
@@ -442,8 +484,8 @@ background-color: rgb(0, 0, 0);
 
 
 
-.activitiesNavbar button:hover, #activebutton{
-  background-color: black;
+#activebutton{
+  background-color: rgb(0, 0, 0);
   color:white;
 }
 
@@ -473,4 +515,8 @@ background-color: rgb(0, 0, 0);
 
 .clientcontractpage button{
   width: 200px;
+.activitiesNavbar button:hover{
+  background-color: rgb(100, 100, 100);
+  color:white;
+  font-weight: 800;
 }
