@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+
+.App{
+  font-family: "Open Sans", sans-serif;
+}
+
 .navbar{
   background-color: white;
   color: black;
@@ -41,7 +46,7 @@
   margin: 0 auto;
   margin-top: 100px;
 
-
+  border-radius: 20px;
   border: dashed;
   padding: 20px;
   text-align: center;
@@ -62,18 +67,69 @@
 .signup input, .login input, .postjob input, .proposalpage input, .profilesettings input{
 
   width: 100%;
+  border-radius: 10px;
 
   padding: 6px 10px;
 
   margin: 10px 0;
 
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
 
   box-sizing: border-box;
 
   display: block;
+  background-color: #f8f8f8;
 
 }
+
+
+.proposalpage textarea {
+  width: 100%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+    border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+} 
+
+.price-card{
+  background-color: #f8f8f8;
+  max-width: 100%;
+  margin: 0 auto;
+border-radius: 20px;
+  border: 1px solid;
+  padding: 20px;
+  text-align: center;
+
+}
+.price-card table {
+
+  height: 120px;
+  table-layout: auto;
+  text-align:left;
+  width: 100%;
+}
+
+#dollar-symbol{
+  width: 20%;
+  align-content: flex-end;
+  align-self: flex-end;
+}
+#dollar-char{
+  text-align: end;
+}
+
+
+#table-and-dollar-symbol{
+  margin-top: 50px;
+  table-layout: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
 
 .signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{
   margin-top: 10px;
@@ -84,6 +140,13 @@
   border-radius: 4px;
   color: white;
   background-color: black;
+}
+.proposal-details input {
+  background-color: #f8f8f8;
+  align-items: left;
+  width: 46%;
+  margin: 0px 0px 0px 10px;
+  display: inline-block;
 }
 
 .jobcard{
@@ -146,6 +209,7 @@
 
 
 .postjob, .proposalpage, .profilesettings{
+  border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
   margin-top: 100px;
@@ -170,6 +234,7 @@
   content: 'Select some files';
   display: inline-block;
   background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  background-color: #f8f8f8;
   border: 1px dashed rgb(0, 0, 0);
   border-radius: 50px;
   padding: 20px 30px;
@@ -188,19 +253,20 @@ hr {
 
 .propsalarea textarea {
   width: 100%;
-  height: 150px;
+  height: 200px;
   padding: 12px 20px;
+  border-radius: 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 4px;
   background-color: #f8f8f8;
-  font-size: 16px;
   resize: none;
 }
 
 .signup select{
 
 background-color: rgba(0, 0, 0, 0);
+border-radius: 20px;
+background-color: #f8f8f8;
 color: rgb(134, 134, 134);
 border : 55;
 height: 5555;
@@ -320,6 +386,7 @@ display: block;
 }
 #join-client-freelancer input {
   margin: px 0px 0px 20px;
+  background-color: #f8f8f8;
 }
 .different-skills table{
   width: 100%;

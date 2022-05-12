@@ -50,6 +50,7 @@ function App() {
                 <ProfileSettings/>
               </Route>
               <Route exact path="/proposalpage"> 
+              <FreelancerNavbar/>
                 <ProposalPage/>
               </Route> 
               <Route exact path="/browsejobs">
