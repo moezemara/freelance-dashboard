@@ -95,11 +95,9 @@
 } 
 
 .price-card{
-
-  max-width: 400px;
+  background-color: #f8f8f8;
+  max-width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
-
 border-radius: 20px;
   border: 1px solid;
   padding: 20px;
@@ -107,9 +105,30 @@ border-radius: 20px;
 
 }
 .price-card table {
+
+  height: 120px;
+  table-layout: auto;
   text-align:left;
   width: 100%;
 }
+
+#dollar-symbol{
+  width: 20%;
+  align-content: flex-end;
+  align-self: flex-end;
+}
+#dollar-char{
+  text-align: end;
+}
+
+
+#table-and-dollar-symbol{
+  margin-top: 50px;
+  table-layout: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
 
 
 .signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{

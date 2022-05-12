@@ -1,5 +1,6 @@
-var totalMoney = 0;
 
+import dollarSymbol from "./src-images/dollar.png";
+var totalMoney = 1000;
 const ProposalPage = () => {
   return (
     <div>
@@ -45,30 +46,36 @@ const ProposalPage = () => {
             <input type="date" placeholder="Due Date" />
             <input type="text" placeholder="Money $" />
           </div>
-<hr />
 
-
+<div><table id="table-and-dollar-symbol">
+<td id="dollar-symbol"><img src={dollarSymbol} height="120" alt="" /></td>
+    <td>
 <div className="price-card">
     <table>
     <tr>
     <td>total price</td>
+    <td id="dollar-char">$</td>
     <td>{totalMoney}</td>
     </tr>
 
     <tr>
     <td>FreeLanco fees</td>
+    <td id="dollar-char">$</td>
     <td>{totalMoney*0.2}</td>
     </tr>
 
     <tr>
     <td>your income</td>
+    <td id="dollar-char">$</td>
     <td>{totalMoney*0.8}</td>
     </tr>
     </table>
-    
 </div>
+</td>
 
 
+
+</table></div>
 
           <button>submit</button>
         </form>
