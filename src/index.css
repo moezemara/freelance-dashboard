@@ -130,8 +130,8 @@ border-radius: 20px;
 }
 
 
-/*small buttons*/
-.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button{
+
+.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button, .clientcontractpage button{
   margin-top: 10px;
   height:30px;
   width:100px;
@@ -328,7 +328,7 @@ display: block;
   align-content: center;
 }
 
-.home, .browsejobs, .activitiespage {
+.home, .browsejobs, .activitiespage, .clientcontractpage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -495,6 +495,33 @@ activities-page-content{
   color:white;
 }
 
+.clientcontractmilestones{
+  padding: 2%;
+}
+
+.clientcontractmilestones button{
+  color: black;
+  background-color: white;
+  border: white;
+}
+
+.milestoneinput{
+  display: flex;
+  padding: 3px;
+  align-items: center;
+  text-align: center;
+}
+.milestoneinput label{
+  margin: 1%;
+
+}
+.milestoneinput input{
+  margin: 1%;
+}
+
+.clientcontractpage button{
+  width: 200px;
+}
 .activitiesNavbar button:hover{
   background-color: rgb(100, 100, 100);
   color:white;
