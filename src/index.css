@@ -46,7 +46,7 @@
   margin: 0 auto;
   margin-top: 100px;
 
-
+  border-radius: 20px;
   border: dashed;
   padding: 20px;
   text-align: center;
@@ -67,6 +67,7 @@
 .signup input, .login input, .postjob input, .proposalpage input, .profilesettings input{
 
   width: 100%;
+  border-radius: 10px;
 
   padding: 6px 10px;
 
@@ -94,7 +95,20 @@
 } 
 
 .price-card{
-  
+
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+border-radius: 20px;
+  border: 1px solid;
+  padding: 20px;
+  text-align: center;
+
+}
+.price-card table {
+  text-align:left;
+  width: 100%;
 }
 
 
@@ -152,6 +166,7 @@
 
 
 .postjob, .proposalpage, .profilesettings{
+  border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
   margin-top: 100px;
@@ -197,17 +212,18 @@ hr {
   width: 100%;
   height: 200px;
   padding: 12px 20px;
+  border-radius: 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 4px;
   background-color: #f8f8f8;
-  font-size: 16px;
   resize: none;
 }
 
 .signup select{
 
 background-color: rgba(0, 0, 0, 0);
+border-radius: 20px;
+background-color: #f8f8f8;
 color: rgb(134, 134, 134);
 border : 55;
 height: 5555;

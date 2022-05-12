@@ -49,6 +49,7 @@ const ProposalPage = () => {
 
 
 <div className="price-card">
+    <table>
     <tr>
     <td>total price</td>
     <td>{totalMoney}</td>
@@ -63,6 +64,7 @@ const ProposalPage = () => {
     <td>your income</td>
     <td>{totalMoney*0.8}</td>
     </tr>
+    </table>
     
 </div>
 
