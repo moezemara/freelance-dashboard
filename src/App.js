@@ -14,6 +14,7 @@ import Footer from './footer';
 import FreelancerNavbar from './FreelancerNavbar';
 import BrowseJobs from './BrowseJobs';
 import ActivitiesPage from './ActivitiesPage';
+import ClientContractPage from './ClientContractPage';
 
 function App() {
     return (
@@ -60,6 +61,9 @@ function App() {
               <Route exact path="/client-activities">
                 <ClientNavbar/>
                 <ActivitiesPage/>
+              </Route>
+              <Route exct path="/testpendingcontract">
+                <ClientContractPage/>
               </Route>
               <Route path="*">
                     <Page404/>

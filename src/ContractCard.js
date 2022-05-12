@@ -6,6 +6,7 @@ const ContractCard = (props) => {
         <div className="contractcard" key={contract.id}>
             <p><b>Client Name: </b>{contract.clientName} </p>
             <p><b>Freelancer Name: </b>{contract.freelancerName}</p>
+            <p><b>Status: </b>{contract.status}</p>
             <b>Description</b>
             <p>{contract.description}</p>
             <p><b>Final Price: </b>{contract.price}$</p>
