@@ -155,12 +155,36 @@ border-radius: 20px;
   border-color: gray;
   max-width: 600px;
   border-width: 5px;
-  border: solid;
+  border: dashed;
   color: black;
   margin-top: 20px;
   padding: 20px;
   align-self: center;
   align-items: center;
+}
+
+.proposalcard, .contractcard{
+  border-radius: 7px;
+  border-color: gray;
+  max-width: 600px;
+  border-width: 5px;
+  border: dashed;
+  color: black;
+  margin-top: 20px;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+  
+}
+
+.proposalcard a, .contractcard a{
+  margin-left: auto;
+}
+
+.proposalcard img, .contractcard img{
+  margin-left:auto;
+  width:40px;
+  height:20px;
 }
 
 .jobcardmain {
@@ -262,11 +286,12 @@ display: block;
   align-content: center;
 }
 
-.home, .browsejobs {
+.home, .browsejobs, .activitiespage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -381,7 +406,7 @@ background-color: rgb(0, 0, 0);
 
 .footer a{
   color: rgb(255, 255, 255);
-  align: left;
+  text-align: left;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
@@ -399,4 +424,25 @@ background-color: rgb(0, 0, 0);
 .different-skills img{
   margin-right: 10px;
   height: 20px;
+}
+
+.activitiesNavbar{
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+  width:800px;
+}
+
+.activitiespage button{
+  background-color: white;
+  color: black;
+  padding: 1%;
+  width: 200px;
+}
+
+
+
+.activitiesNavbar button:hover, #activebutton{
+  background-color: black;
+  color:white;
 }
