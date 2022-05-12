@@ -515,6 +515,7 @@ background-color: rgb(0, 0, 0);
 
 .clientcontractpage button{
   width: 200px;
+}
 .activitiesNavbar button:hover{
   background-color: rgb(100, 100, 100);
   color:white;
