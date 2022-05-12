@@ -8,6 +8,8 @@ const ProfileSettings = () => {
                 <div>
                     <select>
                         <option value=""  disabled selected hidden>Choose Category</option>
+                        <option value="Web development">Web development</option>
+                        <option value="Machine Learning">Machine Learning</option>
                     </select>
                 </div>
                 <div>
@@ -19,6 +21,21 @@ const ProfileSettings = () => {
                 <div>
                     <input type="text" placeholder="Pay rate($/hr)"/>
                 </div>
+
+
+                <input placeholder="address"/>
+
+<div className="name_part">
+<input type="text" style={{marginRight:10}} placeholder="phone"/>
+
+<select>
+<option value="" disabled selected hidden>Gender</option>                        
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="others">others</option>
+</select>
+</div>
+                
                 <div className="profile-attachmenents">
                     <input type="file"/>
                 </div>                

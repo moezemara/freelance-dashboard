@@ -1,3 +1,4 @@
+
 import Navbar  from './Navbar';
 import Home from './Home';
 import React from 'react';
@@ -18,13 +19,15 @@ import ClientContractPage from './ClientContractPage';
 import AppliedProposals from './AppliedProposals';
 import FreelancerContractPage from './FreelancerContractPage';
 
+
 function App() {
-    return (
-      <Router>
-        <div className="App">
-          <div className='content'>
-            <Switch>
+  return (
+    <Router>
+      <div className="App">
+        <div className="content">
+          <Switch>
             <Route exact path="/">
+
 				        <Navbar/>
                 <Home/>
              </Route>
@@ -68,25 +71,27 @@ function App() {
                 <ClientContractPage/>
               </Route>
 
+
+            <Route exact path="/applied-proposals">
+              <ClientNavbar />
+              <AppliedProposals />
+            </Route>
+
               <Route exct path="/testfreelancercontract">
                 <FreelancerContractPage/>
               </Route>
 
-              <Route exact path="/applied-proposals">
-                <ClientNavbar/>
-                <AppliedProposals/>
-              </Route>
 
-
-              <Route path="*">
-                    <Page404/>
-              </Route>
-            </Switch>
-          </div>
-          <Footer/>
+            <Route path="*">
+              <Navbar />
+              <Page404 />
+            </Route>
+          </Switch>
         </div>
-      </Router>
-    );
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
