@@ -484,7 +484,13 @@ background-color: rgb(0, 0, 0);
 
 
 
-.activitiesNavbar button:hover, #activebutton{
-  background-color: black;
+#activebutton{
+  background-color: rgb(0, 0, 0);
   color:white;
+}
+
+.activitiesNavbar button:hover{
+  background-color: rgb(100, 100, 100);
+  color:white;
+  font-weight: 800;
 }
