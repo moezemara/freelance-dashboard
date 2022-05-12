@@ -5,7 +5,7 @@ const my_contract = {id:1,clientName:'someone',freelancerName:'someone else',sta
 
 
 
-const ClientContractPage = () => {
+const  FreelancerContractPage = () => {
 
     const [milstoneNum, setMilestonesNum] = useState(3)
     const [milestonesInputs, setMilestonesInputs] = useState([1,2,3]);
@@ -20,9 +20,9 @@ const ClientContractPage = () => {
 
 
     return (
-        <div className="clientcontractpage">
+        <div className="freelancercontractpage">
             <ContractCard contract={my_contract}/>
-            <div className="clientcontractmilestones">
+            <div className="freelancercontractmilestones">
                 <p><b>Miltstones</b> ({milstoneNum})</p>
                 { 
                 (my_contract.status === "pending") &&
@@ -51,10 +51,18 @@ const ClientContractPage = () => {
                 {(my_contract.status === "pending") &&
                 <button onClick={()=>{updateMilestones()}}><u><b>+Add Miltstones</b></u></button>}
             </div>
-            {(my_contract.status==="pending") && <button>Agree On Contract</button>}
-            {(my_contract.status==="open") && <button>Pay</button>}
+            {(my_contract.status==="pending") && <div style={{textAlign:'center'}}><button>Agree On Contract</button></div>}
+            {(my_contract.status==="open") && 
+            <div style={{textAlign:'center'}}>
+                <label>Drag or upload project files </label>
+                <div>
+                    <input type="file"></input>
+                </div>
+                <button>Send Files</button>
+            </div>
+            }                                                      
         </div>
     );
 }
  
-export default ClientContractPage;
+export default FreelancerContractPage;

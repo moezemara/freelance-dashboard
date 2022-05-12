@@ -77,7 +77,7 @@
 
 }
 
-.signup input, .login input, .postjob input, .proposalpage input, .profilesettings input{
+.signup input, .login input, .postjob input, .proposalpage input, .profilesettings input, .freelancercontractpage input{
 
   width: 100%;
   border-radius: 10px;
@@ -144,7 +144,7 @@ border-radius: 20px;
 
 
 
-.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button, .clientcontractpage button{
+.signup button, .login button, .postjob button, .proposalpage button, .profilesettings button, .clientcontractpage button, .freelancercontractpage button{
   margin-top: 10px;
   height:30px;
   width:100px;
@@ -341,7 +341,7 @@ display: block;
   align-content: center;
 }
 
-.home, .browsejobs, .activitiespage, .clientcontractpage {
+.home, .browsejobs, .activitiespage, .clientcontractpage, .freelancercontractpage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -508,11 +508,11 @@ activities-page-content{
   color:white;
 }
 
-.clientcontractmilestones{
+.clientcontractmilestones, .freelancercontractmilestones{
   padding: 2%;
 }
 
-.clientcontractmilestones button{
+.clientcontractmilestones button, .freelancercontractmilestones button{
   color: black;
   background-color: white;
   border: white;
@@ -532,7 +532,7 @@ activities-page-content{
   margin: 1%;
 }
 
-.clientcontractpage button{
+.clientcontractpage button, .freelancercontractpage button{
   width: 200px;
 }
 .activitiesNavbar button:hover{
