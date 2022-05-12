@@ -23,9 +23,13 @@ const AppliedProposals = () => {
       <h3>Recommended price: {recommendedPrice} $</h3>
 
       <h3>Attachements</h3>
-      <button>Attachment 1</button>
-      <button>Attachment 2</button>
+      <button className="attachments-buttons">Attachment 1</button>
+      <button className="attachments-buttons">Attachment 2</button>
 
+      <hr />
+      <div className="accept-proposal">
+        <button>Accept proposal</button>
+      </div>
     </div>
   );
 };
