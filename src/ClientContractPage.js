@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ContractCard from "./ContractCard";
 
-const my_contract = {id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'};
+const my_contract = {id:1,clientName:'someone',freelancerName:'someone else',status:'open',description:'job description should be written here',price:'500'};
 
 
 
