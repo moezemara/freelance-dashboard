@@ -196,7 +196,7 @@ display: block;
   align-content: center;
 }
 
-.home, .browsejobs {
+.home, .browsejobs, .activitiespage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -314,7 +314,7 @@ background-color: rgb(0, 0, 0);
 
 .footer a{
   color: rgb(255, 255, 255);
-  align: left;
+  text-align: left;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
@@ -332,4 +332,23 @@ background-color: rgb(0, 0, 0);
 .different-skills img{
   margin-right: 10px;
   height: 20px;
+}
+
+.activitiesNavbar{
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.activitiespage button{
+  background-color: white;
+  color: black;
+  padding: 1%;
+}
+
+
+
+.activitiesNavbar button:hover, #activebutton{
+  background-color: black;
+  color:white;
 }

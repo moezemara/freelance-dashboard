@@ -14,6 +14,7 @@ import ProfileSettings from './ProfileSettings';
 import Footer from './footer';
 import FreelancerNavbar from './FreelancerNavbar';
 import BrowseJobs from './BrowseJobs';
+import ActivitiesPage from './ActivitiesPage';
 
 function App() {
     return (
@@ -55,6 +56,10 @@ function App() {
               <Route exact path="/browsejobs">
                 <FreelancerNavbar/>
                 <BrowseJobs/>
+              </Route>
+              <Route exact path="/client-activities">
+                <ClientNavbar/>
+                <ActivitiesPage/>
               </Route>
               <Route path="*">
                     <Page404/>
