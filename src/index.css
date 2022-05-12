@@ -92,12 +92,36 @@
   border-color: gray;
   max-width: 600px;
   border-width: 5px;
-  border: solid;
+  border: dashed;
   color: black;
   margin-top: 20px;
   padding: 20px;
   align-self: center;
   align-items: center;
+}
+
+.proposalcard, .contractcard{
+  border-radius: 7px;
+  border-color: gray;
+  max-width: 600px;
+  border-width: 5px;
+  border: dashed;
+  color: black;
+  margin-top: 20px;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+  
+}
+
+.proposalcard a{
+  margin-left: auto;
+}
+
+.proposalcard img{
+  margin-left:auto;
+  width:40px;
+  height:20px;
 }
 
 .jobcardmain {
@@ -201,6 +225,7 @@ display: block;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -338,12 +363,14 @@ background-color: rgb(0, 0, 0);
   align-items: center;
   text-align: center;
   margin-top: 5%;
+  width:800px;
 }
 
 .activitiespage button{
   background-color: white;
   color: black;
   padding: 1%;
+  width: 200px;
 }
 
 

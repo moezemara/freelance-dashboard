@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ProposalCard from "./ProposalCard";
+
+
+const arr = [{'id':1,title:'Proposal 1',freelancerName:'mark',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
 
 const ActivitiesPage = () => {
+
+    
+    const [proposals,setProposals] = useState([]);
 
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''}) 
 
     const [content, setContent] = useState('appliedproposals');
+
+    useEffect(()=>{
+        setProposals(arr);
+    });
 
     const handleBtnClick = (btnState)=>{
         //setting button color to the appropriate theme
@@ -13,6 +24,15 @@ const ActivitiesPage = () => {
         setButtonClasses(newState);
         setContent(btnState);
     }
+    
+
+    const getProposalsList = (myproposals)=>{
+         return (  
+             myproposals.map((proposal)=>(<ProposalCard proposal={proposal}/>))
+      );
+    }
+
+    
 
     let pageContent;
 
@@ -27,7 +47,7 @@ const ActivitiesPage = () => {
             pageContent = <h1>finished contracts</h1>;
             break;
         default:
-            pageContent=<h1>applied</h1>;
+            pageContent=getProposalsList(proposals);
     }
 
     return (
@@ -38,7 +58,9 @@ const ActivitiesPage = () => {
                 <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
                 <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
             </div>
-            {pageContent}
+            <div>
+                {pageContent}
+            </div>
         </div>
     );
 }

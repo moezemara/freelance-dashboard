@@ -1,11 +1,13 @@
 const JobCard = (props) => {
     const title = props.title;
     const price = props.price;
+    const description = props.description;
     return ( 
         <div className="jobcard">
             <div className="jobcardmain">
-                <h2>{title}</h2>
-                <h4 style={{color:'gray'}}>{price}$</h4>
+                <h3>{title}</h3>
+                <p><b>Description:</b> {description}</p>
+                <p>Price:<b>{price}$</b></p>
             </div>
             <div style={{marginLeft:'auto'}}>
                 <button>Details</button>
