@@ -196,6 +196,7 @@ border-radius: 20px;
   align-items: center;
 }
 
+
 .proposalcard, .contractcard{
   border-radius: 7px;
   border-color: gray;
@@ -341,13 +342,28 @@ display: block;
   align-content: center;
 }
 
-.home, .browsejobs, .activitiespage, .clientcontractpage, .freelancercontractpage {
+.home, .activitiespage, .clientcontractpage, .freelancercontractpage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
   align-items: center;
   width: 100%;
+}
+
+.browsejobs{
+  max-width: 800px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 1%;
+}
+
+.jobslist{
+  margin-right: 1%;
 }
 
 #home-img {
@@ -420,7 +436,7 @@ display: block;
   display: flex;
 }
 
-.clientsidebar {
+.profilesidebar {
   border-radius: 8px;
   margin-left: auto;
   background-color: rgb(180, 178, 178);

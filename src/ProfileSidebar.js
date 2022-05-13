@@ -1,7 +1,7 @@
 import pImg from "./src-images/profile.png"
-const ClientSidebar = () => {
+const ProfileSidebar = () => {
     return ( 
-        <div className="clientsidebar">
+        <div className="profilesidebar">
             <a href="/profilesettings"><img className="profileimg" src={pImg} style={{width:200,height:200}}/></a>
             <h2>Profile Name</h2>
             <p><b>Skills:</b> Coding, Writing...</p>
@@ -11,4 +11,4 @@ const ClientSidebar = () => {
      );
 }
  
-export default ClientSidebar ;
+export default ProfileSidebar ;
