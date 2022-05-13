@@ -3,11 +3,13 @@ import ContractCard from "./ContractCard";
 import ProposalCard from "./ProposalCard";
 import ProfileCard from "./ProfileCard";
 
-const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',coverLetter:"freelancer cover letter",duedate:"5-13-2022", price:1000},];
+const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',
+coverLetter:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, eum non autem porro aut consequatur corrupti possimus adipisci veritatis quisquam vero illum fugiat rerum itaque modi iste, accusantium distinctio dolores sint, ducimus officiis perspiciatis temporibus omnis. Non possimus a nisi aut optio soluta sint, recusandae similique quia reiciendis eos omnis error culpa in iure libero architecto nobis voluptates molestias porro repudiandae! Voluptates sunt aliquam debitis culpa reprehenderit. Nemo non natus voluptate praesentium! Maxime, unde quo beatae, fuga aut similique assumenda totam dignissimos et labore possimus id? Incidunt mollitia soluta nemo consequatur, autem assumenda reiciendis ratione illum amet quidem ut facilis.",
+duedate:"5-13-2022", price:1000},];
+
 const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'}]
 
 const ActivitiesPage = () => {
-
     
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
@@ -64,8 +66,9 @@ const ActivitiesPage = () => {
         <div className="activitiespage">
             <div>
             <ProfileCard 
-            profileName="M Ashmawy" country="Egypt" profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus expedita voluptates eius ea esse ducimus sint adipisci vero provident laborum repellendus consequatur a odit excepturi repellat ipsum laudantium omnis amet, ad nisi aliquam iusto. Iste sit hic, aperiam, ratione quidem asperiores facere, necessitatibus odio enim cupiditate autem esse sequi nesciunt quasi illum assumenda natus. Culpa animi praesentium eaque itaque id iusto non! Corrupti, impedit maiores! Aliquid consectetur maiores nihil ipsum veniam, dignissimos architecto iure exercitationem animi et. Molestiae deleniti ex est accusantium aspernatur, illum nulla nemo, magni velit qui quas at iure asperiores temporibus assumenda dolorem odit! Iste, possimus."
+            profileName="M Ashmawy" country="Egypt" skills="python, cpp, xxx" payRate='50' rating ='4.9'
+            profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus expedita voluptates eius ea esse ducimus sint adipisci vero provident laborum repellendus consequatur a odit."
             />
 
             </div>

@@ -15,7 +15,7 @@ const ProposalCard = (props) => {
             <p><b>Freelancer Rate: </b>{freelancerRate}</p>
            
             <b>Cover letter</b>
-            <p>{coverLetter}</p>
+            <p className='big-paragraphs'>{coverLetter}</p>
             <p><b>Due Date: </b>{dueDate}</p>
             <p><b>Recommended Price: </b>{price}$</p>
             <div style={{display:'flex'}}>
