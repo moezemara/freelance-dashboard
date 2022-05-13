@@ -10,7 +10,7 @@ const JobCard = (props) => {
                 <p>Price:<b>{price}$</b></p>
             </div>
             <div style={{marginLeft:'auto'}}>
-                <button>Details</button>
+                <button style={{marginLeft:10}}>Details</button>
             </div>
         </div>
      );
