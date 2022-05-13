@@ -9,7 +9,7 @@
 .navbar{
   background-color: white;
   color: black;
-  padding: 10px;
+  padding: 10px 100px 10px 100px;
   display: flex;
   align-items: center;
   border-bottom: 5px solid #f2f2f2;
