@@ -81,7 +81,6 @@ function App() {
                 <FreelancerContractPage/>
               </Route>
 
-
             <Route path="*">
               <Navbar />
               <Page404 />
