@@ -17,13 +17,13 @@ const Footer = () => {
 
 <tr>
 <td><a href="/clientprofile">Client profile</a></td>
-<td><a href="/profilesettings">profile settings</a></td>
+<td><a href="/freelancerprofile">freelancer profile</a></td>
 <td><a href="/proposalpage">proposal page</a></td>
 </tr>
 
 <tr>
 <td><a href="/browsejobs">browse jobs</a></td>
-<td><a href="/client-activities">client activities</a></td>
+<td><a href="/profilesettings">profile settings</a></td>
 <td><a href="/testclientcontract">test client contract</a></td>
 </tr>
 

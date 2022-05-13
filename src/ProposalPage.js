@@ -11,11 +11,6 @@ const ProposalPage = () => {
 
       <div className="proposalpage">
         <div></div>
-        <h2>here is a card to view job activity</h2>
-      </div>
-
-      <div className="proposalpage">
-        <div></div>
         <h2>Proposal</h2>
         <hr />
 
