@@ -1,3 +1,4 @@
 {
-    "API": {"BASE_URL": "https://api.plebits.com/v1"}
+    "API": {"BASE_URL": "https://api.plebits.com/v1"},
+    "RECAPTCHA": {"PUBLIC_KEY": "6Lct6dgfAAAAAOOx11KQeH7HSS9QVDwlFuAYsQh5"}
 }

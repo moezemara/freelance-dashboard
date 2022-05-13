@@ -1,5 +1,11 @@
+import ReCAPTCHA from "react-google-recaptcha";
+import config from "./config.json"
+import { useState, useEffect, createRef } from "react";
+
+
 const SignUp = () => {
-    
+    const recaptchaRef = createRef();
+
     return (  
         <div className="signup">
             <h2>Sign Up To Freelanco</h2>
@@ -245,6 +251,7 @@ const SignUp = () => {
                     <label>I agree to terms & conditions</label>
                 </div>
 
+                <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
 
                 <button>Sign Up</button>
             </form>

@@ -1,4 +1,5 @@
 import axios from "./axios.js";
+import config from "./config.json"
 import { useState, useEffect, createRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -35,7 +36,7 @@ const Login = () => {
             <form>
                 <input type="text" name="username" placeholder="Username" value={username} onInput={e => setUsername(e.target.value)}/>
                 <input type="text" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
-                <ReCAPTCHA ref={recaptchaRef} sitekey="6Lct6dgfAAAAAOOx11KQeH7HSS9QVDwlFuAYsQh5"/>
+                <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
                 <button type="button" onClick={handleLogin}>Login</button>
                 <p style={{color:"gray"}}>Don't have an account?<a style={{color:"gray"}} href="/signup">Create One</a></p>
             </form>
