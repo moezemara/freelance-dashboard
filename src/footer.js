@@ -13,24 +13,27 @@ const Footer = () => {
 <td><a href="/postjob">Post a job</a></td>
 <td><a href="/signup">sign up</a></td>
 <td><a href="/login">Log in</a></td>
+<td><a href="/applied-proposals">applied proposals</a></td>
 </tr>
 
 <tr>
 <td><a href="/clientprofile">Client profile</a></td>
 <td><a href="/freelancerprofile">freelancer profile</a></td>
 <td><a href="/proposalpage">proposal page</a></td>
+<td><a href="/testfreelancercontract">test freelancer contract</a></td>
 </tr>
 
 <tr>
 <td><a href="/browsejobs">browse jobs</a></td>
 <td><a href="/profilesettings">profile settings</a></td>
 <td><a href="/testclientcontract">test client contract</a></td>
+<td><a href="*">Error page!</a></td>
 </tr>
 
 <tr>
-<td><a href="/applied-proposals">applied proposals</a></td>
-<td><a href="/testfreelancercontract">test freelancer contract</a></td>
-<td><a href="*">Error!!!</a></td>
+
+
+
 </tr>
 
 

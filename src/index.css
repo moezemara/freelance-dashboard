@@ -466,7 +466,7 @@ display: block;
   margin: 0 auto;
   margin-top: 100px;
   background-color: rgb(0, 0, 0);
-  padding: 10px 0px 0px 50px;
+  padding: 10px 100px 0px 200px;
   text-align: left;
 
 }
@@ -484,7 +484,7 @@ display: block;
 
 .footer table{
   width: 100%;
-  height: 170px;
+  height: 150px;
 }
 
 .footer a{
