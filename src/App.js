@@ -9,7 +9,6 @@ import PostJob from './PostJob';
 import Page404 from './Page404';
 import ProposalPage from './ProposalPage'
 import ClientNavbar from './ClientNavbar';
-import ClientMainPage from './ClientMainPage';
 import ProfileSettings from './ProfileSettings';
 import Footer from './footer';
 import FreelancerNavbar from './FreelancerNavbar';
@@ -31,10 +30,6 @@ function App() {
 				        <Navbar/>
                 <Home/>
              </Route>
-              <Route exact path="/postjob" component={PostJob}>
-                <Navbar/>
-                <PostJob/>
-              </Route>
               <Route exact path="/signup">
                 <Navbar/>
                 <SignUp/>
@@ -45,7 +40,11 @@ function App() {
               </Route> 
               <Route exact path="/clientprofile">
                 <ClientNavbar/>
-                <ClientMainPage/>
+                <ActivitiesPage/>
+              </Route>
+              <Route exact path="/freelancerprofile">
+                <FreelancerNavbar/>
+                <ActivitiesPage/>
               </Route>
               <Route exact path="/postjob">
                 <ClientNavbar/>
@@ -62,10 +61,6 @@ function App() {
               <Route exact path="/browsejobs">
                 <FreelancerNavbar/>
                 <BrowseJobs/>
-              </Route>
-              <Route exact path="/client-activities">
-                <ClientNavbar/>
-                <ActivitiesPage/>
               </Route>
               <Route exct path="/testclientcontract">
                 <ClientContractPage/>
