@@ -11,7 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState('')
     //for client side handling
     const [loginFailed,setLoginFailed] = useState(false);
-    
+    const [loginMessage,setLoginMessage] = useState('')
     async function handleLogin(){
         console.log(process.env.BASE_API_URL)
         const data = {
@@ -28,6 +28,7 @@ const Login = () => {
         }
         else{
             setLoginFailed(true);
+            setLoginMessage(response.data.message);
             setUsername('');
             setPassword('');
             window.grecaptcha.reset();
@@ -44,7 +45,7 @@ const Login = () => {
                 <input type="text" name="username" placeholder="Username" value={username} onInput={e => setUsername(e.target.value)}/>
                 <input type="password" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
                 <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
-                {loginFailed && <p><label style={{color:'red'}}>Invalid Username or Password!</label></p>}
+                {loginFailed && <p><label style={{color:'red'}}>{loginMessage}</label></p>}
                 <button type="button" onClick={handleLogin}>Login</button>
                 <p style={{color:"gray"}}>Don't have an account?<a style={{color:"gray"}} href="/signup">Create One</a></p>
             </form>

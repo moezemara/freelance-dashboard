@@ -24,10 +24,6 @@ const SignUp = () => {
 
     const [confirmPassword, setConfirmPassword] = useState('')
 
-    useEffect(()=>{
-
-    })
-
 
     async function handleSignUp(){
         console.log(process.env.BASE_API_URL)
