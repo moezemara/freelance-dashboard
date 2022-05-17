@@ -9,6 +9,8 @@ const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    //for client side handling
+    const [loginFailed,setLoginFailed] = useState(false);
     
     async function handleLogin(){
         console.log(process.env.BASE_API_URL)
@@ -18,11 +20,22 @@ const Login = () => {
             'g-recaptcha-response': recaptchaRef.current.getValue()
         }
 
-        const response = await axios.post('user/login', data).then((res)=>{window.location='/profile'});
-        console.log(response);
+        const response = await axios.post('user/login', data)
+        setLoginFailed(false);
+        if(response.data.success){
+            document.cookie = JSON.stringify({'type':response.data.message.type})
+            window.location = '/profile';
+        }
+        else{
+            setLoginFailed(true);
+            setUsername('');
+            setPassword('');
+            window.grecaptcha.reset();
+        }
     }
 
     
+
     return (
 
         <div className="login">
@@ -31,6 +44,7 @@ const Login = () => {
                 <input type="text" name="username" placeholder="Username" value={username} onInput={e => setUsername(e.target.value)}/>
                 <input type="text" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
                 <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
+                {loginFailed && <p><label style={{color:'red'}}>Invalid Username or Password!</label></p>}
                 <button type="button" onClick={handleLogin}>Login</button>
                 <p style={{color:"gray"}}>Don't have an account?<a style={{color:"gray"}} href="/signup">Create One</a></p>
             </form>
