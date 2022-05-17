@@ -6,6 +6,7 @@ const FreelancerNavbar = () => {
             <a href="/freelancerprofile">Home</a>
             <div className="links">
                 <a href="/profilesettings">Settings</a>
+                <a href="/logout">Log Out</a>
             </div>
         </nav>
     );
