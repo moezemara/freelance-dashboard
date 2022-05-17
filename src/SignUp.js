@@ -38,10 +38,17 @@ const SignUp = () => {
             'sex':sex,
             'g-recaptcha-response': recaptchaRef.current.getValue()
         }
-
+    
         const response = await axios.post('user/signup', data)
         console.log(response)
-       
+        if(response.data.success){
+            document.cookie = JSON.stringify({'type':response.data.message.type})
+            window.location = '/profile';
+        }
+        else{
+            console.log("failed")
+        }
+        
     }
 
 
@@ -290,7 +297,7 @@ const SignUp = () => {
 
                 <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
 
-                <button onClick={handleSignUp}>Sign Up</button>
+                <button type="button" onClick={handleSignUp}>Sign Up</button>
             </form>
         </div>
     );
