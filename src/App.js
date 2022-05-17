@@ -12,7 +12,7 @@ import ProfileSettings from "./ProfileSettings";
 import Footer from "./footer";
 import FreelancerNavbar from "./FreelancerNavbar";
 import BrowseJobs from "./BrowseJobs";
-import ActivitiesPage from "./ActivitiesPage";
+import ProfileMainPage from "./ProfileMainPage";
 import ClientContractPage from "./ClientContractPage";
 import AppliedProposals from "./AppliedProposals";
 import FreelancerContractPage from "./FreelancerContractPage";
@@ -35,13 +35,8 @@ function App() {
               <Navbar />
               <Login />
             </Route>
-            <Route exact path="/clientprofile">
-              <ClientNavbar />
-              <ActivitiesPage />
-            </Route>
-            <Route exact path="/freelancerprofile">
-              <FreelancerNavbar />
-              <ActivitiesPage />
+            <Route exact path="/profile">
+              <ProfileMainPage/>
             </Route>
             <Route exact path="/postjob">
               <ClientNavbar />
