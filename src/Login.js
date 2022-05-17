@@ -42,7 +42,7 @@ const Login = () => {
             <h2>Login</h2>
             <form>
                 <input type="text" name="username" placeholder="Username" value={username} onInput={e => setUsername(e.target.value)}/>
-                <input type="text" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
+                <input type="password" name="password" placeholder="Password" value={password} onInput={e => setPassword(e.target.value)}/>
                 <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
                 {loginFailed && <p><label style={{color:'red'}}>Invalid Username or Password!</label></p>}
                 <button type="button" onClick={handleLogin}>Login</button>
