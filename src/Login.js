@@ -18,17 +18,11 @@ const Login = () => {
             'g-recaptcha-response': recaptchaRef.current.getValue()
         }
 
-        const response = await axios.post('user/login', data);
+        const response = await axios.post('user/login', data).then((res)=>{window.location='/profile'});
         console.log(response);
     }
 
-    useEffect(()=>{
-        const script = document.createElement("script");
-        script.src = "https://www.google.com/recaptcha/api.js";
-        script.async = true;
-        document.body.appendChild(script);
-    })
-
+    
     return (
 
         <div className="login">
