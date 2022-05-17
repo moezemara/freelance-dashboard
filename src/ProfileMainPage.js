@@ -25,6 +25,7 @@ const ProfileMainPage = () => {
     useEffect(()=>{
         let cookieObj = JSON.parse(document.cookie);
         setAccountType(cookieObj.type);
+        console.log(accountType);
         setProposals(arr);
         setContractss(my_contracts);
     });
