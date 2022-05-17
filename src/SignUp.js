@@ -1,6 +1,7 @@
 import ReCAPTCHA from "react-google-recaptcha";
 import config from "./config.json"
 import { useState, useEffect, createRef } from "react";
+import axios from "./axios.js";
 
 
 const SignUp = () => {
@@ -16,8 +17,32 @@ const SignUp = () => {
     const [address, setAddress] = useState('');
     const [country, setCountry] = useState('');
     const [sex, setSex] = useState('');
+    
+    //for local validation
+    const [confirmPassword, setConfirmPassword] = useState('')
 
 
+
+    async function handleSignUp(){
+        console.log(process.env.BASE_API_URL)
+        const data = {
+            'fname':fname,
+            'lname':lname,
+            'username':username,
+            'password':password,
+            'email':email,
+            'type':type,
+            'phone':phone,
+            'address':address,
+            'country':country,
+            'sex':sex,
+            'g-recaptcha-response': recaptchaRef.current.getValue()
+        }
+
+        const response = await axios.post('user/signup', data)
+        console.log(response)
+       
+    }
 
 
     return (  
@@ -250,8 +275,8 @@ const SignUp = () => {
 
 
                 <input type="password" placeholder="Password" value={password} onInput={e=>setPassword(e.target.value)}/>
-                <input type="password" placeholder="Confirm Password"/>
-
+                <input type="password" placeholder="Confirm Password" value={confirmPassword} onInput={e=>setConfirmPassword(e.target.value)}/>
+                { (confirmPassword!==password) && <label style={{color:'red'}}>Password needs to be confirmed</label>}
                 <div id = "join-client-freelancer" className="name_part">
                     <label>Join</label>
                     <input type="radio" value="client" name="joinAs" onClick={()=>{setType('C')}}/>client
@@ -265,7 +290,7 @@ const SignUp = () => {
 
                 <ReCAPTCHA ref={recaptchaRef} sitekey={config.RECAPTCHA.PUBLIC_KEY}/>
 
-                <button>Sign Up</button>
+                <button onClick={handleSignUp}>Sign Up</button>
             </form>
         </div>
     );

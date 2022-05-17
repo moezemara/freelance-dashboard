@@ -20,9 +20,11 @@ const ProfileMainPage = () => {
 
     const [content, setContent] = useState('appliedproposals');
 
-    const accounttype = 'F';
+    const [accountType,setAccountType] = useState('');
 
     useEffect(()=>{
+        let cookieObj = JSON.parse(document.cookie);
+        setAccountType(cookieObj.type);
         setProposals(arr);
         setContractss(my_contracts);
     });
@@ -68,8 +70,8 @@ const ProfileMainPage = () => {
 
     return (
         <div>
-            {(accounttype==='C') && <ClientNavbar/>}
-            {(accounttype==='F') && <FreelancerNavbar/>}
+            {(accountType==='C') && <ClientNavbar/>}
+            {(accountType==='F') && <FreelancerNavbar/>}
             <div className="activitiespage">
                 <div>
                 <ProfileCard 
