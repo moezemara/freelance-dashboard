@@ -6,15 +6,17 @@ import ClientNavbar from "./ClientNavbar";
 import FreelancerNavbar from "./FreelancerNavbar";
 import BriefProfileCard from "./BriefProfileCard";
 import axios from "./axios.js"
+import Cookies from 'universal-cookie';
 
 const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',
 coverLetter:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, eum non autem porro aut consequatur corrupti possimus adipisci veritatis quisquam vero illum fugiat rerum itaque modi iste, accusantium distinctio dolores sint, ducimus officiis perspiciatis temporibus omnis. Non possimus a nisi aut optio soluta sint, recusandae similique quia reiciendis eos omnis error culpa in iure libero architecto nobis voluptates molestias porro repudiandae! Voluptates sunt aliquam debitis culpa reprehenderit. Nemo non natus voluptate praesentium! Maxime, unde quo beatae, fuga aut similique assumenda totam dignissimos et labore possimus id? Incidunt mollitia soluta nemo consequatur, autem assumenda reiciendis ratione illum amet quidem ut facilis.",
 duedate:"5-13-2022", price:1000},];
 
 const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'}]
+const cookies = new Cookies();
+
 
 const ProfileMainPage = () => {
-    
     const [data,setData] = useState({});
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
@@ -29,8 +31,9 @@ const ProfileMainPage = () => {
     
 
     useEffect(()=>{
-        let cookieObj = JSON.parse(document.cookie);
-        setAccountType(cookieObj.type);
+        console.log(cookies.getAll())
+        //let cookieObj = JSON.parse(document.cookie);
+        //setAccountType(cookieObj.type);
 
         axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{setData(res);console.log(res)});
     },[]);

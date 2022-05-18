@@ -13,7 +13,6 @@ const Login = () => {
     const [loginFailed,setLoginFailed] = useState(false);
     const [loginMessage,setLoginMessage] = useState('')
     async function handleLogin(){
-        console.log(process.env.BASE_API_URL)
         const data = {
             username: username,
             password: password,
@@ -23,7 +22,7 @@ const Login = () => {
         const response = await axios.post('user/login', data)
         setLoginFailed(false);
         if(response.data.success){
-            document.cookie = JSON.stringify({'type':response.data.message.type})
+            document.cookie = 'type='+response.data.message.type
             window.location = '/profile';
         }
         else{
