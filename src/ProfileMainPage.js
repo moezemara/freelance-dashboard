@@ -106,7 +106,6 @@ const ProfileMainPage = () => {
                                 <BriefProfileCard title={profile.title} id={profile.profile_id} key={profile.profile_id}/>
                             ))
                             }
-                            <BriefProfileCard title="another profile" key={1} id='1'/>
                         </div>
                     }
                 </div>
