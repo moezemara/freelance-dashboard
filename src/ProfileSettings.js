@@ -1,4 +1,14 @@
+import {getCategoriesList} from './Options.js'
+
+
 const ProfileSettings = () => {
+
+
+    
+
+
+
+
     return (  
         <div className="profilesettings">
             <form>
@@ -8,8 +18,7 @@ const ProfileSettings = () => {
                 <div>
                     <select>
                         <option value=""  disabled selected hidden>Choose Category</option>
-                        <option value="Web development">Web development</option>
-                        <option value="Machine Learning">Machine Learning</option>
+                        {getCategoriesList()}
                     </select>
                 </div>
                 <div>
