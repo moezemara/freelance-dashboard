@@ -43,7 +43,6 @@ function App() {
               <PostJob />
             </Route>
             <Route exact path="/profilesettings">
-              <ClientNavbar />
               <ProfileSettings />
             </Route>
             <Route exact path="/proposalpage">

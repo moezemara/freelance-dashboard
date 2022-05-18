@@ -615,3 +615,29 @@ text-align: left;
 .big-paragraphs{
   text-align: justify;
 }
+
+
+.briefprofilecard{
+  display: flex;
+  border-radius: 7px;
+  border-color: gray;
+  border-width: 5px;
+  border: dashed;
+  color: black;
+  margin-top: 20px;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
+}
+
+
+.briefprofilecardmain {
+  min-width: 200px;
+  border-right: 5px solid #f2f2f2;
+}
+
+.briefprofilecard button{
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+}
