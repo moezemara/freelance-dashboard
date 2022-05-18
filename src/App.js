@@ -16,6 +16,7 @@ import ProfileMainPage from "./ProfileMainPage";
 import ClientContractPage from "./ClientContractPage";
 import AppliedProposals from "./AppliedProposals";
 import FreelancerContractPage from "./FreelancerContractPage";
+import MakeProfile from "./MakeProfile";
 
 function App() {
   return (
@@ -67,6 +68,12 @@ function App() {
               <FreelancerNavbar />
               <FreelancerContractPage />
             </Route>
+
+            <Route exct path="/makeprofile">
+              <FreelancerNavbar />
+              <MakeProfile/>
+            </Route>
+
 
             <Route path="*">
               <Navbar />

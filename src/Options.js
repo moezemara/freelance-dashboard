@@ -1,6 +1,8 @@
 var CategoriesList = ['web development', 'artificial intellegence', 'machine learning',
 'wireframing', 'communication','software development','front end', 'back end','Do any thing'
-]
+];
+
+var GenderList = ['male','female','others'];
 
 
 const getCategoriesList = ()=>{
@@ -9,10 +11,10 @@ const getCategoriesList = ()=>{
  );
 }
 
-const getCategoriesList2 = ()=>{
+const getGenderList = ()=>{ //neglect this now
     return (  
-        CategoriesList.map((category)=>(<option>{category}</option>))
+        GenderList.map((gender)=>(<option>{gender}</option>))
  );
 }
 
-export {getCategoriesList, getCategoriesList2}
+export {getCategoriesList, getGenderList}

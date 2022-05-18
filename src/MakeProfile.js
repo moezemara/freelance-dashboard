@@ -1,11 +1,9 @@
 import {getCategoriesList, getGenderList} from './Options.js'
 
-
-const ProfileSettings = () => {
-
+const MakeProfile = () => {
     return (  
-        <div className="profilesettings">
-            <h1>Profile settings</h1>
+        <div className="profilesettings"> {/*let its name profilesettings as changing its name make a lot of trouble in styling*/}
+            <h1>Make your profile</h1>
             <form>
                 <div>
                     <input type="text" placeholder="Job Title"/>
@@ -23,12 +21,15 @@ const ProfileSettings = () => {
                 <div>
                     <input type="text" placeholder="Skills"/>
                 </div>
+                <div>
+                    <input type="text" placeholder="Pay rate($/hr)"/>
+                </div>
 
                 <div>
                 <input placeholder="address"/>
                 </div>
 <div className="name_part">
-<input type="text" style={{marginRight:20}} placeholder="phone"/>
+<input type="text" style={{marginRight:10}} placeholder="phone"/>
 
 <select>
 <option value="" disabled selected hidden>Gender</option>                        
@@ -39,7 +40,7 @@ const ProfileSettings = () => {
                 <div className="profile-attachmenents">
                     <input type="file"/>
                 </div>                
-                <button>Done</button>
+                <button>make profile</button>
 
             </form>
 
@@ -47,4 +48,4 @@ const ProfileSettings = () => {
     );
 }
  
-export default ProfileSettings;
+export default MakeProfile;
