@@ -17,7 +17,9 @@ const cookies = new Cookies();
 
 
 const ProfileMainPage = () => {
-    const [data,setData] = useState({});
+    const [loaded,setLoaded] = useState(0);
+    const [profileData,setProfileData] = useState({});
+    const [profiles,setProfiles] = useState([]);
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
 
@@ -31,11 +33,18 @@ const ProfileMainPage = () => {
     
 
     useEffect(()=>{
-        console.log(cookies.getAll())
+        setAccountType(cookies.getAll().type);
         //let cookieObj = JSON.parse(document.cookie);
         //setAccountType(cookieObj.type);
 
-        axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{setData(res);console.log(res)});
+        axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+            if(res.data.success===1){
+                setProfileData(res.data.message.profile);
+                setProfiles(res.data.message.ids);
+            }
+            else{
+                window.location = '/login';
+            }});
     },[]);
 
     const handleBtnClick = (btnState)=>{
@@ -77,6 +86,7 @@ const ProfileMainPage = () => {
     }
 
     return (
+        
         <div>
             {(accountType==='C') && <ClientNavbar/>}
             {(accountType==='F') && <FreelancerNavbar/>}
@@ -84,15 +94,18 @@ const ProfileMainPage = () => {
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
                         <ProfileCard 
-                        profileName="M Ashmawy" country="Egypt" skills="python, cpp, xxx" payRate='50' rating ='4.9'
+                        profileName="M Ashmawy" country="Egypt" skills={profileData.skills} payRate={profileData.pay_rate} rating ={profileData.rating}
                         profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus expedita voluptates eius ea esse ducimus sint adipisci vero provident laborum repellendus consequatur a odit."
+                        description={profileData.description}
                         />
                     </div>
                     { (1==1) &&
                         <div className="mainpagelistofprofiles">
                             <h2>Profiles:</h2>
-                            <BriefProfileCard title="another profile" key={1} id='1'/>
+                            { profiles.map((profile)=>(
+                                <BriefProfileCard title={profile.title} id={profile.profile_id} key={profile.profile_id}/>
+                            ))
+                            }
                         </div>
                     }
                 </div>
@@ -104,11 +117,11 @@ const ProfileMainPage = () => {
                     <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
                 </div>
                 <div className='activities-page-content'>
-                    {}
                     {pageContent}
                 </div>
             </div>
         </div>
+    
     );
 }
  
