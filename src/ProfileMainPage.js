@@ -4,6 +4,8 @@ import ProposalCard from "./ProposalCard";
 import ProfileCard from "./ProfileCard";
 import ClientNavbar from "./ClientNavbar";
 import FreelancerNavbar from "./FreelancerNavbar";
+import BriefProfileCard from "./BriefProfileCard";
+import axios from "./axios.js"
 
 const arr = [{'id':1,title:'Proposal 1',freelancerName:'someone',freelancerRate:'5',
 coverLetter:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, eum non autem porro aut consequatur corrupti possimus adipisci veritatis quisquam vero illum fugiat rerum itaque modi iste, accusantium distinctio dolores sint, ducimus officiis perspiciatis temporibus omnis. Non possimus a nisi aut optio soluta sint, recusandae similique quia reiciendis eos omnis error culpa in iure libero architecto nobis voluptates molestias porro repudiandae! Voluptates sunt aliquam debitis culpa reprehenderit. Nemo non natus voluptate praesentium! Maxime, unde quo beatae, fuga aut similique assumenda totam dignissimos et labore possimus id? Incidunt mollitia soluta nemo consequatur, autem assumenda reiciendis ratione illum amet quidem ut facilis.",
@@ -13,6 +15,7 @@ const my_contracts = [{id:1,clientName:'someone',freelancerName:'someone else',s
 
 const ProfileMainPage = () => {
     
+    const [data,setData] = useState({});
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
 
@@ -22,13 +25,15 @@ const ProfileMainPage = () => {
 
     const [accountType,setAccountType] = useState('');
 
+
+    
+
     useEffect(()=>{
         let cookieObj = JSON.parse(document.cookie);
         setAccountType(cookieObj.type);
-        console.log(accountType);
-        setProposals(arr);
-        setContractss(my_contracts);
-    });
+
+        axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{setData(res);console.log(res)});
+    },[]);
 
     const handleBtnClick = (btnState)=>{
         //setting button color to the appropriate theme
@@ -37,7 +42,6 @@ const ProfileMainPage = () => {
         setButtonClasses(newState);
         setContent(btnState);
     }
-    
 
     const getProposalsList = (myproposals)=>{
          return (  
@@ -74,14 +78,22 @@ const ProfileMainPage = () => {
             {(accountType==='C') && <ClientNavbar/>}
             {(accountType==='F') && <FreelancerNavbar/>}
             <div className="activitiespage">
-                <div>
-                <ProfileCard 
-                profileName="M Ashmawy" country="Egypt" skills="python, cpp, xxx" payRate='50' rating ='4.9'
-                profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus expedita voluptates eius ea esse ducimus sint adipisci vero provident laborum repellendus consequatur a odit."
-                />
-
+                <div style={{display:'flex'}}>
+                    <div style={{marginRight:10,minWidth:600}}>
+                        <ProfileCard 
+                        profileName="M Ashmawy" country="Egypt" skills="python, cpp, xxx" payRate='50' rating ='4.9'
+                        profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
+                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus expedita voluptates eius ea esse ducimus sint adipisci vero provident laborum repellendus consequatur a odit."
+                        />
+                    </div>
+                    { (1==1) &&
+                        <div className="mainpagelistofprofiles">
+                            <h2>Profiles:</h2>
+                            <BriefProfileCard title="another profile" key={1} id='1'/>
+                        </div>
+                    }
                 </div>
+                
                 <div className="activitiesNavbar">
                     <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>
                     <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>
@@ -89,6 +101,7 @@ const ProfileMainPage = () => {
                     <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
                 </div>
                 <div className='activities-page-content'>
+                    {}
                     {pageContent}
                 </div>
             </div>
