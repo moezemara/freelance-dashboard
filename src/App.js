@@ -17,7 +17,6 @@ import ClientContractPage from "./ClientContractPage";
 import AppliedProposals from "./AppliedProposals";
 import FreelancerContractPage from "./FreelancerContractPage";
 
-
 function App() {
   return (
     <Router>
