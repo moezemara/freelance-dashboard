@@ -36,7 +36,9 @@ const ProfileMainPage = () => {
     
 
     useEffect(()=>{
-         getAccountType();
+        if(accountType !== 'F' || accountType !== 'C'){
+            getAccountType();
+        }
         //let cookieObj = JSON.parse(document.cookie);
         //setAccountType(cookieObj.type);
         if(accountType==='F'){
@@ -44,6 +46,7 @@ const ProfileMainPage = () => {
                 if(res.data.success===1){
                     setProfileData(res.data.message.profile);
                     setProfiles(res.data.message.ids);
+                    console.log("got data")
                 }
                 else{//////////////////////////////////////////////////////////////////////////////////************** */
                     window.location = '/login';
@@ -60,7 +63,7 @@ const ProfileMainPage = () => {
                     window.location = '/login';
                 }},[]);
         }
-    });
+    },[accountType]);
 
     const handleBtnClick = (btnState)=>{
         //setting button color to the appropriate theme
