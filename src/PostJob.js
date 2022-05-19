@@ -4,8 +4,6 @@ import axios from "./axios.js";
 
 const PostJob = () => {
 
-
-
     const [title,setTitle] = useState('');
     const [category,setCategory] = useState('');
     const [experience_level,setExperienceLevel] = useState('');
@@ -16,8 +14,7 @@ const PostJob = () => {
     const [attachment, setAttachment] = useState('');
     const [client_profile_id, setClientProfileId] = useState('');
     
-
-    async function handleSignUp(){
+    async function handlepostJob(){
         console.log(process.env.BASE_API_URL)
         const data = {
             'title':title,
@@ -79,12 +76,14 @@ const PostJob = () => {
                 <div>
                 <label><b> Description</b></label>
                     <textarea rows = "5" cols = "60" 
-                    placeholder="Write the description of your job here..."></textarea>
+                    placeholder="Write the description of your job here..."
+                    value={description} onInput={e=>setDescription(e.target.value)}></textarea>
                 <hr/>
                 </div>                
                 <div>
                     <label><b>Skills</b></label>
-                    <input type="text" placeholder="Skill, Skill, Skill, Skill"/>
+                    <input type="text" placeholder="Skill, Skill, Skill, Skill"
+                    value={skills} onInput={e=>setSkills(e.target.value)}/>
                 </div>
                 <hr/>
                 <div>
@@ -92,20 +91,21 @@ const PostJob = () => {
 <table style={{width:'100%'}}><tr><td>
 
 
-                    <label><b>Pay rate</b></label>
-                    <input type="text"placeholder="pay rate ($$/hour)"/>
+                    <label><b>Expected price</b></label>
+                    <input type="text"placeholder="Expected price $$" 
+                    value={expected_price} onInput={e=>setExpectedPrice(e.target.value)}/>
                     </td>
                     <td style={{width:'5%'}}></td>
                     <td>
                     <label><b>Estimated total work time</b></label>
-                    <input type="text" placeholder="Estimated work Time (hours)"/>
+                    <input type="text" placeholder="Estimated work Time (hours)"
+                    value={estimated_time} onInput={e=>setEstimatedTime(e.target.value)}/>
                     
                     </td></tr></table>
                 </div>
                 
-                
                 <hr/>
-                <button>Post Job</button>
+                <button type="button" onClick={handlepostJob}>Post Job</button>
             </form>
         </div>
     );
