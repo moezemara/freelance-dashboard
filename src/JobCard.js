@@ -14,7 +14,7 @@ const JobCard = (props) => {
                 <p><b>Category:</b>{category}</p>
                 <p><b>Skills:</b>{skills}</p>
                 <p><b>Attachments:</b>
-                <a style = {{marginLeft:10}} href={attatchment}> <button>attatchment here</button></a>
+                <a style = {{marginLeft:10}} href={attatchment}> <button className="attachments-buttons">attatchment here</button></a>
 
                 </p>
 

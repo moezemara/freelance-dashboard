@@ -1,13 +1,16 @@
 
 import dollarSymbol from "./src-images/dollar.png";
-import JobCard from "./JobCard";
+import JobCardForProposal from "./JobCardForProposal";
 var totalMoney = 1000;
 const ProposalPage = () => {
   return (
     <div >
       <div className="job-card-of-proposal">
-<JobCard job={{}}/>
-      </div>
+<JobCardForProposal job={{title:"Job Card Example", price:"1800", skills:"api, dashboard, web dev",category:"web",
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat molestias iste corrupti nemo modi consequatur consectetur accusantium praesentium laboriosam nostrum, assumenda quaerat quas at expedita, quos cumque repellendus pariatur deleniti. Incidunt similique consequatur, modi tempora numquam, dolorem soluta porro at magni illo dignissimos repellendus amet pariatur! Minus, quod quibusdam!",
+    attatchment:"https://www.zewailcity.edu.eg/media-library/PDFs/Academic_Calendar_2021-2022__2022-02-16052857.pdf"}
+    }/>
+      </div>  
 
       <div className="proposalpage">
         <div></div>
