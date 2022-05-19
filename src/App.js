@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Home from "./Home";
+import HomeWide from "./HomeWide";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./SignUp";
@@ -73,6 +74,9 @@ function App() {
               <MakeProfile/>
             </Route>
 
+            <Route exct path="/h">
+              <HomeWide/>
+            </Route>
 
             <Route path="*">
               <Page404 />
