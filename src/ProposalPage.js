@@ -1,12 +1,12 @@
 
 import dollarSymbol from "./src-images/dollar.png";
+import JobCard from "./JobCard";
 var totalMoney = 1000;
 const ProposalPage = () => {
   return (
-    <div>
-      <div className="proposalpage">
-        <div></div>
-        <h2>here is a card to preview the job</h2>
+    <div >
+      <div className="job-card-of-proposal">
+<JobCard job={{}}/>
       </div>
 
       <div className="proposalpage">
