@@ -42,7 +42,7 @@ const ProfileMainPage = () => {
                 setProfileData(res.data.message.profile);
                 setProfiles(res.data.message.ids);
             }
-            else{
+            else{//////////////////////////////////////////////////////////////////////////////////************** */
                 window.location = '/login';
             }});
     },[]);
@@ -85,6 +85,17 @@ const ProfileMainPage = () => {
             pageContent=getProposalsList(proposals);
     }
 
+
+
+    
+    const convertSkillsToButtons = (skillsStr)=>{
+        var skillsList = skillsStr.split(", ")
+        return (  
+            skillsList.map((skill)=>(<button className="attachments-buttons">{skill}</button>))
+     );
+    }
+
+
     return (
         
         <div>
@@ -94,7 +105,7 @@ const ProfileMainPage = () => {
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
                         <ProfileCard 
-                        profileName="M Ashmawy" country="Egypt" skills={profileData.skills} payRate={profileData.pay_rate} rating ={profileData.rating}
+                        profileName="M Ashmawy" country="Egypt" skills={convertSkillsToButtons(profileData.skills)} payRate={profileData.pay_rate} rating ={profileData.rating}
                         profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
                         description={profileData.description}
                         />

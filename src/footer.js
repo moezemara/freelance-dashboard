@@ -17,8 +17,8 @@ const Footer = () => {
 </tr>
 
 <tr>
-<td><a href="/clientprofile">Client profile</a></td>
-<td><a href="/freelancerprofile">freelancer profile</a></td>
+<td><a href="/profile">Profile</a></td>
+<td><a href="/makeprofile">Make profile</a></td>
 <td><a href="/proposalpage">proposal page</a></td>
 <td><a href="/testfreelancercontract">test freelancer contract</a></td>
 </tr>
