@@ -69,14 +69,12 @@ function App() {
               <FreelancerContractPage />
             </Route>
 
-            <Route exct path="/makeprofile">
-              <FreelancerNavbar />
+            <Route exct path="/createprofile">
               <MakeProfile/>
             </Route>
 
 
             <Route path="*">
-              <Navbar />
               <Page404 />
             </Route>
           </Switch>

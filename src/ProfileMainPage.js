@@ -29,23 +29,38 @@ const ProfileMainPage = () => {
 
     const [accountType,setAccountType] = useState('');
 
-
+    async function getAccountType(){
+        const type = await cookies.getAll().type;
+        await setAccountType(type);
+    }
     
 
     useEffect(()=>{
-        setAccountType(cookies.getAll().type);
+         getAccountType();
         //let cookieObj = JSON.parse(document.cookie);
         //setAccountType(cookieObj.type);
-
-        axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
-            if(res.data.success===1){
-                setProfileData(res.data.message.profile);
-                setProfiles(res.data.message.ids);
-            }
-            else{//////////////////////////////////////////////////////////////////////////////////************** */
-                window.location = '/login';
-            }});
-    },[]);
+        if(accountType==='F'){
+            axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    setProfileData(res.data.message.profile);
+                    setProfiles(res.data.message.ids);
+                }
+                else{//////////////////////////////////////////////////////////////////////////////////************** */
+                    window.location = '/login';
+                }},[]);
+        }
+        else if(accountType==='C'){
+            axios.get('client/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    //setProfileData(res.data.message.profile);
+                    setProfiles(res.data.message.ids);
+                    console.log(res);
+                }
+                else{//////////////////////////////////////////////////////////////////////////////////************** */
+                    window.location = '/login';
+                }},[]);
+        }
+    });
 
     const handleBtnClick = (btnState)=>{
         //setting button color to the appropriate theme
@@ -87,14 +102,6 @@ const ProfileMainPage = () => {
 
 
 
-    
-    const convertSkillsToButtons = (skillsStr)=>{
-        var skillsList = skillsStr.split(", ")
-        return (  
-            skillsList.map((skill)=>(<button className="attachments-buttons">{skill}</button>))
-     );
-    }
-
 
     return (
         
@@ -105,12 +112,12 @@ const ProfileMainPage = () => {
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
                         <ProfileCard 
-                        profileName="M Ashmawy" country="Egypt" skills={convertSkillsToButtons(profileData.skills)} payRate={profileData.pay_rate} rating ={profileData.rating}
+                        profileName="M Ashmawy" country="Egypt" skills={profileData.skills} payRate={profileData.pay_rate} rating ={profileData.rating}
                         profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
                         description={profileData.description}
                         />
                     </div>
-                    { (1==1) &&
+                    { (profiles) &&
                         <div className="mainpagelistofprofiles">
                             <h2>Profiles:</h2>
                             { profiles.map((profile)=>(

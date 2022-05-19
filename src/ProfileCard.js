@@ -7,7 +7,7 @@ const ProfileCard = (props) => {
 var profileName = props.profileName;
 var country = props.country;
 var profilePictureLink = props.profilePictureLink;
-var skills = props.skills;
+var skills = String(props.skills);
 var payRate = props.payRate;
 var rating = props.rating;
 var description = props.description
