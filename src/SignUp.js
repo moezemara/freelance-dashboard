@@ -21,7 +21,7 @@ const SignUp = () => {
     const [sex, setSex] = useState('');
     
     //for local validation
-
+    
     const [confirmPassword, setConfirmPassword] = useState('')
 
 
