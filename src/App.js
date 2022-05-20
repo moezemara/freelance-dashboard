@@ -19,6 +19,7 @@ import AppliedProposals from "./AppliedProposals";
 import FreelancerContractPage from "./FreelancerContractPage";
 import MakeProfile from "./MakeProfile";
 import ProfilePage from "./ProfilePage";
+import ActivitiesPage from "./ActivitiesPage";
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
+            <Route exact path="/activitiespage/">
+              <ActivitiesPage/>
+            </Route>
+
             <Route exact path="/proposalpage">
               <FreelancerNavbar />
               <ProposalPage />
