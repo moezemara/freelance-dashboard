@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const ClientNavbar = () => {
+const ClientNavbar = (props) => {
+
+    const profile_id = props.profile_id;
 
 
     async function handleLogout(){
@@ -14,7 +16,7 @@ const ClientNavbar = () => {
         <a href="/profile"><h2>Freelanco</h2></a>
         <a href="/postjob">Post a Job</a>
         <div className="links">
-            <a href="/profilesettings">Settings</a>
+            <a href={`/profilesettings/${profile_id}`}>Settings</a>
             <a onClick={handleLogout}>Log Out</a>
         </div>
     </nav>

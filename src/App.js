@@ -49,7 +49,7 @@ function App() {
               <ClientNavbar />
               <PostJob />
             </Route>
-            <Route exact path="/profilesettings">
+            <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
             <Route exact path="/proposalpage">

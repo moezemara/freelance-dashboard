@@ -17,12 +17,12 @@ const cookies = new Cookies();
 
 
 const ProfileMainPage = () => {
-    const [loaded,setLoaded] = useState(0);
-    const [profileData,setProfileData] = useState({});
+    
+    const [profileData,setProfileData] = useState({profile:{}});
     const [profiles,setProfiles] = useState([]);
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
-
+    const [activeProfileId, setActiveProfileId] = useState('');
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
 
     const [content, setContent] = useState('appliedproposals');
@@ -44,10 +44,12 @@ const ProfileMainPage = () => {
         if(accountType==='F'){
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
                 if(res.data.success===1){
-                    setProfileData(res.data.message.profile);
+                    setActiveProfileId(res.data.message.active_id);
+                    setProfileData(res.data.message);
                     setProfiles(res.data.message.ids);
+                    console.log(res);
                 }
-                else{//////////////////////////////////////////////////////////////////////////////////************** */
+                else{
                     window.location = '/login';
                 }},[]);
         }
@@ -55,10 +57,14 @@ const ProfileMainPage = () => {
             axios.get('client/profile/',{ withCredentials: true}).then(res=>{
                 if(res.data.success===1){
                     //setProfileData(res.data.message.profile);
+                    console.log(res);
+                    setActiveProfileId(res.data.message.profile_id);
+
                     setProfiles(res.data.message.ids);
                 }
-                else{//////////////////////////////////////////////////////////////////////////////////************** */
-                    window.location = '/login';
+                else{
+                    console.log(res);
+                    //window.location = '/login';
                 }},[]);
         }
     },[accountType]);
@@ -102,20 +108,18 @@ const ProfileMainPage = () => {
     }
 
 
-
-
     return (
         
         <div>
-            {(accountType==='C') && <ClientNavbar/>}
-            {(accountType==='F') && <FreelancerNavbar/>}
+            {(accountType==='C') && <ClientNavbar profile_id={activeProfileId}/>}
+            {(accountType==='F') && <FreelancerNavbar profile_id={activeProfileId}/>}
             <div className="activitiespage">
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
                         <ProfileCard 
-                        profileName="M Ashmawy" country="Egypt" skills={profileData.skills} payRate={profileData.pay_rate} rating ={profileData.rating}
+                        profileName="M Ashmawy" country="Egypt" skills={profileData.profile.skills} payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
                         profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
-                        description={profileData.description}
+                        description={profileData.profile.description}
                         />
                     </div>
                     { (profiles) &&

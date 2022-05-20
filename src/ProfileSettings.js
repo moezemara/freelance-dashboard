@@ -38,8 +38,15 @@ const ProfileSettings = () => {
                 
                 <div className="profile-attachmenents">
                     <input type="file"/>
-                </div>                
-                <button>Done</button>
+                </div>
+                <div>
+                    <label>Status:</label> 
+                    <button type="button">Activate</button>
+                </div>
+                <div>
+                 <button type="button">Delete</button>
+                </div>
+                <button type="button">Done</button>
 
             </form>
 

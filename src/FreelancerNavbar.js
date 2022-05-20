@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const FreelancerNavbar = () => {
+const FreelancerNavbar = (props) => {
+
+    const profile_id = props.profile_id;
+
 
     async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
@@ -14,7 +17,7 @@ const FreelancerNavbar = () => {
             <a href="/browsejobs">Find work</a>
             <a href="/createprofile">Add Profile</a>
             <div className="links">
-                <a href="/profilesettings">Settings</a>
+                <a href={`/profilesettings/${profile_id}`}>Settings</a>
                 <a onClick={handleLogOut}>Log Out</a>
             </div>
         </nav>
