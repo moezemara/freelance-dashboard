@@ -26,6 +26,19 @@ const ProfileSettings = () => {
         })
     }
 
+    
+    const handleDelete = ()=>{
+        var urlRoot = '';
+        if(accountType==='F') urlRoot='freelancer';
+        else if(accountType==='C') urlRoot = 'client';
+
+        axios.post(`${urlRoot}/profile/${profile_id}/delete`,{ withCredentials: true}).then(res=>{
+            if(res.data.success===1){
+                window.location = '/profile/';
+            }
+        })
+    }
+
     useEffect(()=>{
         if(accountType !== 'F' || accountType !=='C'){
             setAccountType(cookies.getAll().type);
@@ -76,7 +89,7 @@ const ProfileSettings = () => {
                     <button onClick={handleActivate} type="button">Activate</button>
                 </div>
                 <div>
-                 <button type="button">Delete</button>
+                 <button onClick={handleDelete} type="button">Delete</button>
                 </div>
                 <button type="button">Done</button>
 
