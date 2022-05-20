@@ -1,9 +1,26 @@
+import { useEffect, useState } from 'react';
 import {getCategoriesList, getGenderList} from './Options.js'
+import Cookies from 'universal-cookie';
+import FreelancerNavbar from './FreelancerNavbar.js';
+import ClientNavbar from './ClientNavbar.js';
+import { useParams } from 'react-router-dom';
 
 
 const ProfileSettings = () => {
+    const [accountType, setAccountType] = useState();
+    const {profile_id} = useParams();
+    const cookies = new Cookies();
+
+    useEffect(()=>{
+        if(accountType !== 'F' || accountType !=='C'){
+            setAccountType(cookies.getAll().type);
+        }
+    },[accountType]);
 
     return (  
+        <div>
+            {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
+            {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
         <div className="profilesettings">
             <h1>Profile settings</h1>
             <form>
@@ -50,6 +67,7 @@ const ProfileSettings = () => {
 
             </form>
 
+        </div>
         </div>
     );
 }
