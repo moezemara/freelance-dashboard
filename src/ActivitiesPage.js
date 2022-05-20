@@ -21,7 +21,6 @@ const ActivitiesPage = ()=>{
         var newState = {'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''};
         newState[btnState] = 'activebutton';
         setButtonClasses(newState);
-        setContent(btnState);
     }
 
     return(

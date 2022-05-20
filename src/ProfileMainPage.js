@@ -14,7 +14,7 @@ const cookies = new Cookies();
 
 const ProfileMainPage = () => {
     
-    const [profileData,setProfileData] = useState({profile:{}});
+    const [profileData,setProfileData] = useState({account:{},profile:{}});
     const [profiles,setProfiles] = useState([]);
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);

@@ -13,7 +13,7 @@ const ProfileSettings = () => {
     const cookies = new Cookies();
     const [ActivateMessage,setActivateMessage] = useState('');
 
-
+    
     const handleActivate = ()=>{
         var urlRoot = '';
         if(accountType==='F') urlRoot='freelancer';
