@@ -4,13 +4,14 @@ import Cookies from 'universal-cookie';
 import FreelancerNavbar from './FreelancerNavbar.js';
 import ClientNavbar from './ClientNavbar.js';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from "./axios.js"
 
 
 const ProfileSettings = () => {
     const [accountType, setAccountType] = useState();
     const {profile_id} = useParams();
     const cookies = new Cookies();
+    const [ActivateMessage,setActivateMessage] = useState('');
 
 
     const handleActivate = ()=>{
@@ -19,7 +20,9 @@ const ProfileSettings = () => {
         else if(accountType==='C') urlRoot = 'client';
 
         axios.post(`${urlRoot}/profile/${profile_id}/activate`,{ withCredentials: true}).then(res=>{
-            console.log(res);
+            if(res.data.success===1){
+                setActivateMessage("Successfully Activated!")
+            }
         })
     }
 
@@ -69,7 +72,7 @@ const ProfileSettings = () => {
                     <input type="file"/>
                 </div>
                 <div>
-                    <label>Status:</label> 
+                    <label style={{color:'green'}}>{ActivateMessage}</label> 
                     <button onClick={handleActivate} type="button">Activate</button>
                 </div>
                 <div>
