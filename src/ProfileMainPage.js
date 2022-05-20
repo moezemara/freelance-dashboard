@@ -128,7 +128,9 @@ const ProfileMainPage = () => {
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
                         <ProfileCard 
-                        profileName="M Ashmawy" country="Egypt" skills={profileData.profile.skills} payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
+                        profileName={profileData.account.first_name + " " + profileData.account.last_name }
+                        country={profileData.account.country} skills={profileData.profile.skills}
+                        payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
                         profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
                         description={profileData.profile.description}
                         />
