@@ -654,3 +654,30 @@ text-align: left;
   background-color: black;
   border-radius: 4px;
 }
+
+.profilepage{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  max-width: 800px;
+  margin:0 auto;
+}
+
+.profilepageactivitiesNavbar{
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+  width:800px;
+}
+
+.profilepageactivitiesNavbar  button{
+  background-color: white;
+  color: black;
+  padding: 1%;
+  width: 200px;
+}
+
+.profilepageactivitiesNavbar  button:hover{
+  background-color: black;
+  color: white;
+}

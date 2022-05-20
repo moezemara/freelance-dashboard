@@ -9,6 +9,9 @@ const ProfilePage = ()=>{
     const {profile_id} = useParams();
     const [myData, setMyData] = useState({profile:{}});
 
+    const handleEdit = ()=>{
+        window.location = `/profilesettings/${profile_id}`;
+    }
 
     useEffect(()=>{
         axios.get(`freelancer/profile/${profile_id}`,{ withCredentials: true}).then(res=>{
@@ -24,22 +27,20 @@ const ProfilePage = ()=>{
     },[]);
 
     return(
-        <div className="profilepage">
-            <FreelancerNavbar/>
+    <div style={{alignItems:'center',textAlign:'center',alignContent:'center'}}>
+        <FreelancerNavbar/>
+        <div className="profilepage">        
             {myData.profile.title && <ProfileCard profileTitle={myData.profile.title} profileName={myData.account.first_name+ " "+myData.account.last_name}
             country={myData.account.country} profileImageLink={myData.account.profile_picture} payRate={myData.profile.pay_rate}
             rating={myData.profile.rating} description={myData.profile.description} skills={myData.profile.skills}/> 
             }
-            {myData.accessable &&
-                <button>Activate</button>
-            }
-             {myData.accessable &&
-                <button>Delete</button>
-            }
-             {myData.accessable &&
-                <button>Edit</button>
-            }
+            <div className="profilepageactivitiesNavbar">
+                {myData.accessable &&
+                    <button onClick={handleEdit}>Edit</button>
+                }
+            </div>
         </div>
+    </div>
     );
 }
 
