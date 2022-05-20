@@ -1,0 +1,4 @@
+cookies in post job
+how to get the ID of something (to post the proposal with job id)
+from browsejobs (apply)-->proposal //how to pass the job ID and how to get the data of the job to display
+let's make table skills
