@@ -84,16 +84,16 @@ const ProfileSettings = () => {
                 <div className="profile-attachmenents">
                     <input type="file"/>
                 </div>
-                <div>
-                    <label style={{color:'green'}}>{ActivateMessage}</label> 
-                    <button onClick={handleActivate} type="button">Activate</button>
-                </div>
-                <div>
-                 <button onClick={handleDelete} type="button">Delete</button>
-                </div>
+                
                 <button type="button">Done</button>
+                
 
             </form>
+            <div className="profilepageactivitiesNavbar">
+                    <button onClick={handleActivate} type="button">Activate</button>
+                    <button onClick={handleDelete} type="button">Delete</button>
+                </div>
+            <label style={{color:'green'}}>{ActivateMessage}</label> 
 
         </div>
         </div>

@@ -4,7 +4,7 @@ import JobCard from "./JobCard";
 
 
 
-jobs_list =
+const jobs_list =
 [
     {title:"Job Card Example", price:"1800", skills:"api, dashboard, web dev",category:"web",
     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat molestias iste corrupti nemo modi consequatur consectetur accusantium praesentium laboriosam nostrum, assumenda quaerat quas at expedita, quos cumque repellendus pariatur deleniti. Incidunt similique consequatur, modi tempora numquam, dolorem soluta porro at magni illo dignissimos repellendus amet pariatur! Minus, quod quibusdam!",
@@ -23,7 +23,7 @@ const BrowseJobs = () => {
         
         axios.get('freelancer/browsejobs/',{ withCredentials: true}).then(res=>{
             if(res.data.success===1){
-                setJobs(res.data.message.jobs_list);
+                //setJobs(res.data.message.jobs_list);
                 console.log(res);
             }
             else{
