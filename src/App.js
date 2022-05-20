@@ -18,6 +18,7 @@ import ClientContractPage from "./ClientContractPage";
 import AppliedProposals from "./AppliedProposals";
 import FreelancerContractPage from "./FreelancerContractPage";
 import MakeProfile from "./MakeProfile";
+import ProfilePage from "./ProfilePage";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route exact path="/profile">
               <ProfileMainPage/>
+            </Route>
+            <Route exact path="/profile/:profile_id">
+                <ProfilePage/>
             </Route>
             <Route exact path="/postjob">
               <ClientNavbar />

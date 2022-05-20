@@ -46,7 +46,6 @@ const ProfileMainPage = () => {
                 if(res.data.success===1){
                     setProfileData(res.data.message.profile);
                     setProfiles(res.data.message.ids);
-                    console.log("got data")
                 }
                 else{//////////////////////////////////////////////////////////////////////////////////************** */
                     window.location = '/login';
@@ -57,7 +56,6 @@ const ProfileMainPage = () => {
                 if(res.data.success===1){
                     //setProfileData(res.data.message.profile);
                     setProfiles(res.data.message.ids);
-                    console.log(res);
                 }
                 else{//////////////////////////////////////////////////////////////////////////////////************** */
                     window.location = '/login';

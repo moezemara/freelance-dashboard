@@ -4,7 +4,7 @@ const FreelancerNavbar = () => {
 
     async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
-        const response = await axios.post('user/logout').then((res)=>{window.location = '/';});
+        const response = await axios.post('user/logout',).then((res)=>{window.location = '/';});
         console.log(response);
     }
 

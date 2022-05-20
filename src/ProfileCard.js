@@ -4,6 +4,7 @@ import locationLogo from './src-images/location.jpg'
 
 const ProfileCard = (props) => {
 
+var profileTitle = props.profileTitle;    
 var profileName = props.profileName;
 var country = props.country;
 var profilePictureLink = props.profilePictureLink;
@@ -16,7 +17,7 @@ var description = props.description
 
     return (  
         <div className="profilecard">
-            <h1>Profile view</h1>
+            <h1>{profileTitle}</h1>
 
 
 <td>

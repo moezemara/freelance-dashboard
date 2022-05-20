@@ -15,7 +15,7 @@ const Page404 = () => {
         if(type==='C') setNavbar(<ClientNavbar/>);
         else if(type==="F") setNavbar(<FreelancerNavbar/>);
         else setNavbar(<Navbar/>);
-    });
+    },[type]);
 
     return (
         <div>
