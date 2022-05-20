@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "./axios.js"
 
 const FreelancerNavbar = (props) => {
 
@@ -7,8 +7,9 @@ const FreelancerNavbar = (props) => {
 
     async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
-        const response = await axios.post('user/logout',).then((res)=>{window.location = '/';});
-        console.log(response);
+        axios.post('user/logout',{ withCredentials: true}).then((res)=>{
+            if(res.data.success===1) window.location='/login';
+        });
     }
 
     return (

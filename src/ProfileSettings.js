@@ -4,12 +4,24 @@ import Cookies from 'universal-cookie';
 import FreelancerNavbar from './FreelancerNavbar.js';
 import ClientNavbar from './ClientNavbar.js';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
 const ProfileSettings = () => {
     const [accountType, setAccountType] = useState();
     const {profile_id} = useParams();
     const cookies = new Cookies();
+
+
+    const handleActivate = ()=>{
+        var urlRoot = '';
+        if(accountType==='F') urlRoot='freelancer';
+        else if(accountType==='C') urlRoot = 'client';
+
+        axios.post(`${urlRoot}/profile/${profile_id}/activate`,{ withCredentials: true}).then(res=>{
+            console.log(res);
+        })
+    }
 
     useEffect(()=>{
         if(accountType !== 'F' || accountType !=='C'){
@@ -58,7 +70,7 @@ const ProfileSettings = () => {
                 </div>
                 <div>
                     <label>Status:</label> 
-                    <button type="button">Activate</button>
+                    <button onClick={handleActivate} type="button">Activate</button>
                 </div>
                 <div>
                  <button type="button">Delete</button>

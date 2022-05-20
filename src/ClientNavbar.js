@@ -1,14 +1,15 @@
-import axios from "axios";
+import axios from "./axios.js"
 
 const ClientNavbar = (props) => {
 
     const profile_id = props.profile_id;
 
 
-    async function handleLogout(){
+    async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
-        const response = await axios.post('user/logout').then((res)=>{window.location = '/';});
-        console.log(response);
+        axios.post('user/logout',{ withCredentials: true}).then((res)=>{
+            if(res.data.success===1) window.location='/login';
+        });
     }
 
     return ( 
@@ -19,7 +20,7 @@ const ClientNavbar = (props) => {
 
         <div className="links">
             <a href={`/profilesettings/${profile_id}`}>Settings</a>
-            <a onClick={handleLogout}>Log Out</a>
+            <a onClick={handleLogOut}>Log Out</a>
         </div>
     </nav>
      );
