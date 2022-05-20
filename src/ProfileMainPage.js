@@ -35,8 +35,7 @@ const ProfileMainPage = () => {
         if(accountType !== 'F' || accountType !== 'C'){
             getAccountType();
         }
-        //let cookieObj = JSON.parse(document.cookie);
-        //setAccountType(cookieObj.type);
+        
         if(accountType==='F'){
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
                 if(res.data.success===1){
@@ -59,8 +58,7 @@ const ProfileMainPage = () => {
                     setProfiles(res.data.message.ids);
                 }
                 else{
-                    console.log(res);
-                    //window.location = '/login';
+                    window.location = '/login';
                 }},[]);
         }
     },[accountType]);
@@ -74,13 +72,14 @@ const ProfileMainPage = () => {
 
         switch(btnState){
             case 'activecontracts':
-                axios.get("freelancer/contract/active",{ withCredentials: true}).then((res)=>{
+                axios.get(`contract/contract/${profileData.active_id}/active`,{ withCredentials: true}).then((res)=>{
                     console.log(1);
+                    console.log(profileData.active_id)
                     console.log(res);
                 });
                 break;
             case 'finishedcontracts':
-                axios.get("freelancer/contract/archived",{ withCredentials: true}).then((res)=>{
+                axios.get(`contract/contract/${profileData.active_id}/archived`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
                 });
             break;
