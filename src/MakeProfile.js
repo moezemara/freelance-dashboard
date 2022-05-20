@@ -1,7 +1,10 @@
+import FreelancerNavbar from './FreelancerNavbar.js';
 import {getCategoriesList, getGenderList} from './Options.js'
 
 const MakeProfile = () => {
     return (  
+        <div>
+        <FreelancerNavbar/>
         <div className="profilesettings"> {/*let its name profilesettings as changing its name make a lot of trouble in styling*/}
             <h1>Make your profile</h1>
             <form>
@@ -44,6 +47,7 @@ const MakeProfile = () => {
 
             </form>
 
+        </div>
         </div>
     );
 }
