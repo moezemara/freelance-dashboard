@@ -12,7 +12,6 @@ const PostJob = () => {
     const [expected_price,setExpectedPrice] = useState('');
     const [estimated_time, setEstimatedTime] = useState('');
     const [attachment, setAttachment] = useState('');
-    const [client_profile_id, setClientProfileId] = useState('');
     
     async function handlepostJob(){
         console.log(process.env.BASE_API_URL)
@@ -25,10 +24,9 @@ const PostJob = () => {
             'expected_price':expected_price,
             'estimated_time':estimated_time,
             'attachment':attachment,
-            'client_profile_id':client_profile_id,////////////////////will we use account id or profile id??
         }
 
-        const response = await axios.post('user/postjob', data)
+        const response = await axios.post('user/postjob', data, {withCredentials: true}) //for sending cookies
         console.log(response)
         if(response.data.success){
             document.cookie = JSON.stringify({'type':response.data.message.type})
