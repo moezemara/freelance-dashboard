@@ -1,6 +1,7 @@
-const Navbar = () => {
+
+const NavbarWide = () => {
     return (  
-         <nav className="navbar">
+         <nav className="navbarwide">
             <a href="/"><h2>HomieLancer</h2></a>
             <div className="links">
                 <a href="/login">Log In</a>
@@ -10,4 +11,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default NavbarWide;

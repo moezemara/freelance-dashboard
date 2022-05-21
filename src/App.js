@@ -84,6 +84,7 @@ function App() {
             </Route>
 
             <Route exct path="/h">
+            
               <HomeWide/>
             </Route>
 

@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import NavbarWide from "./NavbarWide";
 import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";
@@ -6,11 +6,10 @@ import img4 from "./src-images/logo4.png";
 import serviceImage from './src-images/service-logo.png';
 const HomeWide = () => {
   return (
-    <div>
-      {Navbar}
-    <div className="home">
+    <div className="homewide">
       
-      <div id="home-img">
+      <div id="homewide-img">
+      <NavbarWide/>
         <p>
           {" "}
           <br />
@@ -197,7 +196,6 @@ const HomeWide = () => {
       </div>
 
 
-    </div>
     </div>
   );
 };
