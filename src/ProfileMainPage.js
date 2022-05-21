@@ -16,13 +16,16 @@ const cookies = new Cookies();
 const ProfileMainPage = () => {
     
     const [profileData,setProfileData] = useState({account:{},profile:{}});
-    const [profiles,setProfiles] = useState();
+    const [profiles,setProfiles] = useState('');
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
     const [activeProfileId, setActiveProfileId] = useState('');
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
+    const [ButtonState,setButtonState] = useState('');
+    const [prevContent, setPrevContent] = useState('');
 
-    const [content, setContent] = useState('appliedproposals');
+
+    const [content, setContent] = useState('');
 
     const [accountType,setAccountType] = useState('');
 
@@ -62,27 +65,44 @@ const ProfileMainPage = () => {
         }
     },[accountType]);
 
-    const handleBtnClick = (btnState)=>{
+    async function handleBtnClick(btnState){
         //setting button color to the appropriate theme
-        var newState = {'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''};
+        var newState = {'jobsposted':'','appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''};
         newState[btnState] = 'activebutton';
         setButtonClasses(newState);
-        setContent(btnState);
+        setButtonState(btnState);
+        setContent();
+        
+    } 
 
-        switch(btnState){
+    useEffect(()=>{
+        if(!content){
+            setPrevContent(content);
+
+        switch(ButtonState){
             case 'activecontracts':
-                axios.get(`contract/contract/${profileData.active_id}/active`,{ withCredentials: true}).then((res)=>{
+                axios.get(`/contract/profile/${activeProfileId}/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
+                    if(res.data.success===1){
+                        //todo:: mapping with proposals that will be sent
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
                 });
                 break;
             case 'finishedcontracts':
-                axios.get(`contract/contract/${profileData.active_id}/archived`,{ withCredentials: true}).then((res)=>{
-                    console.log(res);
+                axios.get(`/contract/profile/${activeProfileId}/archived`,{ withCredentials: true}).then((res)=>{
+                    setContent(<h1>content</h1>)
+                    if(res.data.success===1){
+                        //todo:: mapping with proposals that will be sent
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
                 });
-            break;
-        }
-        
-    }
+                break;
+    }}},[ButtonState,content])
 
     const getProposalsList = (myproposals)=>{
          return (  
@@ -96,23 +116,6 @@ const ProfileMainPage = () => {
      );
    }
 
-    
-
-    let pageContent;
-
-    switch(content){
-        case 'joboffers':
-            pageContent = getContractsList(contracts);
-            break;
-        case 'activecontracts':
-            pageContent = getContractsList(contracts);
-            break;
-        case 'finishedcontracts':
-            pageContent = getContractsList(contracts);
-            break;
-        default:
-            pageContent=getProposalsList(proposals);
-    }
 
 
     return (
@@ -160,7 +163,7 @@ const ProfileMainPage = () => {
                     <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
                 </div>
                 <div className='activities-page-content'>
-                    {pageContent}
+                    {content}
                 </div>
             </div>
         </div>

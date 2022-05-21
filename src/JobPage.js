@@ -17,8 +17,8 @@ const JobPage = ()=>{
     const profile_id = cookies.getAll().active_id;
     const [jobData, setJobData] = useState();
     const [appliedProposalsData, setAppliedProposalsData] = useState();
-    const job_id = useParams();
-
+    const job_id = useParams().job_id;
+    const [resMessage, setResMessage] = useState();
 
 
     const [cover_letter, setCoverLetter] = useState("");
@@ -32,26 +32,29 @@ const JobPage = ()=>{
         const data = {
           cover_letter: cover_letter,
           price: price,
-          expected_date: expected_date,
-          attachment: attachment,
+          expected_date: (new Date(expected_date)).getTime(),
         };
     
-        const response = await axios.post("user/proposal", data, {
+        const response = await axios.post(`/proposal/apply/${job_id}`, data, {
           withCredentials: true,
         }); //for sending cookies
-        console.log(response);
+        setResMessage(response.data.message)
+
         if (response.data.success) {
           document.cookie = JSON.stringify({ type: response.data.message.type });
-          window.location = "/browsejobs";
+          console.log(response);
         } else {
           console.log("failed");
         }
       }
 
     useEffect(()=>{
-      axios.get(`/proposal/get/proposals/${job_id}`,{withCredentials:true}).then((res)=>{
-        console.log(res);
-      });
+
+      if(accountType==='C'){
+        axios.get(`/proposal/get/proposals/${job_id}`,{withCredentials:true}).then((res)=>{
+          console.log(res);
+        });
+      }
     },[])
 
     return(
@@ -158,6 +161,7 @@ const JobPage = ()=>{
           <button type="button" onClick={handleSendProposal}>
             submit proposal
           </button>{" "}
+          <label>{resMessage}</label>
         </form>
       </div>
     }

@@ -15,7 +15,6 @@ const ActivitiesPage = ()=>{
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':'','jobsposted':''}) 
     const [accountType, setAccountType] = useState();
     const cookies = new Cookies();
-    const [render,setRender] = useState('waiting');
     const [active_id,setActiveId] = useState('');
     const [ButtonState,setButtonState] = useState('');
 
@@ -40,7 +39,6 @@ const ActivitiesPage = ()=>{
         setButtonClasses(newState);
         setButtonState(btnState);
         setContent();
-        //handling requests to be done based on the button clicked
         
     } 
 
@@ -60,7 +58,7 @@ const ActivitiesPage = ()=>{
                     }
                 });
             case 'activecontracts':
-                axios.get(`/contract/${active_id}/active`,{ withCredentials: true}).then((res)=>{
+                axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
                     if(res.data.success===1){
                         //todo:: mapping with proposals that will be sent
@@ -71,7 +69,7 @@ const ActivitiesPage = ()=>{
                 });
                 break;
             case 'finishedcontracts':
-                axios.get(`/contract/${active_id}/archived`,{ withCredentials: true}).then((res)=>{
+                axios.get(`/contract/archived`,{ withCredentials: true}).then((res)=>{
                     setContent(<h1>content</h1>)
                     if(res.data.success===1){
                         //todo:: mapping with proposals that will be sent
