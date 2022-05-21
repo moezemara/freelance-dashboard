@@ -7,6 +7,7 @@ import FreelancerNavbar from "./FreelancerNavbar";
 import BriefProfileCard from "./BriefProfileCard";
 import axios from "./axios.js"
 import Cookies from 'universal-cookie';
+import ClientProfileCard from "./ClientProfileCard";
 
 
 const cookies = new Cookies();
@@ -15,7 +16,7 @@ const cookies = new Cookies();
 const ProfileMainPage = () => {
     
     const [profileData,setProfileData] = useState({account:{},profile:{}});
-    const [profiles,setProfiles] = useState([]);
+    const [profiles,setProfiles] = useState();
     const [proposals,setProposals] = useState([]);
     const [contracts,setContractss] = useState([]);
     const [activeProfileId, setActiveProfileId] = useState('');
@@ -52,11 +53,8 @@ const ProfileMainPage = () => {
         else if(accountType==='C'){
             axios.get('client/profile/',{ withCredentials: true}).then(res=>{
                 if(res.data.success===1){
-                    //setProfileData(res.data.message.profile);
+                    setProfileData(res.data.message);
                     console.log(res);
-                    setActiveProfileId(res.data.message.profile_id);
-
-                    setProfiles(res.data.message.ids);
                 }
                 else{
                     window.location = '/login';
@@ -125,15 +123,28 @@ const ProfileMainPage = () => {
             <div className="activitiespage">
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
-                        <ProfileCard 
-                        profileName={profileData.account.first_name + " " + profileData.account.last_name }
-                        country={profileData.account.country} skills={profileData.profile.skills}
-                        payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
-                        profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
-                        description={profileData.profile.description}
-                        />
+                        {(accountType==='F') && 
+                            <ProfileCard 
+                            profileName={profileData.account.first_name + " " + profileData.account.last_name }
+                            country={profileData.account.country} skills={profileData.profile.skills}
+                            payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
+                            profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
+                            description={profileData.profile.description}
+                            />
+                        }
+                        {
+                            (accountType==='C') &&
+                            <ClientProfileCard
+                            profileName={profileData.account.first_name + " " + profileData.account.last_name }       
+                            country={profileData.account.country}
+                            totalSpent = {profileData.profile.totalSpent}
+                            rating ={profileData.profile.rating}
+                            profilePictureLink={profileData.account.profile_picture}
+                            />
+                        }
+
                     </div>
-                    { (profiles) &&
+                        {(profiles) &&
                         <div className="mainpagelistofprofiles">
                             <h2>Profiles:</h2>
                             { profiles.map((profile)=>(
