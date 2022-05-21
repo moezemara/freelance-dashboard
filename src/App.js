@@ -50,6 +50,9 @@ function App() {
               <ClientNavbar />
               <PostJob />
             </Route>
+            <Route exact path="/job/:job_id">
+              
+            </Route>
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
