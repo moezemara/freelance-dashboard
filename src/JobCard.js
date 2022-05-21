@@ -5,7 +5,7 @@ const JobCard = (props) => {
     const category = props.job.category;
     const description = props.job.description;
     const attatchment =props.job.attatchment;
-
+    const job_id = props.job.job_id;
 
     const convertSkillsToButtons = (skillsList)=>{
         return (  
@@ -28,7 +28,7 @@ const JobCard = (props) => {
 
             </div>
             <div style={{marginLeft:'auto'}}>
-                <button style={{marginLeft:10}}>Apply</button>
+                <button onClick={()=>{window.location=`/job/${job_id}`}} style={{marginLeft:10}}>Details</button>
             </div>
         </div>
      );

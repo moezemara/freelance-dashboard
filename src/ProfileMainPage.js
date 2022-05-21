@@ -123,7 +123,7 @@ const ProfileMainPage = () => {
             <div className="activitiespage">
                 <div style={{display:'flex'}}>
                     <div style={{marginRight:10,minWidth:600}}>
-                        {(accountType==='F') && 
+                        {(accountType==='F') && profileData.profile.skills &&
                             <ProfileCard 
                             profileName={profileData.account.first_name + " " + profileData.account.last_name }
                             country={profileData.account.country} skills={profileData.profile.skills}

@@ -8,12 +8,16 @@ var profileTitle = props.profileTitle;
 var profileName = props.profileName;
 var country = props.country;
 var profilePictureLink = props.profilePictureLink;
-var skills = String(props.skills);
+var skills = props.skills;
 var payRate = props.payRate;
 var rating = props.rating;
 var description = props.description
 
-
+const convertSkillsToButtons = (skillsList)=>{
+    return (  
+        skillsList.map((skill)=>(<button className="attachments-buttons">{skill}</button>))
+ );
+}
 
     return (  
         <div className="profilecard">
@@ -42,7 +46,7 @@ var description = props.description
 <h3>Description </h3> 
 <p className='big-paragraphs'>{description}</p>
 
-<h3>skills: {skills} </h3> 
+<h3>skills: {convertSkillsToButtons(skills)} </h3> 
 <p></p>
 
 

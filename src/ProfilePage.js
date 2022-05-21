@@ -32,7 +32,7 @@ const ProfilePage = ()=>{
         <div className="profilepage">        
             {myData.profile.title && <ProfileCard profileTitle={myData.profile.title} profileName={myData.account.first_name+ " "+myData.account.last_name}
             country={myData.account.country} profileImageLink={myData.account.profile_picture} payRate={myData.profile.pay_rate}
-            rating={myData.profile.rating} description={myData.profile.description} skills={myData.profile.skills}/> 
+            rating={myData.profile.rating} description={myData.profile.description} skills={JSON.parse(myData.profile.skills)}/> 
             }
             <div className="profilepageactivitiesNavbar">
                 {myData.accessable &&
