@@ -3,16 +3,15 @@ import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";
 import img4 from "./src-images/logo4.png";
+import img5 from "./src-images/logo5.png";
+
 import serviceImage from "./src-images/service-logo.png";
 const HomeWide = () => {
   return (
     <div className="homewide">
       <div class="homewide-img" id="homewide-img">
         <NavbarWide />
-        <p>
-          {" "}
-
-        </p>
+        <br />
         <p id="homewide-img-txt-1">Hire the world-best</p>
         <p id="homewide-img-txt-2">Freelancers</p>
         <p id="homewide-img-txt-3">here, for any job you need.</p>
@@ -29,7 +28,8 @@ const HomeWide = () => {
           <button id="home-btn-2">Earn money now</button>
         </a>
       </div>
-      <hr />
+      
+
       <div className="homewide-content">
       <div id="trusted-by">
         <table border="0" cellspacing="0" cellpadding="2">
@@ -47,12 +47,16 @@ const HomeWide = () => {
               <img src={img3} height="80" alt="logo" />
             </td>
             <td>
+              <img src={img5} height="80" alt="logo" />
+            </td>
+            <td>
               <img src={img4} height="80" alt="logo" />
             </td>
           </tr>
         </table>
       </div>
       <hr />
+      <hr id="hr2" />
 
       <div className="need-sth">
         <h2>Need something?</h2>
@@ -84,7 +88,7 @@ const HomeWide = () => {
           </tr>
         </table>
       </div>
-
+      <hr id="hr2" />
       <div className="why-using-us">
         <h2>Why using us?</h2>
 
@@ -126,7 +130,7 @@ const HomeWide = () => {
           </tr>
         </table>
       </div>
-
+      <hr id="hr2" />
       <div className="different-skills">
         <h2>We have different skills and services</h2>
 
@@ -286,9 +290,101 @@ const HomeWide = () => {
               </td>
             </td>
           </tr>
+
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+          </tr>
+
+
         </table>
       </div>
       </div>
+      
+
+      {/* <div class="homewide-footer-img" id="homewide-footer-img">
+        
+      </div> */}
+
+
+
+
+
     </div>
   );
 };
