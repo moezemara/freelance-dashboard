@@ -8,7 +8,7 @@ const HomeWide = () => {
   return (
     <div className="homewide">
       
-      <div id="homewide-img">
+      <div class="homewide-img" id="homewide-img">
       <NavbarWide/>
         <p>
           {" "}
