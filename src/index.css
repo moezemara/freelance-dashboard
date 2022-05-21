@@ -27,7 +27,7 @@
 .navbar:hover{
 
   box-shadow:  0px 0px 10px #e2e2e2; 
-  ;
+  
 }
 
 .navbar .links{
@@ -54,12 +54,29 @@
 }
 
 
+.homewide-img {
+  -webkit-animation: action 100ms  1s alternate;
+  animation: action 1100ms infinite alternate;
+  animation-iteration-count:2;
+}
+
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+
 /*Navbar Wide*/
 
 .navbarwide{
   background-color: rgba(35, 35, 35, 0);
   color: black;
-  padding: 10px 100px 10px 100px;
+  padding: 10px 100px 10px 30px;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -146,7 +163,7 @@
 
 }
 
-input:hover, textarea:hover, select:hover
+input:hover, textarea:hover, select:hover, button:hover
 {
   font-weight: 799;
 
@@ -551,7 +568,7 @@ display: block;
   background-repeat: no-repeat;
   background-size:cover;
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 30px;
 }
 #table-of-home-logo{
   margin-top: 0px;
@@ -588,7 +605,7 @@ display: block;
   margin: 30px 0px 0px 35px;
   border-radius: 8px;
   color: rgb(0, 0, 0);
-  font-weight: 800;
+  font-weight: 600;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
   height:45px;
@@ -600,12 +617,27 @@ display: block;
   box-sizing: border-box;
   border: 3px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-weight: 800;
+  font-weight: 600;
   background-color: rgba(255, 255, 255, 0);
   font-size: 18px;
   height:45px;
   width:250px;
 }
+
+#home-btn-1:hover{
+  box-shadow:  0px 0px 15px #e2e2e2; 
+text-shadow: 0px 0px 10px #323232;
+position: relative; 
+  top: -3px;
+}
+
+#home-btn-2:hover{
+  box-shadow:  0px 0px 10px #ffffff; 
+text-shadow: 0px 0px 5px #979797;
+position: relative; 
+  top: -3px;
+}
+
 #trusted-by img{
   margin: 0px 0px 0px 20px;
 }
@@ -615,6 +647,12 @@ display: block;
   margin: 10px 30px 20px 20px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;  
+}
+
+#logo-of-main-navbar:hover{
+  filter: drop-shadow(0px 0px 3px white);
+  height: 71px;
+  
 }
 
 

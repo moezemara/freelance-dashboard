@@ -9,6 +9,7 @@ import axios from "./axios.js";
 import { useParams } from "react-router-dom";
 
 
+;
 
 const JobPage = ()=>{
     const cookies = new Cookies();
