@@ -56,7 +56,7 @@ const SignUp = () => {
 
     return (  
         <div className="signup">
-            <h2>Sign Up To Freelanco</h2>
+            <h2>Sign Up To HomieLancer</h2>
             <form>
                 
                 <div className="name_part">

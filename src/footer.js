@@ -1,7 +1,7 @@
 const Footer = () => {
     return (  
          <div className="footer">
-<a id="footer-head" href="/"><h2>Freelanco</h2></a>
+<a id="footer-head" href="/"><h2>HomieLancer</h2></a>
 
 
 
@@ -41,7 +41,7 @@ const Footer = () => {
 </div>
 
 
-<p id="copyrights-text">© 2022 - FreeLanco inc.</p>
+<p id="copyrights-text">© 2022 - HomieLancer inc.</p>
 
          </div>
     );

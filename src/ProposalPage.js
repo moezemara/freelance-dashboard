@@ -109,7 +109,7 @@ const ProposalPage = () => {
                     </tr>
 
                     <tr>
-                      <td style={{ width: "90%" }}>FreeLanco fees</td>
+                      <td style={{ width: "90%" }}>HomieLancer fees</td>
                       <td id="dollar-char">$</td>
                       <td>{price * 0.2}</td>
                     </tr>

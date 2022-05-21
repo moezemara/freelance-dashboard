@@ -14,7 +14,7 @@ const ClientNavbar = (props) => {
 
     return ( 
         <nav className="navbar">
-        <a href="/profile"><h2>Freelanco</h2></a>
+        <a href="/profile"><h2>HomieLancer</h2></a>
         <a href="/postjob">Post a Job</a>
         <a href="/activitiespage">All Activities</a>
 
