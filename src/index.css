@@ -6,6 +6,11 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.root, .App{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+
+}
 
 
 
@@ -48,6 +53,42 @@
 
 }
 
+
+/*Navbar Wide*/
+
+.navbarwide{
+  background-color: rgba(35, 35, 35, 0);
+  color: black;
+  padding: 10px 100px 10px 100px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+.navbarwide .links{
+  margin-left: auto;
+}
+
+.navbarwide a{
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  font-size: 20px;
+  font-weight: 700px;
+}
+
+.navbarwide h2{
+  font-size: 30px;
+  font-weight: 900px;
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+
 .signup, .login, .postjob  {
 
   max-width: 400px;
@@ -60,10 +101,6 @@
   text-align: center;
 
 }
-
-
-
-
 
 .profilecard{
 
@@ -406,6 +443,16 @@ display: block;
   width: 100%;
 }
 
+
+.homewide {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
 .browsejobs{
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
@@ -439,6 +486,21 @@ display: block;
   width: 100%;
   background-image: url('/public/home-image.jpg');
 }
+
+#homewide-img {
+  align-self: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  height: 900px;
+  width: 100%;
+  background-image: url('/public/home-image.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+
 #home-img-txt-1{
   font-size: 40px;
   font-weight: 900;
