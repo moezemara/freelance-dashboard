@@ -3,13 +3,12 @@ import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";
 import img4 from "./src-images/logo4.png";
-import serviceImage from './src-images/service-logo.png';
+import serviceImage from "./src-images/service-logo.png";
 const HomeWide = () => {
   return (
     <div className="homewide">
-      
       <div class="homewide-img" id="homewide-img">
-      <NavbarWide/>
+        <NavbarWide />
         <p>
           {" "}
           <br />
@@ -30,9 +29,8 @@ const HomeWide = () => {
         <a href="/signup">
           <button id="home-btn-2">Earn money now</button>
         </a>
-        
       </div>
-<hr />
+      <hr />
       <div id="trusted-by">
         <table border="0" cellspacing="0" cellpadding="2">
           <tr>
@@ -135,67 +133,161 @@ const HomeWide = () => {
         <table>
           <tr>
             <td>
-              <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
-            </td>
-            <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
           </tr>
 
           <tr>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
             <td>
-             <td><img src={serviceImage} /></td><td> <h3>Feature</h3></td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Feature</h3>
+              </td>
             </td>
           </tr>
         </table>
       </div>
-
-
     </div>
   );
 };

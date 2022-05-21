@@ -502,6 +502,7 @@ display: block;
   height: 465px;
   width: 100%;
   background-image: url('/public/home-image.jpg');
+  
 }
 #home-img-txt-1{
   font-size: 40px;
@@ -564,7 +565,7 @@ display: block;
   color: rgb(255, 255, 255);
   height: 900px;
   width: 100%;
-  background-image: url('/public/home-image.jpg');
+  background-image: url('/public/giphy.gif');
   background-repeat: no-repeat;
   background-size:cover;
   margin: 0px 0px 0px 0px;
