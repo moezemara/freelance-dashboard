@@ -40,6 +40,7 @@ const ProfileMainPage = () => {
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
                 if(res.data.success===1){
                     setActiveProfileId(res.data.message.active_id);
+                    document.cookie = 'active_id='+res.data.message.active_id;
                     setProfileData(res.data.message);
                     setProfiles(res.data.message.ids);
                     console.log(res);
@@ -73,8 +74,6 @@ const ProfileMainPage = () => {
         switch(btnState){
             case 'activecontracts':
                 axios.get(`contract/contract/${profileData.active_id}/active`,{ withCredentials: true}).then((res)=>{
-                    console.log(1);
-                    console.log(profileData.active_id)
                     console.log(res);
                 });
                 break;

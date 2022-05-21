@@ -24,13 +24,14 @@ const BrowseJobs = () => {
 
     useEffect(()=>{
         
-        axios.get('freelancer/browsejobs/',{ withCredentials: true}).then(res=>{
+        axios.get('/job/job/browse',{ withCredentials: true}).then(res=>{
             if(res.data.success===1){
                 //setJobs(res.data.message.jobs_list);
                 console.log(res);
             }
             else{
-                window.location = '/';
+                console.log(res);
+
         }},[]);
         
     },[]);

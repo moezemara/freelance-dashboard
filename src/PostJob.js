@@ -12,25 +12,27 @@ const PostJob = () => {
     const [expected_price,setExpectedPrice] = useState('');
     const [estimated_time, setEstimatedTime] = useState('');
     const [attachment, setAttachment] = useState('');
+    const [JobMessage,setJobMessage] = useState('');
     
     async function handlepostJob(){
         console.log(process.env.BASE_API_URL)
         const data = {
             'title':title,
             'category':category,
-            'experience_level':experience_level,
-            'skills':skills,
+            'experience':experience_level,
+            'skills':skills.split(","),
             'description':description,
-            'expected_price':expected_price,
-            'estimated_time':estimated_time,
-            'attachment':attachment,
+            'price':expected_price,
+            'time':estimated_time,
         }
 
-        const response = await axios.post('user/postjob', data, {withCredentials: true}) //for sending cookies
-        console.log(response)
+        const response = await axios.post('job/create', data, {withCredentials: true}) //for sending cookies
+        
+        setJobMessage(response.data.message);
+        
         if(response.data.success){
+            console.log(response)
             document.cookie = JSON.stringify({'type':response.data.message.type})
-            window.location = '/browsejobs';
         }
         else{
             console.log("failed")
@@ -52,7 +54,7 @@ const PostJob = () => {
                     <table style={{width:'100%'}}>
                     <tr ><td >
                     <label><b>Category</b></label>
-                    <select >value={category} onInput={e=>setCategory(e.target.value)}
+                    <select value={category} onInput={e=>setCategory(e.target.value)}>
                         <option value=""  disabled selected hidden >Select Category</option>
                         {getCategoriesList()}
                     </select>
@@ -62,9 +64,9 @@ const PostJob = () => {
                     <label><b>Needed Level</b></label>
                     <select value={experience_level} onInput={e=>setExperienceLevel(e.target.value)}>
                         <option value=""  disabled selected hidden >Select level</option>
-                        <option value="entery">Entry Level</option>
-                        <option value="intermediate">Intermediate Level</option>
-                        <option value="advanced">Advanced Level</option>
+                        <option value="Entry">Entry Level</option>
+                        <option value="Intermediate">Intermediate Level</option>
+                        <option value="Advanced">Advanced Level</option>
                     </select>
                     </td></tr></table>
 
@@ -105,6 +107,7 @@ const PostJob = () => {
                 <hr/>
                 <button type="button" onClick={handlepostJob}>Post Job</button>
             </form>
+            <label>{JobMessage}</label>
         </div>
     );
 }
