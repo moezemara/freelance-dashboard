@@ -5,13 +5,21 @@ import { useEffect, useState } from "react";
 import JobCard from "./JobCard";
 import JobCardForProposal from "./JobCardForProposal";
 import dollarSymbol from "./src-images/dollar.png";
-import axios from "axios";
+import axios from "./axios.js";
+import { useParams } from "react-router-dom";
+
+
+;
 
 const JobPage = ()=>{
     const cookies = new Cookies();
     const accountType = cookies.getAll().type;
     const profile_id = cookies.getAll().active_id;
     const [jobData, setJobData] = useState();
+    const [appliedProposalsData, setAppliedProposalsData] = useState();
+    const job_id = useParams();
+
+
 
     const [cover_letter, setCoverLetter] = useState("");
     const [price, setPrice] = useState("");
@@ -41,7 +49,9 @@ const JobPage = ()=>{
       }
 
     useEffect(()=>{
-
+      axios.get(`/proposal/get/proposals/${job_id}`,{withCredentials:true}).then((res)=>{
+        console.log(res);
+      });
     },[])
 
     return(
@@ -64,6 +74,9 @@ const JobPage = ()=>{
           }}
         />
       </div>
+    {(accountType==='C')
+
+    }
     { (accountType==='F') &&
       <div className="proposalpage">
         <div></div>

@@ -49,14 +49,36 @@ const ActivitiesPage = ()=>{
             setPrevContent(content);
 
         switch(ButtonState){
-            case 'activecontracts':
-                axios.get(`contract/contract/${active_id}/active`,{ withCredentials: true}).then((res)=>{
+            case 'appliedproposals':
+                axios.get('/proposal/get/pending',{ withCredentials: true}).then((res)=>{
                     console.log(res);
+                    if(res.data.success===1){
+                        //todo:: mapping with proposals that will be sent
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
+                });
+            case 'activecontracts':
+                axios.get(`/contract/${active_id}/active`,{ withCredentials: true}).then((res)=>{
+                    console.log(res);
+                    if(res.data.success===1){
+                        //todo:: mapping with proposals that will be sent
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
                 });
                 break;
             case 'finishedcontracts':
-                axios.get(`contract/contract/${active_id}/archived`,{ withCredentials: true}).then((res)=>{
+                axios.get(`/contract/${active_id}/archived`,{ withCredentials: true}).then((res)=>{
                     setContent(<h1>content</h1>)
+                    if(res.data.success===1){
+                        //todo:: mapping with proposals that will be sent
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
                 });
                 break;
             case 'jobsposted':
