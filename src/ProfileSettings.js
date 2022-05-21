@@ -11,14 +11,15 @@ const ProfileSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [ActivateMessage, setActivateMessage] = useState("");
-  const [active_profile_id, setActiveProfileID] = useState("")
+  const [active_profile_id, setActiveId] = useState("")
+
   const [profile_data,setProfileData] = useState({profile:{}, account:{}});
   useEffect(()=>{
       ////we need to get that profile data so I sent the cokkies to send us the profile data
       ////but let's agree on one path
       axios.get('/freelancer/profile/',{ withCredentials: true}).then(res=>{ 
           if(res.data.success===1){
-            setActiveProfileId(res.data.message.active_id);
+            setActiveId(res.data.message.active_id);
             document.cookie = 'active_id='+res.data.message.active_id;
             console.log(res);
           }
