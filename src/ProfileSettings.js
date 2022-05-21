@@ -12,14 +12,32 @@ const ProfileSettings = () => {
   const cookies = new Cookies();
   const [ActivateMessage, setActivateMessage] = useState("");
 
-  const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("");
-  const [skills, setSkills] = useState("");
-  const [description, setDescription] = useState("");
-  const [pay_rate, setPayRate] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
-  const [gender, setGender] = useState("");
+  const [profile_data,setProfileData] = useState({profile:{}, account:{}});
+  useEffect(()=>{
+      ////we need to get that profile data so I sent the cokkies to send us the profile data
+      ////but let's agree on one path
+      axios.get('/',{ withCredentials: true}).then(res=>{ 
+          if(res.data.success===1){
+              //setProfileData(res.data.message.profile);
+              console.log(res);
+          }
+          else{
+              console.log(res);
+
+      }},[]);
+      
+  },[]);
+
+
+//will use the current state that will passed to it through api
+  const [title, setTitle] = useState(profile_data.profile.title);
+  const [category, setCategory] = useState(profile_data.profile.category);
+  const [skills, setSkills] = useState(profile_data.profile.skills);
+  const [description, setDescription] = useState(profile_data.profile.description);
+  const [pay_rate, setPayRate] = useState(profile_data.profile.pay_rate);
+  const [address, setAddress] = useState(profile_data.account.address);
+  const [phone, setPhone] = useState(profile_data.account.phone);
+  const [gender, setGender] = useState(profile_data.account.gender);
 
   async function handleSettings() {
     console.log(process.env.BASE_API_URL);
