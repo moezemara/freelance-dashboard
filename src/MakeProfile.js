@@ -22,15 +22,16 @@ const MakeProfile = () => {
 
     const response = await axios.post("freelancer/profile", data, {
       withCredentials: true,
-    });
+    }).then((response)=>{
 
     console.log(response);
-    if (response.data.success) {
+    if (response.data.success===1) {
       console.log(response);
-      document.cookie = JSON.stringify({ type: response.data.message.type });
+      window.location = '/profile';
     } else {
       console.log("failed");
     }
+  });
   }
 
   return (

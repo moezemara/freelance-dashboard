@@ -45,7 +45,7 @@ const SignUp = () => {
         console.log(response)
         if(response.data.success){
             document.cookie = JSON.stringify({'type':response.data.message.type})
-            window.location = '/profile';
+            window.location = '/createprofile';
         }
         else{
             console.log("failed")
