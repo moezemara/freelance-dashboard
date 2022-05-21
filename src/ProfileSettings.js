@@ -11,19 +11,30 @@ const ProfileSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [ActivateMessage, setActivateMessage] = useState("");
-
+  const [active_profile_id, setActiveProfileID] = useState("")
   const [profile_data,setProfileData] = useState({profile:{}, account:{}});
   useEffect(()=>{
       ////we need to get that profile data so I sent the cokkies to send us the profile data
       ////but let's agree on one path
-      axios.get('/',{ withCredentials: true}).then(res=>{ 
+      axios.get('/freelancer/profile/',{ withCredentials: true}).then(res=>{ 
           if(res.data.success===1){
-              //setProfileData(res.data.message.profile);
-              console.log(res);
+            setActiveProfileId(res.data.message.active_id);
+            document.cookie = 'active_id='+res.data.message.active_id;
+            console.log(res);
           }
           else{
               console.log(res);
+            }},[]);
 
+
+      axios.get(`/freelancer/profile/${active_profile_id}`,{ withCredentials: true}).then(res=>{ 
+        if(res.data.success===1){
+          setProfileData(res.data.message);
+          console.log(res);
+        }
+        else{
+            console.log(res);
+                
       }},[]);
       
   },[]);
@@ -35,9 +46,6 @@ const ProfileSettings = () => {
   const [skills, setSkills] = useState(profile_data.profile.skills);
   const [description, setDescription] = useState(profile_data.profile.description);
   const [pay_rate, setPayRate] = useState(profile_data.profile.pay_rate);
-  const [address, setAddress] = useState(profile_data.account.address);
-  const [phone, setPhone] = useState(profile_data.account.phone);
-  const [gender, setGender] = useState(profile_data.account.gender);
 
   async function handleSettings() {
     console.log(process.env.BASE_API_URL);
@@ -151,33 +159,6 @@ const ProfileSettings = () => {
             />{" "}
           </div>
 
-          <div>
-            <input
-              placeholder="address"
-              value={address}
-              onInput={(e) => setAddress(e.target.value)}
-            />
-          </div>
-          <div className="name_part">
-            <input
-              type="text"
-              style={{ marginRight: 20 }}
-              placeholder="phone"
-              value={phone}
-              onInput={(e) => setPhone(e.target.value)}
-            />
-
-            <select value={gender} onInput={(e) => setGender(e.target.value)}>
-              <option value="" disabled selected hidden>
-                Gender
-              </option>
-              {getGenderList()}
-            </select>
-          </div>
-
-          {/* <div className="profile-attachmenents">
-                    <input type="file"/>
-                </div> */}
 
 <button type="button" onClick={handleSettings}>
             Create profile
