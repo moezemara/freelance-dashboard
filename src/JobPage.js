@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import JobCard from "./JobCard";
 import JobCardForProposal from "./JobCardForProposal";
 import dollarSymbol from "./src-images/dollar.png";
+import axios from "axios";
 
 const JobPage = ()=>{
     const cookies = new Cookies();

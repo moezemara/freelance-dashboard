@@ -20,7 +20,7 @@ const ProposalPage = () => {
 
     const response = await axios.post("user/proposal", data, {
       withCredentials: true,
-    }); //for sending cookies
+    }); 
     console.log(response);
     if (response.data.success) {
       document.cookie = JSON.stringify({ type: response.data.message.type });
