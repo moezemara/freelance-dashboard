@@ -3,14 +3,21 @@ import Cookies from "universal-cookie";
 import FreelancerNavbar from "./FreelancerNavbar";
 import ClientNavbar from "./ClientNavbar";
 import axios from "./axios.js"
+import JobCard from "./JobCard";
+
+
 
 
 const ActivitiesPage = ()=>{
 
-    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
+    const [prevContent, setPrevContent] = useState('');
+    const [content, setContent] = useState();
+    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':'','jobsposted':''}) 
     const [accountType, setAccountType] = useState();
     const cookies = new Cookies();
+    const [render,setRender] = useState('waiting');
     const [active_id,setActiveId] = useState('');
+    const [ButtonState,setButtonState] = useState('');
 
     useEffect(()=>{
         if(accountType !== 'F' || accountType !=='C'){
@@ -20,13 +27,28 @@ const ActivitiesPage = ()=>{
         }
     },[accountType]);
 
+    
 
-    const handleBtnClick = (btnState)=>{
+    async function setMyContent(mycontent){
+        setContent(mycontent);
+    }
+
+     async function handleBtnClick(btnState){
         //setting button color to the appropriate theme
-        var newState = {'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''};
+        var newState = {'jobsposted':'','appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':''};
         newState[btnState] = 'activebutton';
         setButtonClasses(newState);
-        switch(btnState){
+        setButtonState(btnState);
+        setContent();
+        //handling requests to be done based on the button clicked
+        
+    } 
+
+    useEffect(()=>{
+        if(!content){
+            setPrevContent(content);
+
+        switch(ButtonState){
             case 'activecontracts':
                 axios.get(`contract/contract/${active_id}/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
@@ -34,12 +56,20 @@ const ActivitiesPage = ()=>{
                 break;
             case 'finishedcontracts':
                 axios.get(`contract/contract/${active_id}/archived`,{ withCredentials: true}).then((res)=>{
-                    console.log(res);
+                    setContent(<h1>content</h1>)
                 });
-            break;
-        }
+                break;
+            case 'jobsposted':
+                axios.get(`job/get/active`,{ withCredentials: true}).then((res)=>{
+                    if(res.data.success===1){
+                        console.log(res.data.message)    
+                        setMyContent(res.data.message.map((job)=>(<JobCard key={job.job_id} job={job}/>)));
 
-    }
+                    }
+                });
+                break;
+    }}},[ButtonState,content])
+    
 
     return(
         <div>
@@ -47,12 +77,14 @@ const ActivitiesPage = ()=>{
             {(accountType==='C') && <ClientNavbar/>}
             <div className="activitiespage">
                 <div className="activitiesNavbar">
-                    <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>
-                    <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>
+                    {(accountType==='F') && <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>}
+                    {(accountType==='F') && <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>}
+                    {(accountType==='C') && <button id={buttonsClasses['jobsposted']} onClick={()=>{handleBtnClick('jobsposted');}}>Jobs Posted</button>}
                     <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
                     <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
                 </div>
                 <div className='activities-page-content'>
+                    {(content) && content}
                 </div>
             </div>
         </div>

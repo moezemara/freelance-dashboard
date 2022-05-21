@@ -7,8 +7,7 @@ const JobCard = (props) => {
     const attatchment =props.job.attatchment;
 
 
-    const convertSkillsToButtons = (skillsStr)=>{
-        var skillsList = skillsStr.split(", ")
+    const convertSkillsToButtons = (skillsList)=>{
         return (  
             skillsList.map((skill)=>(<button className="attachments-buttons">{skill}</button>))
      );

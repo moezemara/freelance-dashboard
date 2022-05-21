@@ -24,7 +24,7 @@ const MakeProfile = () => {
       withCredentials: true,
     });
 
-
+    console.log(response);
     if (response.data.success) {
       console.log(response);
       document.cookie = JSON.stringify({ type: response.data.message.type });
