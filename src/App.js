@@ -65,14 +65,11 @@ function App() {
               <ActivitiesPage/>
             </Route>
 
-            <Route exact path="/proposalpage">
-              <FreelancerNavbar />
-              <ProposalPage />
-            </Route>
             <Route exact path="/browsejobs">
               <FreelancerNavbar />
               <BrowseJobs />
             </Route>
+            
             <Route exct path="/testclientcontract">
               <ClientNavbar />
               <ClientContractPage />
