@@ -183,10 +183,10 @@ const ProfileSettings = () => {
             Create profile
           </button>        </form>
         <div className="profilepageactivitiesNavbar">
-          <button onClick={handleActivate} type="button">
+          <button id="button-to-be-green" onClick={handleActivate} type="button">
             Activate
           </button>
-          <button onClick={handleDelete} type="button">
+          <button id="button-to-be-red" onClick={handleDelete} type="button">
             Delete
           </button>
         </div>
