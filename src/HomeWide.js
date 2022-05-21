@@ -11,8 +11,7 @@ const HomeWide = () => {
         <NavbarWide />
         <p>
           {" "}
-          <br />
-          <br />
+
         </p>
         <p id="homewide-img-txt-1">Hire the world-best</p>
         <p id="homewide-img-txt-2">Freelancers</p>
@@ -31,6 +30,7 @@ const HomeWide = () => {
         </a>
       </div>
       <hr />
+      <div className="homewide-content">
       <div id="trusted-by">
         <table border="0" cellspacing="0" cellpadding="2">
           <tr>
@@ -287,6 +287,7 @@ const HomeWide = () => {
             </td>
           </tr>
         </table>
+      </div>
       </div>
     </div>
   );
