@@ -27,10 +27,14 @@ function App() {
       <div className="App">
         <div className="content">
           <Switch>
-            <Route exact path="/">
+
+          <Route exct path="/">
+            <HomeWide/>
+            </Route>
+
+            <Route exact path="/oldhome">
               <Navbar/>
               <Home />
-              
             </Route>
             <Route exact path="/signup">
               <Navbar />
@@ -84,11 +88,6 @@ function App() {
 
             <Route exct path="/createprofile">
               <MakeProfile/>
-            </Route>
-
-            <Route exct path="/h">
-            
-              <HomeWide/>
             </Route>
 
             <Route path="*">
