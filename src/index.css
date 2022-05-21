@@ -101,7 +101,7 @@
 }
 
 
-.proposalpage textarea, .postjob textarea {
+.proposalpage textarea, .postjob textarea, #description-make-profile{
   width: 100%;
   height: 200px;
   padding: 12px 20px;

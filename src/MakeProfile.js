@@ -24,7 +24,6 @@ const MakeProfile = () => {
       withCredentials: true,
     });
 
-    setJobMessage(response.data.message);
 
     if (response.data.success) {
       console.log(response);
