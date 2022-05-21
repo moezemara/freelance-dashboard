@@ -11,7 +11,7 @@ const FreelancerAppliedProposalCard = (props)=>{
     
 
     const handleWidthdraw = ()=>{
-        axios.post(`/proposal/${proposal_id}/widthdrawproposal`,{ withCredentials: true}).then((res)=>{
+        axios.post(`/proposal/${proposal_id}/withdraw`,{ withCredentials: true}).then((res)=>{
             if(res.data.success===1){
                 window.location = '/activitiespage';
             }
