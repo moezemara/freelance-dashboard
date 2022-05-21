@@ -16,7 +16,7 @@ const Home = () => {
         <p id="home-img-txt-2">Freelancers</p>
         <p id="home-img-txt-3">here, for any job you need.</p>
         <p id="home-img-txt-4">
-          Tens of users used our FreeLanco website to hire freelancers to have
+          Tens of users used our HomieLancer website to hire freelancers to have
           their job done. Try it now!
         </p>
         <p> </p>
