@@ -7,12 +7,12 @@ import JobCard from "./JobCard";
 
 
 
-var jobs_list =
-[
-    {title:"Job Card Example", price:"1800", skills:['api','dashboard', 'web dev'],category:"web",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat molestias iste corrupti nemo modi consequatur consectetur accusantium praesentium laboriosam nostrum, assumenda quaerat quas at expedita, quos cumque repellendus pariatur deleniti. Incidunt similique consequatur, modi tempora numquam, dolorem soluta porro at magni illo dignissimos repellendus amet pariatur! Minus, quod quibusdam!",
-    attatchment:"https://www.zewailcity.edu.eg/media-library/PDFs/Academic_Calendar_2021-2022__2022-02-16052857.pdf"},
-]
+// var jobs_list =
+// [
+//     {title:"Job Card Example", price:"1800", skills:['api','dashboard', 'web dev'],category:"web",
+//     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat molestias iste corrupti nemo modi consequatur consectetur accusantium praesentium laboriosam nostrum, assumenda quaerat quas at expedita, quos cumque repellendus pariatur deleniti. Incidunt similique consequatur, modi tempora numquam, dolorem soluta porro at magni illo dignissimos repellendus amet pariatur! Minus, quod quibusdam!",
+//     attatchment:"https://www.zewailcity.edu.eg/media-library/PDFs/Academic_Calendar_2021-2022__2022-02-16052857.pdf"},
+// ]
 
 const BrowseJobs = () => {
 
@@ -20,9 +20,9 @@ const BrowseJobs = () => {
 
     useEffect(()=>{
         
-        axios.get('/job/job/browse',{ withCredentials: true}).then(res=>{
+        axios.get('/job/browse',{ withCredentials: true}).then(res=>{
             if(res.data.success===1){
-                //setJobs(res.data.message.jobs_list);
+                setJobs(res.data.message.jobs_list);
                 console.log(res);
             }
             else{
@@ -38,7 +38,7 @@ const BrowseJobs = () => {
             jobs.map((job)=>(<JobCard job={job}/>))
      );}
 
-    var jobsContent = getJobsList(jobs_list);
+    var jobsContent = getJobsList(jobs);
 
     return (  
         <div className="browsejobs">

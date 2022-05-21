@@ -13,7 +13,35 @@ const JobCard = (props) => {
      );
     }
 
+
+    async function handleOpenJob() {
+        console.log(process.env.BASE_API_URL);
+        const data = {
+          title: title,
+          category: category,
+          skills: skills.split(","),
+          description: description,
+          price: price,
+          attatchment:attatchment
+        };
+    
+    
+        const response = await axios.get(`job/browse/${job_id}`, data, {
+          withCredentials: true,
+        });
+    
+        console.log(response.data.success);
+        if(response.data.success===1){
+          setUpdateMessage("Account Updated!");
+        }
+        else{
+          setUpdateMessage(response.data.message);
+        }
+      }
+    
     return ( 
+
+        
         <div className="jobcard">
             <div className="jobcardmain">
                 <h3>{title}</h3>
@@ -28,7 +56,8 @@ const JobCard = (props) => {
 
             </div>
             <div style={{marginLeft:'auto'}}>
-                <button onClick={()=>{window.location=`/job/${job_id}`}} style={{marginLeft:10}}>Details</button>
+                <button onClick={handleOpenJob()}
+                style={{marginLeft:10}}>Apply</button>
             </div>
         </div>
      );
