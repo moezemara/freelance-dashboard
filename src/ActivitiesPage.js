@@ -80,6 +80,7 @@ const ActivitiesPage = ()=>{
                     {(accountType==='F') && <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>}
                     {(accountType==='F') && <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>}
                     {(accountType==='C') && <button id={buttonsClasses['jobsposted']} onClick={()=>{handleBtnClick('jobsposted');}}>Jobs Posted</button>}
+                    <button id={buttonsClasses['pendingcontracts']} onClick={()=>{handleBtnClick('pendingcontracts');}}>Pending Contracts</button>
                     <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
                     <button id={buttonsClasses['finishedcontracts']} onClick={()=>{handleBtnClick('finishedcontracts');}}>Finished Contracts</button>
                 </div>

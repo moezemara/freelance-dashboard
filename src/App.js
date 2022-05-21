@@ -20,6 +20,7 @@ import FreelancerContractPage from "./FreelancerContractPage";
 import MakeProfile from "./MakeProfile";
 import ProfilePage from "./ProfilePage";
 import ActivitiesPage from "./ActivitiesPage";
+import JobPage from "./JobPage";
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
               <PostJob />
             </Route>
             <Route exact path="/job/:job_id">
-              
+                <JobPage/>
             </Route>
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
