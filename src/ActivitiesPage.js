@@ -4,6 +4,7 @@ import FreelancerNavbar from "./FreelancerNavbar";
 import ClientNavbar from "./ClientNavbar";
 import axios from "./axios.js"
 import JobCard from "./JobCard";
+import FreelancerAppliedProposalCard from "./FreelancerAppliedProposalCard";
 
 
 
@@ -43,12 +44,27 @@ const ActivitiesPage = ()=>{
     } 
 
     useEffect(()=>{
-        if(!content){
+        if((!content)){
             setPrevContent(content);
 
         switch(ButtonState){
             case 'appliedproposals':
                 axios.get('/proposal/get/pending',{ withCredentials: true}).then((res)=>{
+                    console.log(res);
+                    if(res.data.success===1){
+                        setContent(res.data.message.map((proposal)=>(
+                            <FreelancerAppliedProposalCard job_id={proposal.job_id} client_profile={proposal.client_profile} 
+                            price={proposal.price} cover_letter={proposal.cover_letter}
+                            proposal_id={proposal.proposal_id}/>
+                         )));
+                    }
+                    else{
+                        setContent(<h3>{res.data.message}</h3>);
+                    }
+                });
+                break;
+            case 'activecontracts':
+                axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
                     if(res.data.success===1){
                         //todo:: mapping with proposals that will be sent
@@ -57,6 +73,7 @@ const ActivitiesPage = ()=>{
                         setContent(<h3>{res.data.message}</h3>);
                     }
                 });
+                break;
             case 'activecontracts':
                 axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
@@ -98,7 +115,6 @@ const ActivitiesPage = ()=>{
             <div className="activitiespage">
                 <div className="activitiesNavbar">
                     {(accountType==='F') && <button id={buttonsClasses['appliedproposals']} onClick={()=>{handleBtnClick('appliedproposals');}}>Applied proposals</button>}
-                    {(accountType==='F') && <button id={buttonsClasses['joboffers']} onClick={()=>{handleBtnClick('joboffers');}}>Job offers</button>}
                     {(accountType==='C') && <button id={buttonsClasses['jobsposted']} onClick={()=>{handleBtnClick('jobsposted');}}>Jobs Posted</button>}
                     <button id={buttonsClasses['pendingcontracts']} onClick={()=>{handleBtnClick('pendingcontracts');}}>Pending Contracts</button>
                     <button id={buttonsClasses['activecontracts']} onClick={()=>{handleBtnClick('activecontracts');}}>Active Contracts</button>
