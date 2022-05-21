@@ -131,7 +131,7 @@ const ProfileMainPage = () => {
                             profileName={profileData.account.first_name + " " + profileData.account.last_name }
                             country={profileData.account.country} skills={profileData.profile.skills}
                             payRate={profileData.profile.pay_rate} rating ={profileData.profile.rating}
-                            profilePictureLink="https://carmensunion589.org/wp-content/uploads/2015/09/photo-300x300.png"
+                            profilePictureLink={profileData.account.profile_picture}
                             description={profileData.profile.description}
                             />
                         }

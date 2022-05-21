@@ -11,9 +11,19 @@ const ProfileSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [ActivateMessage, setActivateMessage] = useState("");
+  const [UpdateMessage, setUpdateMessage] = useState("");
+
   const [active_profile_id, setActiveId] = useState("")
 
   const [profile_data,setProfileData] = useState({profile:{}, account:{}});
+
+
+  const [title, setTitle] = useState(profile_data.profile.title);
+  const [category, setCategory] = useState(profile_data.profile.category);
+  const [skills, setSkills] = useState(profile_data.profile.skills);
+  const [description, setDescription] = useState(profile_data.profile.description);
+  const [pay_rate, setPayRate] = useState(profile_data.profile.pay_rate);
+
   useEffect(()=>{
       ////we need to get that profile data so I sent the cokkies to send us the profile data
       ////but let's agree on one path
@@ -28,9 +38,16 @@ const ProfileSettings = () => {
             }},[]);
 
 
-      axios.get(`/freelancer/profile/${active_profile_id}`,{ withCredentials: true}).then(res=>{ 
+      axios.get(`/freelancer/profile/${profile_id}`,{ withCredentials: true}).then(res=>{ 
         if(res.data.success===1){
           setProfileData(res.data.message);
+          setTitle(res.data.message.profile.title);
+          setCategory(res.data.message.profile.category);
+          const myskills = JSON.parse(res.data.message.profile.skills).join(",");
+          console.log(myskills);
+          setSkills(myskills);
+          setDescription(res.data.message.profile.description );
+          setPayRate(res.data.message.profile.pay_rate);
           console.log(res);
         }
         else{
@@ -42,11 +59,7 @@ const ProfileSettings = () => {
 
 
 //will use the current state that will passed to it through api
-  const [title, setTitle] = useState(profile_data.profile.title);
-  const [category, setCategory] = useState(profile_data.profile.category);
-  const [skills, setSkills] = useState(profile_data.profile.skills);
-  const [description, setDescription] = useState(profile_data.profile.description);
-  const [pay_rate, setPayRate] = useState(profile_data.profile.pay_rate);
+  
 
   async function handleSettings() {
     console.log(process.env.BASE_API_URL);
@@ -58,15 +71,17 @@ const ProfileSettings = () => {
       pay_rate: pay_rate,
     };
 
-    const response = await axios.post("freelancer/profile", data, {
+
+    const response = await axios.post(`freelancer/profile/${profile_id}/update`, data, {
       withCredentials: true,
     });
 
-    if (response.data.success) {
-      console.log(response);
-      document.cookie = JSON.stringify({ type: response.data.message.type });
-    } else {
-      console.log("failed");
+    console.log(response.data.success);
+    if(response.data.success===1){
+      setUpdateMessage("Account Updated!");
+    }
+    else{
+      setUpdateMessage(response.data.message);
     }
   }
 
@@ -161,9 +176,8 @@ const ProfileSettings = () => {
           </div>
 
 
-<button type="button" onClick={handleSettings}>
-            Create profile
-          </button>        </form>
+          <button type="button" onClick={handleSettings}>Update profile</button> 
+            </form>
         <div className="profilepageactivitiesNavbar">
           <button id="button-to-be-green" onClick={handleActivate} type="button">
             Activate
@@ -173,6 +187,8 @@ const ProfileSettings = () => {
           </button>
         </div>
         <label style={{ color: "green" }}>{ActivateMessage}</label>
+        <label style={{ color: "green" }}>{UpdateMessage}</label>
+
       </div>
     </div>
   );
