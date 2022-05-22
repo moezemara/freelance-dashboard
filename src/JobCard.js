@@ -17,31 +17,6 @@ const JobCard = (props) => {
     }
 
 
-    async function handleOpenJob() {
-        console.log(process.env.BASE_API_URL);
-        const data = {
-          title: title,
-          category: category,
-          skills: skills.split(","),
-          description: description,
-          price: price,
-          attatchment:attatchment
-        };
-    
-    
-        const response = await axios.get(`job/browse/${job_id}`, data, {
-          withCredentials: true,
-        });
-    
-        console.log(response.data.success);
-        if(response.data.success===1){
-          console.log(response.data.message);
-        }
-        else{
-            console.log(response.data.message);
-        }
-      }
-    
     return ( 
 
         
@@ -51,15 +26,17 @@ const JobCard = (props) => {
                 <p><b>Description:</b> {description}</p>
                 <p><b>Price:</b> {price}$</p>
                 <p><b>Category:</b>{category}</p>
-                <p><b style={{marginRight:10}}>Skills: </b> {convertSkillsToButtons(skills)}</p>                <p><b>Attachments:</b>
-                <a style = {{marginLeft:10}} href={attatchment}> <button className="attachments-buttons">attatchment here</button></a>
+                <p><b style={{marginRight:10}}>Skills: </b> {convertSkillsToButtons(skills)}</p>
+                <p><b>Attachments:</b>
+                <a style = {{marginLeft:10}} href={attatchment}>
+                <button className="attachments-buttons">attatchment here</button></a>
 
                 </p>
 
 
             </div>
             <div style={{marginLeft:'auto'}}>
-                <button onClick={handleOpenJob()}
+                <button onClick={()=>{window.location=`job/${job_id}`}}
                 style={{marginLeft:10}}>Apply</button>
             </div>
         </div>
