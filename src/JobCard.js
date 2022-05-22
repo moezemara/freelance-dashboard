@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import axios from "./axios.js"
+
 const JobCard = (props) => {
     const title = props.job.title;
     const price = props.job.price;
@@ -32,10 +35,10 @@ const JobCard = (props) => {
     
         console.log(response.data.success);
         if(response.data.success===1){
-          setUpdateMessage("Account Updated!");
+          console.log(response.data.message);
         }
         else{
-          setUpdateMessage(response.data.message);
+            console.log(response.data.message);
         }
       }
     
