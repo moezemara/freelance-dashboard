@@ -16,34 +16,28 @@ import JobCard from "./JobCard";
 
 const BrowseJobs = () => {
 
-    const [jobs,setJobs] = useState([]);
+    const [jobs,setJobs] = useState();
 
     useEffect(()=>{
-        
-        axios.get('/job/browse',{ withCredentials: true}).then(res=>{
-            if(res.data.success===1){
-                setJobs(res.data.message.jobs_list);
-                console.log(res);
-            }
-            else{
-                console.log(res);
+        if(!jobs){
+            axios.get('/job/browse',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    setJobs(res.data.message);
+                    console.log(res);
+                }
+                else{
+                    console.log(res);
 
-        }},[]);
-        
-    },[]);
+            }},[]);
+        }
+    },[jobs]);
 
 
-    const getJobsList = (jobs)=>{
-        return (  
-            jobs.map((job)=>(<JobCard job={job}/>))
-     );}
-
-    var jobsContent = getJobsList(jobs);
 
     return (  
         <div className="browsejobs">
             <div className="jobslist">
-                {jobsContent}
+                {jobs && jobs.map((job)=>(<JobCard job={job}/>))}
             </div>
             <ProfileSidebar/>
         </div>

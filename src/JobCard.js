@@ -3,7 +3,7 @@ import axios from "./axios.js"
 
 const JobCard = (props) => {
     const title = props.job.title;
-    const price = props.job.price;
+    const price = props.job.expected_price;
     const skills = props.job.skills;
     const category = props.job.category;
     const description = props.job.description;

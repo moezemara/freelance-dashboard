@@ -13,7 +13,7 @@ const ActivitiesPage = ()=>{
 
     const [prevContent, setPrevContent] = useState('');
     const [content, setContent] = useState();
-    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':'','jobsposted':''}) 
+    const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':'','jobsposted':''}) 
     const [accountType, setAccountType] = useState();
     const cookies = new Cookies();
     const [active_id,setActiveId] = useState('');
@@ -63,11 +63,12 @@ const ActivitiesPage = ()=>{
                     }
                 });
                 break;
-            case 'activecontracts':
-                axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
+            case 'pendingcontracts':
+                axios.get(`/contract/pending`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
                     if(res.data.success===1){
                         //todo:: mapping with proposals that will be sent
+                        console.log(res);
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
@@ -79,6 +80,7 @@ const ActivitiesPage = ()=>{
                     console.log(res);
                     if(res.data.success===1){
                         //todo:: mapping with proposals that will be sent
+                        console.log(res);
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
