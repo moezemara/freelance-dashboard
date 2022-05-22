@@ -29,18 +29,19 @@ const JobPage = ()=>{
 
 
 
-useEffect(()=>{
-  axios.get(`job/browse/${job_id}`,{ withCredentials: true}).then(res=>{
-      if(res.data.success===1){
-        setJobData(res.data.message.job);
-          console.log(res);
-      }
-      else{
-          window.location = '/*';
-      }
+    useEffect(()=>{
+      if((!jobData)){
+        axios.get(`job/browse/${job_id}`,{ withCredentials: true}).then(res=>{
+            if(res.data.success===1){
+              setJobData(res.data.message);
+                console.log(res);
+            }
+            else{
+                window.location = '/*';
+            }
 
-  });
-},[]);
+      });
+    }},[jobData]);
 
 
 
@@ -74,6 +75,9 @@ useEffect(()=>{
       }
     },[])
 
+
+
+
     return(
         <div>
             {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
@@ -81,16 +85,17 @@ useEffect(()=>{
             <div className="jobpage">
             <div>
       <div className="job-card-of-proposal">
-        <JobCardForProposal
+       { jobData && <JobCardForProposal
           job={{
             title: jobData.title,
-            price: jobData.price,
+            price: jobData.expected_price,
             skills: jobData.skills,
             category: jobData.category,
             description: jobData.description,
             attatchment: jobData.attachment
           }}
         />
+        }
       </div>
     {(accountType==='C')
 
