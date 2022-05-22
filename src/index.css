@@ -14,6 +14,7 @@
 
 
 
+
 .navbar{
   background-color: white;
   color: black;
@@ -53,7 +54,8 @@
 
 }
 
-
+position: relative; 
+  top: -3px;
 
 .homewide-img {
   -webkit-animation: action 100ms  1s alternate;
@@ -95,6 +97,8 @@
   padding: 6px;
   font-size: 20px;
   font-weight: 700px;
+  position: relative; 
+  top: 3px;
 }
 
 .navbarwide h2{
@@ -104,8 +108,42 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  position: relative; 
+  top: 3px;
+}
+  
+
+.navbarwide a:hover, #trusted-by img:hover {
+  -webkit-animation: action 100ms  1s alternate;
+  animation: action 1100ms infinite alternate;
+  
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
+.homewide-content h2:hover {
+  -webkit-animation: action 100ms  1s alternate;
+  animation: action 800ms infinite alternate;
+  animation-iteration-count: 2;
+  filter: drop-shadow(0px 0px 10px rgb(125, 125, 125));
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+.homewide-content h3:hover {
+  filter: drop-shadow(0px 0px 10px rgb(68, 68, 68));
+}
 
 .signup, .login, .postjob  {
 

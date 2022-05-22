@@ -6,6 +6,7 @@ const NavbarWide = () => {
       <a href="/">
         <table id="table-of-home-logo">
           <td>
+            
             <img id="logo-of-main-navbar" src={logo} height="70px" style={{marginTop:"10px"}} />
           </td>
           <td>
