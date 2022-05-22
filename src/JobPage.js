@@ -20,11 +20,28 @@ const JobPage = ()=>{
     const job_id = useParams().job_id;
     const [resMessage, setResMessage] = useState();
 
-
+//proposal data
     const [cover_letter, setCoverLetter] = useState("");
     const [price, setPrice] = useState("");
     const [expected_date, setExpectedDate] = useState("");
     const [attachment, setAttachment] = useState("");
+
+
+
+
+useEffect(()=>{
+  axios.get(`job/browse/${job_id}`,{ withCredentials: true}).then(res=>{
+      if(res.data.success===1){
+        setJobData(res.data.message.job);
+          console.log(res);
+      }
+      else{
+          window.location = '/*';
+      }
+
+  });
+},[]);
+
 
 
     async function handleSendProposal() {
@@ -66,14 +83,12 @@ const JobPage = ()=>{
       <div className="job-card-of-proposal">
         <JobCardForProposal
           job={{
-            title: "Job Card Example",
-            price: "1800",
-            skills: "api, dashboard, web dev",
-            category: "web",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat molestias iste corrupti nemo modi consequatur consectetur accusantium praesentium laboriosam nostrum, assumenda quaerat quas at expedita, quos cumque repellendus pariatur deleniti. Incidunt similique consequatur, modi tempora numquam, dolorem soluta porro at magni illo dignissimos repellendus amet pariatur! Minus, quod quibusdam!",
-            attatchment:
-              "https://www.zewailcity.edu.eg/media-library/PDFs/Academic_Calendar_2021-2022__2022-02-16052857.pdf",
+            title: jobData.title,
+            price: jobData.price,
+            skills: jobData.skills,
+            category: jobData.category,
+            description: jobData.description,
+            attatchment: jobData.attachment
           }}
         />
       </div>
