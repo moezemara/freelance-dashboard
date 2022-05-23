@@ -389,7 +389,7 @@ border-radius: 20px;
 }
 
 
-.postjob, .proposalpage, .profilesettings {
+.postjob, .proposalpage, .profilesettings, .job-card-of-proposal {
   border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
