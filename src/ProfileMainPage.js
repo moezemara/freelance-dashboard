@@ -16,18 +16,14 @@ const ProfileMainPage = () => {
     
     const [profileData,setProfileData] = useState({account:{},profile:{}});
     const [profiles,setProfiles] = useState('');
-    const [proposals,setProposals] = useState([]);
-    const [contracts,setContractss] = useState([]);
     const [activeProfileId, setActiveProfileId] = useState('');
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
     const [ButtonState,setButtonState] = useState('');
-    const [prevContent, setPrevContent] = useState('');
-
-
     const [content, setContent] = useState('');
-
     const [accountType,setAccountType] = useState('');
 
+
+    
     async function getAccountType(){
         const type = await cookies.getAll().type;
         await setAccountType(type);
@@ -76,7 +72,6 @@ const ProfileMainPage = () => {
 
     useEffect(()=>{
         if(!content){
-            setPrevContent(content);
 
         switch(ButtonState){
             case 'activecontracts':
