@@ -37,8 +37,8 @@ const FreelancerAppliedProposalCard = (props)=>{
     
           <hr />
           <div className="accept-proposal">
-            <button onClick={()=>{window.location=`job/${job_id}`}}>Job Details</button>
-            <button onClick={()=>{window.location=`profile/${client_profile}`}}>Client Profile</button>
+            <button onClick={()=>{window.location=`/job/${job_id}`}}>Job Details</button>
+            <button onClick={()=>{window.location=`/profile/${client_profile}`}}>Client Profile</button>
             <button onClick={handleWidthdraw}>Withdraw</button>
           </div>
         </div>

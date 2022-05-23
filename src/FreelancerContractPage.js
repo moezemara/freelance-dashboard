@@ -18,6 +18,10 @@ const  FreelancerContractPage = () => {
         setMilestonesInputs(newArr);
     }
 
+    const updateContract = ()=>{
+
+    }
+
 
     return (
         <div className="freelancercontractpage">

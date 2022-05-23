@@ -53,9 +53,9 @@ const ActivitiesPage = ()=>{
                     console.log(res);
                     if(res.data.success===1){
                         setContent(res.data.message.map((proposal)=>(
-                            <FreelancerAppliedProposalCard job_id={proposal.job_id} client_profile={proposal.client_profile} 
+                            <FreelancerAppliedProposalCard job_id={proposal.job_id} client_profile={proposal.client_profile_id} 
                             price={proposal.price} cover_letter={proposal.cover_letter}
-                            proposal_id={proposal.proposal_id}/>
+                            proposal_id={proposal.proposal_id} />
                          )));
                     }
                     else{
