@@ -20,12 +20,12 @@ const ContractPage = ()=>{
             setContractData(res.data.message);
             console.log(res);
     });
-    });
+    },[]);
 
     return(
         <div>
             {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
-            {(accountType==='F') && <FreelancerContractPage/>}
+            {(accountType==='F') && (contractData) && <FreelancerContractPage contract = {contractData}/>}
             {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
             {(accountType==='C') && <ClientContractPage/>}
 

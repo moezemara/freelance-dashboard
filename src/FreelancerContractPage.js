@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ContractCard from "./ContractCard";
 
-const my_contract = {id:1,clientName:'someone',freelancerName:'someone else',status:'pending',description:'job description should be written here',price:'500'};
 
 
 
-const  FreelancerContractPage = () => {
+const  FreelancerContractPage = (props) => {
 
+    const my_contract = props.contract;
     const [milstoneNum, setMilestonesNum] = useState(3)
     const [milestonesInputs, setMilestonesInputs] = useState([1,2,3]);
 
@@ -18,9 +18,6 @@ const  FreelancerContractPage = () => {
         setMilestonesInputs(newArr);
     }
 
-    const updateContract = ()=>{
-
-    }
 
 
     return (
@@ -29,7 +26,7 @@ const  FreelancerContractPage = () => {
             <div className="freelancercontractmilestones">
                 <p><b>Miltstones</b> ({milstoneNum})</p>
                 { 
-                (my_contract.status === "pending") &&
+                (my_contract.status === "Interview") &&
                 milestonesInputs.map((i)=>(
                     <div className="milestoneinput" id={i} key={i}>
                         <label>{i}</label>
@@ -41,7 +38,7 @@ const  FreelancerContractPage = () => {
                 ))}
 
                 {
-                    (my_contract.status !== "pending") &&
+                    (my_contract.status !== "Interview") &&
                     milestonesInputs.map((i)=>(
                         <div className="milestoneinput" id={i} key={i}>
                             <label>{i}</label>
@@ -52,11 +49,11 @@ const  FreelancerContractPage = () => {
                     ))
                 }
 
-                {(my_contract.status === "pending") &&
+                {(my_contract.status === "Interview") &&
                 <button onClick={()=>{updateMilestones()}}><u><b>+Add Miltstones</b></u></button>}
             </div>
-            {(my_contract.status==="pending") && <div style={{textAlign:'center'}}><button>Agree On Contract</button></div>}
-            {(my_contract.status==="open") && 
+            {(my_contract.status==="Interview") && <div style={{textAlign:'center'}}><button>Agree On Contract</button></div>}
+            {(my_contract.status==="Active") && 
             <div style={{textAlign:'center'}}>
                 <label>Drag or upload project files </label>
                 <div>
