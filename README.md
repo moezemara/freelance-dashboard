@@ -5,7 +5,7 @@ To Install all dependencies
 ```
   npm i
 ```
-#Run instructions:
+## Run instructions:
 To run:
 ```
 npm run start
