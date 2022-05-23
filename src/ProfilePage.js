@@ -20,7 +20,15 @@ const ProfilePage = ()=>{
                 console.log(res);
             }
             else{
-                window.location = '/*';
+                axios.get(`client/profile/${profile_id}`,{ withCredentials: true}).then(res=>{
+                    if(res.data.success){
+                        setMyData(res.data.message);
+                        console.log(res);
+                    }
+                    else{
+                        console.log(res);
+                    }
+                });
             }
 
         });

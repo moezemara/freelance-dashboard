@@ -98,10 +98,10 @@ const JobPage = ()=>{
         />
         }
       </div>
-    {(accountType==='C' && appliedProposalsData) &&
+    {(accountType==='C' && (Array.isArray(appliedProposalsData))) &&
       <h3>Applied Proposals</h3>
     }
-    {(accountType==='C' && appliedProposalsData) &&
+    {(accountType==='C' && Array.isArray(appliedProposalsData)) &&
       (appliedProposalsData.map((proposal)=>(
         <AppliedProposalCard proposal={proposal}/>
       )))

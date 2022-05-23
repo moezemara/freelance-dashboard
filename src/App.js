@@ -21,6 +21,7 @@ import MakeProfile from "./MakeProfile";
 import ProfilePage from "./ProfilePage";
 import ActivitiesPage from "./ActivitiesPage";
 import JobPage from "./JobPage";
+import ContractPage from "./ContractPage";
 
 function App() {
   return (
@@ -48,19 +49,28 @@ function App() {
             <Route exact path="/profile">
               <ProfileMainPage/>
             </Route>
+
+            <Route exct path="/createprofile">
+              <MakeProfile/>
+            </Route>
+
             <Route exact path="/profile/:profile_id">
                 <ProfilePage/>
             </Route>
+            
             <Route exact path="/postjob">
               <ClientNavbar />
               <PostJob />
             </Route>
+            
             <Route exact path="/job/:job_id">
                 <JobPage/>
             </Route>
+            
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
+            
             <Route exact path="/activitiespage/">
               <ActivitiesPage/>
             </Route>
@@ -69,23 +79,17 @@ function App() {
               <FreelancerNavbar />
               <BrowseJobs />
             </Route>
-            
+            <Route exact path="/contract/:contract_id">
+              <ContractPage/>
+            </Route>
             <Route exct path="/testclientcontract">
               <ClientNavbar />
               <ClientContractPage />
-            </Route>
-            <Route exact path="/applied-proposals">
-              <ClientNavbar />
-              <AppliedProposals />
             </Route>
 
             <Route exct path="/testfreelancercontract">
               <FreelancerNavbar />
               <FreelancerContractPage />
-            </Route>
-
-            <Route exct path="/createprofile">
-              <MakeProfile/>
             </Route>
 
             <Route path="*">

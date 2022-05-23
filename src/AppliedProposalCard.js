@@ -1,3 +1,6 @@
+import axios from "./axios.js"
+
+
 const AppliedProposalCard = (props) => {
 
     var proposalName = props.proposal.proposalName;
@@ -9,6 +12,19 @@ const AppliedProposalCard = (props) => {
     var job_id = props.proposal.job_id;
     var freelancer_id = props.proposal.freelancer_profile_id
 
+
+    const handleAccept = ()=>{
+      axios.post(`/contract/proposal/${proposal_id}/accept`).then((res)=>{
+        if(res.data.success===1){
+          window.location = `/contract/${proposal_id}`;
+        }
+        else{
+          console.log(res);
+          console.log("failed");
+        }
+    });
+
+    }
 
     const handleReject = ()=>{
       axios.post(`/proposal/${proposal_id}/withdraw`,{ withCredentials: true}).then((res)=>{
@@ -40,7 +56,7 @@ const AppliedProposalCard = (props) => {
     
           <hr />
           <div className="accept-proposal">
-            <button>Accept Proposal</button>
+            <button onClick={handleAccept}>Accept Proposal</button>
             <button onClick={handleReject}>Reject</button>
           </div>
         </div>
