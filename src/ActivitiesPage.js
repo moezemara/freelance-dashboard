@@ -5,7 +5,7 @@ import ClientNavbar from "./ClientNavbar";
 import axios from "./axios.js"
 import JobCard from "./JobCard";
 import FreelancerAppliedProposalCard from "./FreelancerAppliedProposalCard";
-
+import ContractCard from "./ContractCard";
 
 
 
@@ -65,9 +65,10 @@ const ActivitiesPage = ()=>{
                 break;
             case 'pendingcontracts':
                 axios.get(`/contract/pending`,{ withCredentials: true}).then((res)=>{
-                    console.log(res);
                     if(res.data.success===1){
-                        //todo:: mapping with proposals that will be sent
+                        setContent(res.data.message.map((contract)=>(
+                            <ContractCard contract={contract}/>
+                        )));
                         console.log(res);
                     }
                     else{
@@ -79,8 +80,10 @@ const ActivitiesPage = ()=>{
                 axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
                     console.log(res);
                     if(res.data.success===1){
-                        //todo:: mapping with proposals that will be sent
-                        console.log(res);
+                        setContent(res.data.message.map((contract)=>(
+                            <ContractCard contract={contract}/>
+                        )));
+                        console.log(res);                   
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
@@ -91,7 +94,10 @@ const ActivitiesPage = ()=>{
                 axios.get(`/contract/archived`,{ withCredentials: true}).then((res)=>{
                     setContent(<h1>content</h1>)
                     if(res.data.success===1){
-                        //todo:: mapping with proposals that will be sent
+                        setContent(res.data.message.map((contract)=>(
+                            <ContractCard contract={contract}/>
+                        )));
+                        console.log(res);
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
