@@ -37,7 +37,7 @@ const JobCard = (props) => {
             </div>
             <div style={{marginLeft:'auto'}}>
                 <button onClick={()=>{window.location=`job/${job_id}`}}
-                style={{marginLeft:10}}>Apply</button>
+                style={{marginLeft:10}}>Details</button>
             </div>
         </div>
      );

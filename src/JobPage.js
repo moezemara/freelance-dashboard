@@ -7,9 +7,7 @@ import JobCardForProposal from "./JobCardForProposal";
 import dollarSymbol from "./src-images/dollar.png";
 import axios from "./axios.js";
 import { useParams } from "react-router-dom";
-
-
-;
+import AppliedProposalCard from "./AppliedProposalCard";
 
 const JobPage = ()=>{
     const cookies = new Cookies();
@@ -69,11 +67,14 @@ const JobPage = ()=>{
     useEffect(()=>{
 
       if(accountType==='C'){
-        axios.get(`/proposal/get/proposals/${job_id}`,{withCredentials:true}).then((res)=>{
-          console.log(res);
-        });
+        if(!appliedProposalsData){
+          axios.get(`/proposal/get/proposals/${job_id}`,{withCredentials:true}).then((res)=>{
+            setAppliedProposalsData(res.data.message);
+            console.log(res);
+          });
+        }
       }
-    },[])
+    },[appliedProposalsData])
 
 
 
@@ -97,8 +98,13 @@ const JobPage = ()=>{
         />
         }
       </div>
-    {(accountType==='C')
-
+    {(accountType==='C' && appliedProposalsData) &&
+      <h3>Applied Proposals</h3>
+    }
+    {(accountType==='C' && appliedProposalsData) &&
+      (appliedProposalsData.map((proposal)=>(
+        <AppliedProposalCard proposal={proposal}/>
+      )))
     }
     { (accountType==='F') &&
       <div className="proposalpage">
