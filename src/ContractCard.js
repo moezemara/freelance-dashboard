@@ -2,6 +2,7 @@ import serviceImage from './src-images/service-logo.png'
 
 const ContractCard = (props) => {
     const contract = props.contract;
+    
     return (  
         <div className="contractcard" key={contract.id}>
             <p><b>Client Name: </b>{contract.clientName} </p>
