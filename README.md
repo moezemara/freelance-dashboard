@@ -12,6 +12,6 @@ npm run start
 ```
 
 ## Authors:
-Kareem Elozeiri
-Moustafa Ashmawy
-Mohamed Ezzat
+- Kareem Elozeiri
+- Moustafa Ashmawy  
+- Mohamed Ezzat
