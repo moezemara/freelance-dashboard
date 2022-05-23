@@ -9,7 +9,6 @@ import axios from "./axios.js"
 import Cookies from 'universal-cookie';
 import ClientProfileCard from "./ClientProfileCard";
 
-
 const cookies = new Cookies();
 
 
@@ -81,10 +80,12 @@ const ProfileMainPage = () => {
 
         switch(ButtonState){
             case 'activecontracts':
-                axios.get(`/contract/profile/${activeProfileId}/active`,{ withCredentials: true}).then((res)=>{
-                    console.log(res);
+                axios.get(`/contract/active`,{ withCredentials: true}).then((res)=>{
                     if(res.data.success===1){
-                        //todo:: mapping with proposals that will be sent
+                        setContent(res.data.message.map((contract)=>(
+                            <ContractCard contract={contract}/>
+                        )));
+                        console.log(res);    
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
@@ -92,10 +93,12 @@ const ProfileMainPage = () => {
                 });
                 break;
             case 'finishedcontracts':
-                axios.get(`/contract/profile/${activeProfileId}/archived`,{ withCredentials: true}).then((res)=>{
-                    setContent(<h1>content</h1>)
+                axios.get(`/contract/archived`,{ withCredentials: true}).then((res)=>{
                     if(res.data.success===1){
-                        //todo:: mapping with proposals that will be sent
+                        setContent(res.data.message.map((contract)=>(
+                            <ContractCard contract={contract}/>
+                        )));
+                        console.log(res);                 
                     }
                     else{
                         setContent(<h3>{res.data.message}</h3>);
@@ -103,18 +106,6 @@ const ProfileMainPage = () => {
                 });
                 break;
     }}},[ButtonState,content])
-
-    const getProposalsList = (myproposals)=>{
-         return (  
-             myproposals.map((proposal)=>(<ProposalCard proposal={proposal}/>))
-      );
-    }
-
-    const getContractsList = (mycontracts)=>{
-        return (  
-            mycontracts.map((contract)=>(<ContractCard contract={contract}/>))
-     );
-   }
 
 
 

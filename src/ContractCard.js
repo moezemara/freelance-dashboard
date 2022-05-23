@@ -9,12 +9,12 @@ const ContractCard = (props) => {
             <p><b>Status: </b>{contract.status}</p>
             <b>Description</b>
             <p>
-                
+
             </p>
             <p><b>Final Price: </b>{contract.final_price}$</p>
             <div style={{display:'flex'}}>
                 <label></label>
-                <a><img src={serviceImage}/></a>
+                <a href={`contract/${contract.proposal_id}`}><img src={serviceImage}/></a>
             </div>
         </div>
     );

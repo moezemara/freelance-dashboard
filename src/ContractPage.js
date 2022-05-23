@@ -17,7 +17,7 @@ const ContractPage = ()=>{
 
     useEffect(()=>{
         axios.get(`contract/${contract_id}`,{withCredentials:true}).then((res)=>{
-            setContractData(res.data.message);
+            setContractData(res.data.message.contract);
             console.log(res);
     });
     },[]);
