@@ -6,7 +6,7 @@ const AppliedProposalCard = (props) => {
     var proposalName = props.proposal.proposalName;
     var FreelancerName = props.proposal.freelancer_name;
     var FreelancerRate = props.proposal.freelancer_rate;
-    var coverLetter = props.proposal.cover_letter;
+    var cover_letter = props.proposal.cover_letter;
     var recommendedPrice = props.proposal.price;
     var proposal_id = props.proposal.proposal_id;
     var job_id = props.proposal.job_id;
@@ -46,7 +46,7 @@ const AppliedProposalCard = (props) => {
           <h3>Freelancer Rate: {FreelancerRate}</h3>
     
           <h3>Cover letter</h3>
-          <p>{coverLetter}</p>
+          <p>{cover_letter}</p>
     
           <h3>Price: {recommendedPrice} $</h3>
     
