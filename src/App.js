@@ -82,19 +82,11 @@ function App() {
             <Route exact path="/contract/:contract_id">
               <ContractPage/>
             </Route>
-            <Route exct path="/testclientcontract">
-              <ClientNavbar />
-              <ClientContractPage />
-            </Route>
-
-            <Route exct path="/testfreelancercontract">
-              <FreelancerNavbar />
-              <FreelancerContractPage />
-            </Route>
 
             <Route path="*">
               <Page404 />
             </Route>
+            
           </Switch>
         </div>
         <Footer />
