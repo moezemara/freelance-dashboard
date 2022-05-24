@@ -57,7 +57,7 @@ const ContractPage = ()=>{
                 <div className="clientcontractmilestones">
                     <p><b>Miltstones</b>({milesontesNum})</p>
                     { (contractData.milestones) && milestones.map((milestone)=>(
-                        <Milestone milestone={milestone} key={milesontesNum+1} contract_status={contractData.contract.status} status={contractData.permissions.special_status}/>
+                        <Milestone milestone={milestone} contract_status={contractData.contract.status} status={contractData.permissions.special_status}/>
                     ))
 
                                         

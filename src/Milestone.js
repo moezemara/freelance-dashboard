@@ -23,7 +23,7 @@ const Milestone = (props)=>{
         };
         axios.post(`/contract/${contract_id}/milestone/add`,data,{withCreditionals:true}).then((res)=>{
             if(res.data.addedSuccess){
-                window.location.reload(true);
+                window.location =  `/contract/${contract_id}`;
             }
         });;
     }
