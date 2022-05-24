@@ -1,8 +1,6 @@
 import Cookies from "universal-cookie";
 import ClientNavbar from "./ClientNavbar";
 import FreelancerNavbar from "./FreelancerNavbar";
-import FreelancerContractPage from "./FreelancerContractPage";
-import ClientContractPage from "./ClientContractPage";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "./axios.js";
