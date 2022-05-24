@@ -36,25 +36,25 @@ const Milestone = (props)=>{
 
     return(
         <div className="milestoneinput">
-                        { (status==="NAN") && (!addedSuccess) &&
+                        { (status==="NAN") && (initial) &&
                             <input type="text" placeholder="Description" value={description} onInput={(e)=>setDescription(e.target.value)}/>
                         }
-                        { (status==="NAN") && (!addedSuccess) &&
+                        { (status==="NAN") && (initial) &&
                             <input type="date" placeholder="Due Date" value={dueDate} onInput={(e)=>setDueDate(e.target.value)}/>
                         }
-                        { (status==="NAN") && (!addedSuccess) &&
+                        { (status==="NAN") && (initial) &&
                             <input type="number" placeholder="Money $" value={money} onInput={(e)=>setMoney(e.target.value)}/>
                         }
 
 
 
-                        { ((status!=="NAN")) &&
+                        { (((status!=="NAN")) || (!initial)) &&
                             <label>{description}</label>
                         }
-                        { (status!=="NAN") &&
+                        { (((status!=="NAN")) || (!initial)) &&
                             <label>{dueDate}</label>
                         }
-                        { (status!=="NAN") &&
+                        { (((status!=="NAN")) || (!initial)) &&
                             <label>{money}</label>
                         }
                         { (status==="NAN") && (initial) && (!addedSuccess) &&
