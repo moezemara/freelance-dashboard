@@ -8,6 +8,7 @@ import Login from "./Login";
 import PostJob from "./PostJob";
 import Page404 from "./Page404";
 import ProposalPage from "./ProposalPage";
+import SiteStats from "./SiteStats";
 import ClientNavbar from "./ClientNavbar";
 import ProfileSettings from "./ProfileSettings";
 import Footer from "./footer";
@@ -80,6 +81,13 @@ function App() {
             <Route exact path="/contract/:contract_id">
               <ContractPage/>
             </Route>
+
+            <Route exact path="/statistics">
+              <SiteStats/>
+            </Route>
+
+
+            
 
             <Route path="*">
               <Page404 />
