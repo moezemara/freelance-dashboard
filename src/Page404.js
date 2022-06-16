@@ -1,6 +1,6 @@
-import ClientNavbar from "./ClientNavbar";
-import FreelancerNavbar from "./FreelancerNavbar";
-import Navbar from "./Navbar";
+import ClientNavbar from "./navbars/ClientNavbar";
+import FreelancerNavbar from "./navbars/FreelancerNavbar";
+import Navbar from "./navbars/Navbar";
 import Cookies from 'universal-cookie';
 import { useState, useEffect } from "react";
 

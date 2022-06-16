@@ -1,4 +1,4 @@
-import NavbarWide from "./NavbarWide";
+import NavbarWide from "./navbars/NavbarWide";
 import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";

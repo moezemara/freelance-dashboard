@@ -1,25 +1,24 @@
-import Navbar from "./Navbar";
+import Navbar from "./navbars/Navbar";
 import Home from "./Home";
 import HomeWide from "./HomeWide";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import PostJob from "./PostJob";
+import PostJob from "./jobs/PostJob";
 import Page404 from "./Page404";
-import ProposalPage from "./ProposalPage";
-import ClientNavbar from "./ClientNavbar";
-import ProfileSettings from "./ProfileSettings";
+import ProposalPage from "./proposals/ProposalPage";
+import ClientNavbar from "./navbars/ClientNavbar";
+import ProfileSettings from "./profiles/ProfileSettings";
 import Footer from "./footer";
-import FreelancerNavbar from "./FreelancerNavbar";
-import BrowseJobs from "./BrowseJobs";
-import ProfileMainPage from "./ProfileMainPage";
-import AppliedProposals from "./AppliedProposals";
-import MakeProfile from "./MakeProfile";
-import ProfilePage from "./ProfilePage";
+import FreelancerNavbar from "./navbars/FreelancerNavbar";
+import BrowseJobs from "./jobs/BrowseJobs";
+import ProfileMainPage from "./profiles/ProfileMainPage";
+import MakeProfile from "./profiles/MakeProfile";
+import ProfilePage from "./profiles/ProfilePage";
 import ActivitiesPage from "./ActivitiesPage";
-import JobPage from "./JobPage";
-import ContractPage from "./ContractPage";
+import JobPage from "./jobs/JobPage";
+import ContractPage from "./contracts/ContractPage";
 
 function App() {
   return (

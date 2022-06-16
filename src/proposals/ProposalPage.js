@@ -1,7 +1,7 @@
-import dollarSymbol from "./src-images/dollar.png";
-import JobCardForProposal from "./JobCardForProposal";
+import dollarSymbol from "../src-images/dollar.png";
+import JobCardForProposal from "../jobs/JobCardForProposal";
 import { useState, useEffect, createRef } from "react";
-import axios from "./axios.js";
+import axios from "../axios.js";
 
 const ProposalPage = () => {
   const [cover_letter, setCoverLetter] = useState("");
