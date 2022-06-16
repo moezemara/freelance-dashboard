@@ -10,6 +10,7 @@ import Page404 from "./Page404";
 import ProposalPage from "./proposals/ProposalPage";
 import ClientNavbar from "./navbars/ClientNavbar";
 import ProfileSettings from "./profiles/ProfileSettings";
+import SiteStats from "./SiteStats";
 import Footer from "./footer";
 import FreelancerNavbar from "./navbars/FreelancerNavbar";
 import BrowseJobs from "./jobs/BrowseJobs";
@@ -79,6 +80,13 @@ function App() {
             <Route exact path="/contract/:contract_id">
               <ContractPage/>
             </Route>
+
+            <Route exact path="/statistics">
+              <SiteStats/>
+            </Route>
+
+
+            
 
             <Route path="*">
               <Page404 />
