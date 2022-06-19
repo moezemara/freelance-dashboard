@@ -21,9 +21,9 @@ const SignUp = () => {
     const [sex, setSex] = useState('');
     
     //for local validation
-    
     const [confirmPassword, setConfirmPassword] = useState('')
-
+    //error message for user
+    const [errorMsg,setErrorMsg] = useState('');
 
     async function handleSignUp(){
         console.log(process.env.BASE_API_URL)
@@ -48,7 +48,7 @@ const SignUp = () => {
             window.location = '/createprofile';
         }
         else{
-            console.log("failed")
+            setErrorMsg({'falied':true,'msg':response.data.message});
         }
         
     }
@@ -108,6 +108,8 @@ const SignUp = () => {
 
                 <button type="button" onClick={handleSignUp}>Sign Up</button>
             </form>
+            {(errorMsg.falied) && <label style={{color:'red'}}>{errorMsg.msg}</label>}
+
         </div>
     );
 }
