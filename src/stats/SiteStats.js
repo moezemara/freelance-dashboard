@@ -38,10 +38,10 @@ return(
 <h1>Site Statistics</h1>
 
 
-<AccountStats/>
-<JobStats/>
-<ProposalStats/>
-<ContractStats/>
+<AccountStats stats={myData.AccountStats} />
+<JobStats stats={myData.JobStats} />
+<ProposalStats stats={myData.ProposalStats} />
+<ContractStats stats={myData.ContractStats} />
 
 
 </div>
