@@ -47,7 +47,8 @@ return(
 
     <p>number of proposals: <b>xx</b></p>
     <p>number of opened proposals: <b>xx</b></p>
-    
+    <p>Avg. price: <b>xx</b></p>
+    <p>Avg. expected duration: <b>xx</b></p>
     
 </div>
 
@@ -56,21 +57,16 @@ return(
 <div className="contracts-stats">
 
 <h2>Contracts stats</h2>
+
     <p>In-intervieiw contracts: <b>xx</b></p>
     <p>Active contracts: <b>xx</b></p>
     <p>Archieved contracts: <b>xx</b></p>
-    
+    <p>Avg. Final price: <b>xx</b></p>
+
 </div>
 
 
-
-
-
-
-    </div>
-
-
-
+</div>
 );
 
 }
