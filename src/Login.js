@@ -2,6 +2,7 @@ import axios from "./axios.js";
 import config from "./config.json"
 import { useState, useEffect, createRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import Cookies from "universal-cookie";
 
 const Login = () => {
 
@@ -34,6 +35,37 @@ const Login = () => {
         }
     }
 
+    const cookies = new Cookies();
+    const [accountType,setAccountType] = useState('');
+
+
+    
+    async function getAccountType(){
+        const type = await cookies.getAll().type;
+        await setAccountType(type);
+    }
+    
+
+    useEffect(()=>{
+        if(accountType !== 'F' || accountType !== 'C'){
+            getAccountType();
+        }
+        
+        if(accountType==='F'){
+            axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                  window.location = '/profile/';
+                }},[]);
+        }
+        else if(accountType==='C'){
+            axios.get('client/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    window.location = '/profile/';
+                }
+                else{
+                    
+                }},[]);
+        }},[accountType]);
     
 
     return (

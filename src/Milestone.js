@@ -22,7 +22,7 @@ const Milestone = (props)=>{
             "amount":money
         };
         axios.post(`/contract/${contract_id}/milestone/add`,data,{withCreditionals:true}).then((res)=>{
-            if(res.data.addedSuccess){
+            if(res.data.success){
                 window.location =  `/contract/${contract_id}`;
             }
         });;

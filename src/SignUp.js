@@ -3,6 +3,7 @@ import config from "./config.json"
 import countries from './countries.json'
 import { useState, useEffect, createRef } from "react";
 import axios from "./axios.js";
+import Cookies from "universal-cookie";
 
 
 
@@ -45,13 +46,51 @@ const SignUp = () => {
         console.log(response)
         if(response.data.success){
             document.cookie = JSON.stringify({'type':response.data.message.type})
-            window.location = '/createprofile';
+            if(type==="F"){
+                window.location = '/createprofile';
+            }
+            else{
+                window.location = '/login';
+            }
         }
         else{
             setErrorMsg({'falied':true,'msg':response.data.message});
         }
         
     }
+
+
+    const cookies = new Cookies();
+    const [accountType,setAccountType] = useState('');
+
+
+    
+    async function getAccountType(){
+        const type = await cookies.getAll().type;
+        await setAccountType(type);
+    }
+    
+
+    useEffect(()=>{
+        if(accountType !== 'F' || accountType !== 'C'){
+            getAccountType();
+        }
+        
+        if(accountType==='F'){
+            axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                  window.location = '/profile/';
+                }},[]);
+        }
+        else if(accountType==='C'){
+            axios.get('client/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    window.location = '/profile/';
+                }
+                else{
+                    
+                }},[]);
+        }},[accountType]);
 
 
     return (  
