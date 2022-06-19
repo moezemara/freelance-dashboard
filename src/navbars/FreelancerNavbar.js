@@ -1,9 +1,13 @@
 import axios from "../axios.js"
+import Cookies from "universal-cookie";
+import { useEffect, useState } from "react";
 
 const FreelancerNavbar = (props) => {
 
     const profile_id = props.profile_id;
+    const [activeProfileId, setActiveProfileId] = useState('');
 
+    const cookies = new Cookies();
 
     async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
@@ -11,6 +15,34 @@ const FreelancerNavbar = (props) => {
             if(res.data.success===1) window.location='/login';
         });
     }
+
+    const [accountType,setAccountType] = useState('');
+
+
+    
+    async function getAccountType(){
+        const type = await cookies.getAll().type;
+        await setAccountType(type);
+    }
+    
+
+    useEffect(()=>{
+        if(accountType !== 'F' || accountType !== 'C'){
+            getAccountType();
+        }
+        
+        if(accountType==='F'){
+            axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    setActiveProfileId(res.data.message.active_id);
+                    document.cookie = 'active_id='+res.data.message.active_id;
+                }
+                else{
+                    window.location = '/login';
+                }},[]);
+        }
+    },[accountType]);
+
 
     return (
         <nav className="navbar">

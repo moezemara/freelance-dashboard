@@ -20,6 +20,11 @@ const ActivitiesPage = ()=>{
     const [ButtonState,setButtonState] = useState('');
 
     useEffect(()=>{
+        console.log(cookies.getAll().active_id)
+        if(!cookies.getAll().active_id){
+            window.location = '/login';
+        }
+
         if(accountType !== 'F' || accountType !=='C'){
             setAccountType(cookies.getAll().type);
             setActiveId(cookies.getAll().active_id);
