@@ -21,7 +21,7 @@ return(
     <p>Advanced Level: <b>{AdvancedNum}</b></p>
     <p>Avg expected price: <b>{expectedPriceAvg}</b></p>
     <p>Avg working hours: <b>{workingHoursAvg}</b></p>
-    
+    <br /><br />
 </div>
 
 );

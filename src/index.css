@@ -943,7 +943,7 @@ text-align: left;
   
     border-radius: 20px;
     border: dashed;
-    padding: 20px;
+    padding: 20px 20px 20px 40px;
   
 }
 .account-stats h2,
@@ -953,4 +953,21 @@ text-align: left;
 .site-stats h1
 {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.account-stats p,
+.job-stats p,
+.proposal-stats p,
+.contract-stats p,
+.site-stats p
+{
+  font-size: 18px;
+}
+
+.stats-table{
+
+width: 100%;
+padding: 0px 280px 0px 200px;
+
 }
