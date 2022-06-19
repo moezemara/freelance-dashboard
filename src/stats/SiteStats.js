@@ -14,7 +14,7 @@ const SiteStats = () => {
         setMyData(res.data.message);
         console.log(res);
       } else {
-        axios.get(`stats`).then((res) => {
+        axios.get(`global/stats`).then((res) => {
           if (res.data.success) {
             setMyData(res.data.message);
             console.log(res);
