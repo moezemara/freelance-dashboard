@@ -81,7 +81,7 @@ function App() {
               <ContractPage/>
             </Route>
 
-            <Route exact path="/statistics">
+            <Route exact path="/stats">
               <SiteStats/>
             </Route>
 
