@@ -82,11 +82,9 @@ function App() {
             </Route>
 
             <Route exact path="/stats">
+            <Navbar/>
               <SiteStats/>
             </Route>
-
-
-            
 
             <Route path="*">
               <Page404 />

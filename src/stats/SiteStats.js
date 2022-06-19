@@ -33,7 +33,7 @@ const SiteStats = () => {
 
 return(
 
-    <div className="sitestats">
+    <div className="site-stats">
 
 <h1>Site Statistics</h1>
 

@@ -929,3 +929,28 @@ text-align: left;
   background-color: black;
   color: white;
 }
+ 
+.account-stats,
+.job-stats,
+.proposal-stats,
+.contract-stats
+
+{
+
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+  
+    border-radius: 20px;
+    border: dashed;
+    padding: 20px;
+  
+}
+.account-stats h2,
+.job-stats h2,
+.proposal-stats h2,
+.contract-stats h2,
+.site-stats h1
+{
+  text-align: center;
+}
