@@ -1,10 +1,8 @@
-import { useState, useEffect, createRef } from "react";
-import axios from "../axios.js";
 
 const ProposalStats = (props) => {
 
     var proposalsNum = props.proposalsNum
-    var OpenedProposalNum = props.OpenedProposalNum
+    var pendingProposalNum = props.pendingProposalNum
     var priceAvg = props.priceAvg
     var durationAvg = props.durationAvg
 
@@ -13,7 +11,7 @@ return(
 
 <h2>Proposals stats</h2>
     <p>number of proposals: <b>{proposalsNum}</b></p>
-    <p>number of opened proposals: <b>{OpenedProposalNum}</b></p>
+    <p>number of pending proposals: <b>{pendingProposalNum}</b></p>
     <p>Avg. expected price: <b>{priceAvg}</b></p>
     <p>Avg. expected duration: <b>{durationAvg}</b></p>
     
