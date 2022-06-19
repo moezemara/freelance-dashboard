@@ -10,11 +10,7 @@ const ProfileSettings = () => {
   const [accountType, setAccountType] = useState();
   const { profile_id } = useParams();
   const cookies = new Cookies();
-  const [ActivateMessage, setActivateMessage] = useState("");
-  const [UpdateMessage, setUpdateMessage] = useState("");
-
   const [active_profile_id, setActiveId] = useState("")
-
   const [profile_data,setProfileData] = useState({profile:{}, account:{}});
 
 
@@ -23,6 +19,8 @@ const ProfileSettings = () => {
   const [skills, setSkills] = useState(profile_data.profile.skills);
   const [description, setDescription] = useState(profile_data.profile.description);
   const [pay_rate, setPayRate] = useState(profile_data.profile.pay_rate);
+  const [returnedMsg, setReturnedMsg] = useState({"color":"green","msg":""})
+
 
   useEffect(()=>{
       ////we need to get that profile data so I sent the cokkies to send us the profile data
@@ -78,10 +76,10 @@ const ProfileSettings = () => {
 
     console.log(response.data.success);
     if(response.data.success===1){
-      setUpdateMessage("Account Updated!");
+      setReturnedMsg({"color":"green","msg":"Successfully Updated"});
     }
     else{
-      setUpdateMessage(response.data.message);
+      setReturnedMsg({"color":"red","msg":response.data.message});
     }
   }
 
@@ -96,7 +94,7 @@ const ProfileSettings = () => {
       })
       .then((res) => {
         if (res.data.success === 1) {
-          setActivateMessage("Successfully Activated!");
+          setReturnedMsg({"color":"green","msg":"Successfully Activated!"});
         }
       });
   };
@@ -113,6 +111,9 @@ const ProfileSettings = () => {
       .then((res) => {
         if (res.data.success === 1) {
           window.location = "/profile/";
+        }
+        else{
+          setReturnedMsg({"color":"red","msg":res.data.message});
         }
       });
   };
@@ -186,9 +187,7 @@ const ProfileSettings = () => {
             Delete
           </button>
         </div>
-        <label style={{ color: "green" }}>{ActivateMessage}</label>
-        <label style={{ color: "green" }}>{UpdateMessage}</label>
-
+        <label style={{ color: returnedMsg.color }}>{returnedMsg.msg}</label>
       </div>
     </div>
   );
