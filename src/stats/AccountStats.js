@@ -7,7 +7,7 @@ const AccountStats = (props) => {
 
 return(
 
-<div className="accounts-stats">
+<div className="account-stats">
 <h2>Accounts stats</h2>
     <p>number of users: <b>xx</b></p>
     <p>percent of freelancers: <b>xx</b></p>
