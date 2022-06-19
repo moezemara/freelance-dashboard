@@ -1,4 +1,8 @@
 import NavbarWide from "./navbars/NavbarWide";
+import { useEffect, useState } from "react";
+import axios from "./axios.js";
+
+import Cookies from "universal-cookie";
 import img1 from "./src-images/logo1.jpg";
 import img2 from "./src-images/logo2.jpg";
 import img3 from "./src-images/logo3.jpg";
@@ -7,6 +11,38 @@ import img5 from "./src-images/logo5.png";
 
 import serviceImage from "./src-images/service-logo.png";
 const HomeWide = () => {
+    const cookies = new Cookies();
+    const [accountType,setAccountType] = useState('');
+
+
+    
+    async function getAccountType(){
+        const type = await cookies.getAll().type;
+        await setAccountType(type);
+    }
+    
+
+    useEffect(()=>{
+        if(accountType !== 'F' || accountType !== 'C'){
+            getAccountType();
+        }
+        
+        if(accountType==='F'){
+            axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                  window.location = '/profile/';
+                }},[]);
+        }
+        else if(accountType==='C'){
+            axios.get('client/profile/',{ withCredentials: true}).then(res=>{
+                if(res.data.success===1){
+                    window.location = '/profile/';
+                }
+                else{
+                    
+                }},[]);
+        }},[accountType]);
+
   return (
     <div className="homewide">
       <div class="homewide-img" id="homewide-img">
