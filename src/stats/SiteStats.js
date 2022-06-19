@@ -1,7 +1,30 @@
 import { useState, useEffect, createRef } from "react";
-import axios from "./axios.js";
+import axios from "../axios.js";
 
 const SiteStats = () => {
+    const [myData, setMyData] = useState({profile:{}});
+
+    useEffect(()=>{
+        axios.get(`stats`).then(res=>{
+            if(res.data.success===1){
+                setMyData(res.data.message);
+                console.log(res);
+            }
+            else{
+                axios.get(`stats`).then(res=>{
+                    if(res.data.success){
+                        setMyData(res.data.message);
+                        console.log(res);
+                    }
+                    else{
+                        console.log(res);
+                    }
+                });
+            }
+
+        });
+    },[]);
+
 
 
 return(
