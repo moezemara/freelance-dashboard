@@ -6,7 +6,7 @@ import ContractStats from "./ContractStats.js";
 import JobStats from "./JobStats.js";
 
 const SiteStats = () => {
-  const [myData, setMyData] = useState({ profile: {} });
+  const [myData, setMyData] = useState();
 
   useEffect(() => {
     axios.get(`stats`).then((res) => {
@@ -33,19 +33,19 @@ const SiteStats = () => {
       <table className="stats-table">
         <tr>
           <td>
-            <AccountStats stats={myData} />
+           { (myData) && <AccountStats stats={myData} />}
           </td>
           <td>
-            <JobStats stats={myData} />
+          { (myData) &&<JobStats stats={myData} />}
           </td>
         </tr>
 
         <tr>
           <td>
-            <ProposalStats stats={myData} />
+          { (myData) && <ProposalStats stats={myData} />}
           </td>
           <td>
-            <ContractStats stats={myData} />
+          { (myData) && <ContractStats stats={myData} />}
           </td>
         </tr>
       </table>
