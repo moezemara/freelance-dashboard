@@ -1,21 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-
-.App{
+.App {
   font-family: "Open Sans", sans-serif;
 }
 
-.root, .App{
+.root,
+.App {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-
 }
 
-
-
-
-.navbar{
+.navbar {
   background-color: white;
   color: black;
   padding: 10px 100px 10px 100px;
@@ -25,17 +21,15 @@
   margin: 0 auto;
 }
 
-.navbar:hover{
-
-  box-shadow:  0px 0px 10px #e2e2e2; 
-  
+.navbar:hover {
+  box-shadow: 0px 0px 10px #e2e2e2;
 }
 
-.navbar .links{
+.navbar .links {
   margin-left: auto;
 }
 
-.navbar a{
+.navbar a {
   color: black;
   margin-left: 16px;
   text-decoration: none;
@@ -47,36 +41,42 @@
   color: white;
   border-radius: 8px;
 }
-.navbar a:hover{
+.navbar a:hover {
   background-color: black;
   color: white;
   border-radius: 4px;
-
 }
 
-position: relative; 
-  top: -3px;
+position: relative;
+top: -3px;
 
 .homewide-img {
-  -webkit-animation: action 100ms  1s alternate;
+  -webkit-animation: action 100ms 1s alternate;
   animation: action 1100ms infinite alternate;
-  animation-iteration-count:2;
+  animation-iteration-count: 2;
 }
 
 @-webkit-keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-20px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-20px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
-
 
 /*Navbar Wide*/
 
-.navbarwide{
+.navbarwide {
   background-color: rgba(35, 35, 35, 0);
   color: black;
   padding: 10px 100px 10px 30px;
@@ -85,68 +85,83 @@ position: relative;
   margin: 0 auto;
 }
 
-
-.navbarwide .links{
+.navbarwide .links {
   margin-left: auto;
 }
 
-.navbarwide a{
+.navbarwide a {
   color: white;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
   font-size: 20px;
   font-weight: 700px;
-  position: relative; 
+  position: relative;
   top: 3px;
 }
 
-.navbarwide h2{
+.navbarwide h2 {
   font-size: 30px;
   font-weight: 900px;
   color: white;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
-  position: relative; 
+  position: relative;
   top: 3px;
 }
-  
 
-.navbarwide a:hover, #trusted-by img:hover {
-  -webkit-animation: action 100ms  1s alternate;
+.navbarwide a:hover,
+#trusted-by img:hover {
+  -webkit-animation: action 100ms 1s alternate;
   animation: action 1100ms infinite alternate;
-  
 }
 @-webkit-keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 @keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .homewide-content h2:hover {
-  -webkit-animation: action 100ms  1s alternate;
+  -webkit-animation: action 100ms 1s alternate;
   animation: action 800ms infinite alternate;
   animation-iteration-count: 2;
   filter: drop-shadow(0px 0px 10px rgb(125, 125, 125));
 }
 @-webkit-keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 @keyframes action {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 .homewide-content h3:hover {
   filter: drop-shadow(0px 0px 10px rgb(68, 68, 68));
 }
 
-.signup, .login, .postjob  {
-
+.signup,
+.login,
+.postjob {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 100px;
@@ -155,11 +170,9 @@ position: relative;
   border: dashed;
   padding: 20px;
   text-align: center;
-
 }
 
-.profilecard{
-
+.profilecard {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 20px;
@@ -168,24 +181,24 @@ position: relative;
   border: solid;
   padding: 20px;
   text-align: center;
-
 }
 
-
-
-.signup h2, .login h2, .postjob h2{
-
+.signup h2,
+.login h2,
+.postjob h2 {
   font-size: 20px;
 
   color: black;
 
   margin-bottom: 30px;
-
 }
 
-.signup input, .login input, .postjob input, .proposalpage input,.profilesettings input,
+.signup input,
+.login input,
+.postjob input,
+.proposalpage input,
+.profilesettings input,
 .freelancercontractpage input {
-
   width: 100%;
   border-radius: 10px;
 
@@ -199,77 +212,77 @@ position: relative;
 
   display: block;
   background-color: #f8f8f8;
-
 }
 
-input:hover, textarea:hover, select:hover, button:hover
-{
+input:hover,
+textarea:hover,
+select:hover,
+button:hover {
   font-weight: 799;
-
 }
 
-a:hover{
+a:hover {
   font-weight: 1000;
-  text-shadow: 3px 3px 4px #848484; 
-
+  text-shadow: 3px 3px 4px #848484;
 }
 
-input:focus, textarea:focus, select:focus
-{
+input:focus,
+textarea:focus,
+select:focus {
   font-weight: 800;
-
 }
 
-.proposalpage textarea, .postjob textarea, #description-make-profile{
+.proposalpage textarea,
+.postjob textarea,
+#description-make-profile {
   width: 100%;
   height: 250px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ddd;
-    border-radius: 10px;
+  border-radius: 10px;
   background-color: #f8f8f8;
   resize: vertical;
-} 
+}
 
-.price-card{
+.price-card {
   background-color: #f8f8f8;
   max-width: 100%;
   margin: 0 auto;
-border-radius: 20px;
+  border-radius: 20px;
   border: 1px solid;
   padding: 20px;
   text-align: center;
-
 }
 .price-card table {
-
   height: 120px;
   table-layout: auto;
-  text-align:left;
+  text-align: left;
   width: 100%;
 }
 
-#dollar-symbol{
+#dollar-symbol {
   width: 20%;
   align-content: flex-end;
   align-self: flex-end;
 }
-#dollar-char{
+#dollar-char {
   text-align: end;
 }
 
-
-#table-and-dollar-symbol{
+#table-and-dollar-symbol {
   margin-top: 50px;
   table-layout: auto;
   vertical-align: middle;
   width: 100%;
 }
 
-
-
-.signup button, .login button, .postjob button, .proposalpage button,
-.profilesettings button,.clientcontractpage button,
+.signup button,
+.login button,
+.postjob button,
+.proposalpage button,
+.profilesettings button,
+.clientcontractpage button,
 .freelancercontractpage button {
   margin-top: 10px;
   padding: 5px 10px 5px 10px;
@@ -280,50 +293,44 @@ border-radius: 20px;
   background-color: black;
 }
 
-.signup button:hover, .login button:hover, .postjob button:hover,
-.proposalpage button:hover, .profilesettings button:hover,.clientcontractpage button:hover,
+.signup button:hover,
+.login button:hover,
+.postjob button:hover,
+.proposalpage button:hover,
+.profilesettings button:hover,
+.clientcontractpage button:hover,
 .freelancercontractpage button:hover {
   font-weight: 900;
 }
 
-
-
-
-
-
-#button-to-be-red:hover
-{
+#button-to-be-red:hover {
   font-weight: 900;
   color: white;
   background-color: red;
 }
 
-#button-to-be-green:hover
-{
+#button-to-be-green:hover {
   font-weight: 900;
   color: white;
   background-color: rgb(0, 255, 0);
 }
 
-
-.accept-proposal{
+.accept-proposal {
   text-align: center;
 }
 
 /*big buttons*/
- .accept-proposal button{
+.accept-proposal button {
   align-items: center;
   align-self: center;
   margin-top: 10px;
-  height:30px;
+  height: 30px;
   font-size: 15px;
   margin-top: 20px;
   border-radius: 4px;
   color: white;
   background-color: black;
 }
-
-
 
 .proposal-details input {
   background-color: #f8f8f8;
@@ -333,7 +340,7 @@ border-radius: 20px;
   display: inline-block;
 }
 
-.jobcard{
+.jobcard {
   display: flex;
   border-radius: 7px;
   border-color: gray;
@@ -347,8 +354,8 @@ border-radius: 20px;
   align-items: center;
 }
 
-
-.proposalcard, .contractcard{
+.proposalcard,
+.contractcard {
   border-radius: 7px;
   border-color: gray;
   max-width: 600px;
@@ -359,25 +366,24 @@ border-radius: 20px;
   padding: 20px;
   align-self: center;
   align-items: center;
-  
 }
 
-.proposalcard a, .contractcard a{
+.proposalcard a,
+.contractcard a {
   margin-left: auto;
 }
 
-.proposalcard img, .contractcard img{
-  margin-left:auto;
-  width:40px;
-  height:20px;
+.proposalcard img,
+.contractcard img {
+  margin-left: auto;
+  width: 40px;
+  height: 20px;
 }
 
 .jobcardmain {
-  min-width:500px;
+  min-width: 500px;
   border-right: 5px solid #f2f2f2;
 }
-
-
 
 .name_part {
   color: gray;
@@ -388,8 +394,10 @@ border-radius: 20px;
   align-items: center;
 }
 
-
-.postjob, .proposalpage, .profilesettings, .job-card-of-proposal {
+.postjob,
+.proposalpage,
+.profilesettings,
+.job-card-of-proposal {
   border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -400,42 +408,39 @@ border-radius: 20px;
   border: dashed gray;
 }
 
-
-.appliedproposals{
+.appliedproposals {
   border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 200px 0px 200px;
 }
-.attachments-buttons{
+.attachments-buttons {
   background-color: #f0f0f0;
   color: black;
   padding: 1% 2% 1% 2%;
   border: 0px;
   border-radius: 20px;
   margin-right: 20px;
-
 }
 
-
-.appliedproposals h1, .appliedproposals h2{
+.appliedproposals h1,
+.appliedproposals h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.profilesettings div{
+.profilesettings div {
   padding-top: 1%;
 }
 
-.postjob label{
+.postjob label {
   padding-right: 20px;
 }
 
-
-.proposal input{
+.proposal input {
   text-align: center;
   align-content: center;
-  content: 'Select some files';
+  content: "Select some files";
   display: inline-block;
   background: linear-gradient(top, #f9f9f9, #e3e3e3);
   background-color: #f8f8f8;
@@ -455,30 +460,28 @@ hr {
   height: 10px;
 }
 
-#hr2{
+#hr2 {
   opacity: 100;
   height: 1px;
   background-color: rgb(208, 208, 208);
   border-radius: 10px;
-
 }
 
-.signup select, .profilesettings select, .postjob select{
-
-background-color: rgba(0, 0, 0, 0);
-border-radius: 20px;
-background-color: #f8f8f8;
-color: rgb(134, 134, 134);
-border : 55;
-height: 5555;
-width: 100%;
-padding: 6px 10px;
-margin: 10px 0;
-border: 1px solid rgb(221, 221, 221);
-box-sizing: border-box;
-display: block;
-
-
+.signup select,
+.profilesettings select,
+.postjob select {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  color: rgb(134, 134, 134);
+  border: 55;
+  height: 5555;
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(221, 221, 221);
+  box-sizing: border-box;
+  display: block;
 }
 
 .page404 {
@@ -487,7 +490,9 @@ display: block;
   align-content: center;
 }
 
-.activitiespage, .clientcontractpage, .freelancercontractpage {
+.activitiespage,
+.clientcontractpage,
+.freelancercontractpage {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -495,7 +500,6 @@ display: block;
   align-items: center;
   width: 100%;
 }
-
 
 .homewide {
   font-family: "Open Sans", sans-serif;
@@ -506,8 +510,7 @@ display: block;
   padding-bottom: 0px;
 }
 
-
-.browsejobs{
+.browsejobs {
   max-width: 800px;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -518,7 +521,7 @@ display: block;
   padding: 1%;
 }
 
-.job-card-of-proposal{
+.job-card-of-proposal {
   border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -528,7 +531,7 @@ display: block;
   border: dashed gray;
 }
 
-.jobslist{
+.jobslist {
   margin-right: 1%;
 }
 
@@ -538,74 +541,68 @@ display: block;
   color: rgb(255, 255, 255);
   height: 800px;
   width: 100%;
-  background-image: url('/public/giphy.gif');
+  background-image: url("/public/giphy.gif");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 30px;
 }
-.homewide-content{
-padding: 10px 200px 50px 200px;
+.homewide-content {
+  padding: 10px 200px 50px 200px;
 }
-.homewide-content h2{
+.homewide-content h2 {
   font-size: 40px;
   margin-top: 50px;
 }
-.homewide-content h3{
+.homewide-content h3 {
   font-size: 24px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 50px;
 }
 
-.feature-table h3{
+.feature-table h3 {
   font-size: 18px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 50px;
 }
 
-
-
-.homewide-content p{
+.homewide-content p {
   font-size: 17px;
   font-weight: 500;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
-
 }
 
-
-#table-of-home-logo{
+#table-of-home-logo {
   margin-top: 0px;
   table-layout: auto;
   vertical-align: middle;
   width: 100%;
 }
 
-#homewide-img-txt-1{
+#homewide-img-txt-1 {
   font-size: 50px;
   font-weight: 900;
   margin: 0px 30px 0px 30px;
 }
-#homewide-img-txt-2{
+#homewide-img-txt-2 {
   font-size: 100px;
   font-weight: 900;
   margin: 0px 30px 0px 30px;
 }
-#homewide-img-txt-3{
+#homewide-img-txt-3 {
   font-size: 45px;
   font-weight: 900;
   margin: 0px 30px 0px 30px;
-
 }
-#homewide-img-txt-4{
+#homewide-img-txt-4 {
   max-width: 600px;
   font-size: 20px;
   font-weight: 500;
   margin: 20px 300px 0px 30px;
-
 }
 
 #home-btn-1 {
@@ -615,10 +612,10 @@ padding: 10px 200px 50px 200px;
   font-weight: 600;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
-  height:45px;
-  width:250px;
+  height: 45px;
+  width: 250px;
 }
-#home-btn-2{
+#home-btn-2 {
   margin: 30px 0px 0px 25px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -627,39 +624,38 @@ padding: 10px 200px 50px 200px;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0);
   font-size: 18px;
-  height:45px;
-  width:250px;
+  height: 45px;
+  width: 250px;
 }
 
-#home-btn-1:hover{
-  box-shadow:  0px 0px 15px #e2e2e2; 
-text-shadow: 0px 0px 10px #323232;
-position: relative; 
+#home-btn-1:hover {
+  box-shadow: 0px 0px 15px #e2e2e2;
+  text-shadow: 0px 0px 10px #323232;
+  position: relative;
   top: -3px;
 }
 
-#home-btn-2:hover{
-  box-shadow:  0px 0px 10px #ffffff; 
-text-shadow: 0px 0px 5px #979797;
-position: relative; 
+#home-btn-2:hover {
+  box-shadow: 0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 5px #979797;
+  position: relative;
   top: -3px;
 }
 
-#trusted-by img{
+#trusted-by img {
   margin: 0px 0px 0px 30px;
 }
-#trusted-by p{
+#trusted-by p {
   text-align: center;
-  font-size:25px;
+  font-size: 25px;
   margin: 10px 30px 20px 20px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;  
+  font-family: "Open Sans", sans-serif;
 }
 
-#logo-of-main-navbar:hover{
+#logo-of-main-navbar:hover {
   filter: drop-shadow(0px 0px 3px white);
   height: 71px;
-  
 }
 
 #homewide-img {
@@ -668,9 +664,9 @@ position: relative;
   color: rgb(255, 255, 255);
   height: 800px;
   width: 100%;
-  background-image: url('/public/giphy.gif');
+  background-image: url("/public/giphy.gif");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 30px;
 }
@@ -682,13 +678,13 @@ position: relative;
   color: rgb(255, 255, 255);
   height: 800px;
   width: 100%;
-  background-image: url('/public/giphy.gif');
+  background-image: url("/public/giphy.gif");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 30px;
 }
-.clientprofileview{
+.clientprofileview {
   display: flex;
 }
 
@@ -699,7 +695,6 @@ position: relative;
   text-align: center;
   align-items: center;
   padding: 1%;
-
 }
 
 .profileimg {
@@ -715,181 +710,171 @@ position: relative;
   margin: px 0px 0px 20px;
   background-color: #f8f8f8;
 }
-.different-skills table{
+.different-skills table {
   width: 100%;
   margin: 0px 50px 0px 50px;
 }
 .footer {
   height: 450px;
-  margin: 0px 0px 0px 0px ;
+  margin: 0px 0px 0px 0px;
   margin-top: 100px;
   background-color: rgb(0, 0, 0);
   padding: 10px 100px 0px 200px;
   text-align: left;
-
 }
 
-
-#footer-head{
+#footer-head {
   font-size: 20px;
   color: rgb(255, 255, 255);
   text-align: left;
   margin: 0px 0px 0px 0px;
   text-decoration: none;
   padding: 6px;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
-.footer table{
+.footer table {
   width: 100%;
   height: 150px;
 }
 
-.footer a{
+.footer a {
   font-size: 18px;
   color: rgb(255, 255, 255);
   text-align: left;
   margin: 10px 10px 20px 0px;
   text-decoration: none;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
-.footer a:hover{
-  position: relative; 
+.footer a:hover {
+  position: relative;
   top: -3px;
 }
 
-#copyrights-text{
+#copyrights-text {
   margin: 100px 50px 0px 0px;
   text-align: center;
   vertical-align: bottom;
   color: rgb(255, 255, 255);
 }
 
-
-#copyrights-text:hover{
-  position: relative; 
+#copyrights-text:hover {
+  position: relative;
   top: -3px;
   font-size: 15px;
   font-weight: 1000;
-  text-shadow: 3px 3px 4px #848484; 
+  text-shadow: 3px 3px 4px #848484;
 }
 
-.different-skills h3{
+.different-skills h3 {
   margin: 10px 0px 15px 0px;
   align-items: center;
   align-self: start;
   align-content: center;
-
 }
 
-.different-skills img{
+.different-skills img {
   margin-right: 10px;
   height: 20px;
 }
 
-activities-page-content{
+activities-page-content {
   border: 5px;
   align-items: center;
   text-align: center;
 }
 
-.activitiesNavbar{
+.activitiesNavbar {
   align-items: center;
   text-align: center;
   margin-top: 5%;
-  width:800px;
+  width: 800px;
 }
 
-.activitiesNavbar  button{
+.activitiesNavbar button {
   background-color: white;
   color: black;
   padding: 1%;
   width: 20%;
 }
 
-
-
-#activebutton{
+#activebutton {
   background-color: rgb(0, 0, 0);
-  color:white;
+  color: white;
 }
 
-.clientcontractmilestones, .freelancercontractmilestones{
+.clientcontractmilestones,
+.freelancercontractmilestones {
   padding: 2%;
 }
 
-.clientcontractmilestones button, .freelancercontractmilestones button{
+.clientcontractmilestones button,
+.freelancercontractmilestones button {
   color: black;
   background-color: white;
   border: white;
 }
 
-.milestoneinput{
+.milestoneinput {
   display: flex;
   padding: 3px;
   align-items: center;
   text-align: center;
 }
-.milestoneinput label{
-  margin: 1%;
-
-}
-.milestoneinput input{
+.milestoneinput label {
   margin: 1%;
 }
+.milestoneinput input {
+  margin: 1%;
+}
 
-.clientcontractpage button, .freelancercontractpage button{
+.clientcontractpage button,
+.freelancercontractpage button {
   width: 200px;
 }
-.activitiesNavbar button:hover{
+.activitiesNavbar button:hover {
   background-color: rgb(100, 100, 100);
-  color:white;
+  color: white;
   font-weight: 800;
 }
 
-#profile-picture{
-
+#profile-picture {
   border-radius: 50%;
   height: 150px;
-
 }
-.profilecard table{
-align-content: center;
-
-
+.profilecard table {
+  align-content: center;
 }
 
-.price-card tr, .profilecard td{
+.price-card tr,
+.profilecard td {
   text-align: left;
   vertical-align: top;
-  
 }
-.profilecard img{
+.profilecard img {
   float: left;
   margin-left: 10px;
 }
 
-.profilecard h2{
-  margin: 30px 0px 10px 20px;  
-  }
-
-.profilecard h3{
-margin: 30px 0px 10px 20px;
-text-align: left;
-
+.profilecard h2 {
+  margin: 30px 0px 10px 20px;
 }
 
-.profilecard p{
+.profilecard h3 {
+  margin: 30px 0px 10px 20px;
+  text-align: left;
+}
+
+.profilecard p {
   margin: 0px 30px 0px 35px;
 }
 
-.big-paragraphs{
+.big-paragraphs {
   text-align: justify;
 }
 
-
-.briefprofilecard{
+.briefprofilecard {
   display: flex;
   border-radius: 7px;
   border-color: gray;
@@ -902,92 +887,81 @@ text-align: left;
   align-items: center;
 }
 
-
 .briefprofilecardmain {
   min-width: 200px;
   border-right: 5px solid #f2f2f2;
 }
 
-.briefprofilecard button{
+.briefprofilecard button {
   color: white;
   background-color: black;
   border-radius: 4px;
 }
 
-.profilepage{
+.profilepage {
   text-align: center;
   align-items: center;
   align-content: center;
   max-width: 800px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
-.profilepageactivitiesNavbar{
+.profilepageactivitiesNavbar {
   align-items: center;
   text-align: center;
   margin-top: 5%;
-  width:800px;
+  width: 800px;
 }
 
-.profilepageactivitiesNavbar  button{
+.profilepageactivitiesNavbar button {
   background-color: white;
   color: black;
   padding: 1%;
   width: 200px;
 }
 
-.profilepageactivitiesNavbar  button:hover{
+.profilepageactivitiesNavbar button:hover {
   background-color: black;
   color: white;
 }
- 
+
 .account-stats,
 .job-stats,
 .proposal-stats,
-.contract-stats
+.contract-stats {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
 
-{
-
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 30px;
-  
-    border-radius: 20px;
-    border: dashed;
-    padding: 20px 20px 20px 40px;
-  
+  border-radius: 20px;
+  border: dashed;
+  padding: 20px 20px 20px 40px;
 }
 .account-stats h2,
 .job-stats h2,
 .proposal-stats h2,
-.contract-stats h2
-{
+.contract-stats h2 {
   text-align: center;
   margin-bottom: 30px;
   text-decoration: underline;
-
 }
 
-.site-stats h1{
+.site-stats h1 {
   text-align: center;
   margin-bottom: 10px;
-font-weight: 900;
-font-size: 40px;
+  font-weight: 900;
+  font-size: 40px;
 }
-
 
 .account-stats p,
 .job-stats p,
 .proposal-stats p,
 .contract-stats p,
-.site-stats p
-{
+.site-stats p {
   font-size: 18px;
 }
 
-.stats-table{
-
-width: 100%;
-padding: 0px 280px 0px 200px;
-
+.stats-table {
+  width: 100%;
+  padding: 0px 280px 0px 200px;
 }

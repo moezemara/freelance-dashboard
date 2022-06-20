@@ -18,8 +18,8 @@ return(
 
     <p>Num of all jobs:&ensp;<b>{allJobs}</b></p>
     <p>Num of active jobs:&ensp;<b>{activeJobs}</b></p>
-    <p>percent of active jobs:&ensp;<b>{active_percent}%</b></p>
-    <p>percent of In-active jobs:&ensp;<b>{inactive_percent}%</b></p>
+    <p>percent of active jobs:&ensp;<b>{active_percent} %</b></p>
+    <p>percent of In-active jobs:&ensp;<b>{inactive_percent} %</b></p>
 
 
     <p>Entry Level:&ensp;<b>{entryNum}</b></p>
