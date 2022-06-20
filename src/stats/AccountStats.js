@@ -16,12 +16,12 @@ return(
 <div className="account-stats">
 <h2>Accounts stats</h2>
     <p>number of users:&ensp;<b>{userNum}</b></p>
-    <p>percent of freelancers:&ensp;<b>{freelancerPercent}%</b></p>
-    <p>percent of clients:&ensp;<b>{clientPercent}%</b></p>
-    <p>Avg. clients rating:&ensp;<b>{"★".repeat(Math.floor(avgClientRating)+1)}</b></p>
-    <p>Avg. freelancers rating:&ensp;<b>{"★".repeat(Math.floor(avgFreelancerRating)+1)}</b></p>
-    <p>Percent of Male users:&ensp;<b>{malePercent}%</b></p>
-    <p>Percent of Female users:&ensp;<b>{femalePercent}%</b></p>
+    <p>percent of freelancers:&ensp;<b>{freelancerPercent.toFixed(1)} %</b></p>
+    <p>percent of clients:&ensp;<b>{clientPercent.toFixed(1)} %</b></p>
+    <p>Avg. clients rating:&ensp;<b>({avgClientRating.toFixed(1)})  {"★".repeat(avgClientRating)}</b></p>
+    <p>Avg. freelancers rating:&ensp;<b>({avgFreelancerRating.toFixed(1)}) {"★".repeat(avgFreelancerRating)}</b></p>
+    <p>Percent of Male users:&ensp;<b>{malePercent.toFixed(1)} %</b></p>
+    <p>Percent of Female users:&ensp;<b>{femalePercent.toFixed(1)} %</b></p>
     <p>Num of banned accounts:&ensp;<b>{bannedNum}</b></p>
 
 </div>
