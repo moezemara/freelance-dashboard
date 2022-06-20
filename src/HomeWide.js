@@ -99,28 +99,31 @@ const HomeWide = () => {
         <table>
           <tr>
             <td>
-              <h3>Post a job</h3>
+              <h3>Have your job done</h3>
             </td>
             <td>
-              <h3>Post a job</h3>
+              <h3>Earn Money Now</h3>
             </td>
           </tr>
 
           <tr>
             <td>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                provident perferendis repudiandae enim odio, aut, necessitatibus
-                vel quo quidem placeat eligendi amet cumque.{" "}
+              It’s free and easy to post a job. Simply fill in a title,
+              description and budget and competitive bids come within
+              minutes. We've got freelancers for jobs of any size or
+              budget, across 1800+ skills. No job is too complex. We
+              can get it done!{" "}
               </p>
             </td>
             <td>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                provident perferendis repudiandae enim odio, aut, necessitatibus
-                vel quo quidem placeat eligendi amet cumque.{" "}
-              </p>
-            </td>
+              You can find any work you can do here.
+              come to us with your talent and show it here through a variety of jobs in many categories.
+              Make your talents pay off through having jobs done and presenting your service here. Have money made easily..
+
+                {" "}
+              </p> </td>
           </tr>
         </table>
       </div>
@@ -131,36 +134,33 @@ const HomeWide = () => {
         <table>
           <tr>
             <td>
-              <h3>Feature</h3>
+              <h3>Pay safely</h3>
             </td>
             <td>
-              <h3>Feature</h3>
+              <h3>Quality work</h3>
             </td>
             <td>
-              <h3>Feature</h3>
+              <h3>We’re here to help</h3>
             </td>
           </tr>
 
           <tr>
             <td>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                provident perferendis repudiandae enim odio, aut, necessitatibus
-                vel quo quidem placeat eligendi amet cumque.{" "}
+              Only pay for work when it has been completed and you're 100% satisfied with the quality using our milestone payment system.{" "}
               </p>
             </td>
             <td>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                provident perferendis repudiandae enim odio, aut, necessitatibus
-                vel quo quidem placeat eligendi amet cumque.{" "}
+              Find professionals you can trust by browsing their samples of previous work and reading their profile reviews.
+              Homielancer have a big bool of proffessionals.
+              {" "}
               </p>
             </td>
             <td>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                provident perferendis repudiandae enim odio, aut, necessitatibus
-                vel quo quidem placeat eligendi amet cumque.{" "}
+              Our talented team of recruiters can help you find the best freelancer for the job and our technical co-pilots can even manage the project for you.
+              {" "}
               </p>
             </td>
           </tr>
@@ -169,7 +169,7 @@ const HomeWide = () => {
       <hr id="hr2" />
       <div className="different-skills">
         <h2>We have different skills and services</h2>
-
+<div className="feature-table">
         <table>
           <tr>
             <td>
@@ -178,7 +178,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Machine Learning</h3>
               </td>
             </td>
             <td>
@@ -187,7 +187,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Artificial intellegeance</h3>
               </td>
             </td>
             <td>
@@ -196,18 +196,10 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Web development</h3>
               </td>
             </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
+            
           </tr>
 
           <tr>
@@ -217,7 +209,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Mobile Apps</h3>
               </td>
             </td>
             <td>
@@ -226,7 +218,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Wordpress</h3>
               </td>
             </td>
             <td>
@@ -235,28 +227,20 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
+                <h3>copywriting</h3>
               </td>
             </td>
           </tr>
 
           <tr>
+            
             <td>
               <td>
                 <img src={serviceImage} />
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>content writing</h3>
               </td>
             </td>
             <td>
@@ -265,7 +249,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Amazon web services</h3>
               </td>
             </td>
             <td>
@@ -274,28 +258,20 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
+                <h3>Marketing</h3>
               </td>
             </td>
           </tr>
 
           <tr>
+            
             <td>
               <td>
                 <img src={serviceImage} />
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Windows forms</h3>
               </td>
             </td>
             <td>
@@ -304,7 +280,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Data analysis</h3>
               </td>
             </td>
             <td>
@@ -313,29 +289,21 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
+                <h3>logo design</h3>
               </td>
             </td>
           </tr>
 
 
           <tr>
+            
             <td>
               <td>
                 <img src={serviceImage} />
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>Reserach writing</h3>
               </td>
             </td>
             <td>
@@ -344,7 +312,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>graphic design</h3>
               </td>
             </td>
             <td>
@@ -353,16 +321,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
+                <h3>film montage</h3>
               </td>
             </td>
           </tr>
@@ -375,7 +334,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>accounting</h3>
               </td>
             </td>
             <td>
@@ -384,7 +343,7 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
+                <h3>web scrapping</h3>
               </td>
             </td>
             <td>
@@ -393,25 +352,79 @@ const HomeWide = () => {
               </td>
               <td>
                 {" "}
-                <h3>Feature</h3>
-              </td>
-            </td>
-            <td>
-              <td>
-                <img src={serviceImage} />
-              </td>
-              <td>
-                {" "}
-                <h3>Feature</h3>
+                <h3>automation</h3>
               </td>
             </td>
           </tr>
 
+
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>android develoment</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Database administration</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Resume Writing</h3>
+              </td>
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Game Developer</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Virtual Assistant</h3>
+              </td>
+            </td>
+            <td>
+              <td>
+                <img src={serviceImage} />
+              </td>
+              <td>
+                {" "}
+                <h3>Social Media Management</h3>
+              </td>
+            </td>
+          </tr>
 
         </table>
       </div>
       </div>
-      
+      </div>
 
       {/* <div class="homewide-footer-img" id="homewide-footer-img">
         

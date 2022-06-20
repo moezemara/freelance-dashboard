@@ -11,12 +11,18 @@ const SiteStats = () => {
   useEffect(() => {
     axios.get(`stats`).then((res) => {
       if (res.data.success === 1) {
-        setMyData(res.data.message[0]);
+        setMyData(
+          //for setting null values to zero
+          JSON.parse(JSON.stringify(res.data.message[0]).replaceAll("null", 0))
+        );
         console.log(res);
       } else {
         axios.get(`global/stats`).then((res) => {
           if (res.data.success) {
-            setMyData(res.data.message[0]);
+            setMyData(
+              //for setting null values to zero
+              JSON.parse(JSON.stringify(res.data.message[0]).replaceAll("null", 0))
+              );
             console.log(res);
           } else {
             console.log(res);
