@@ -20,6 +20,7 @@ import ProfilePage from "./profiles/ProfilePage";
 import ActivitiesPage from "./ActivitiesPage";
 import JobPage from "./jobs/JobPage";
 import ContractPage from "./contracts/ContractPage";
+import Chat from "./Chat";
 
 function App() {
   return (
@@ -81,8 +82,11 @@ function App() {
               <ContractPage/>
             </Route>
 
+            <Route exact path="/chat/:contract_id">
+                <Chat/>
+            </Route>
             <Route exact path="/stats">
-            <Navbar/>
+              <Navbar/>
               <SiteStats/>
             </Route>
 

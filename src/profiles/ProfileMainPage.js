@@ -44,9 +44,13 @@ const ProfileMainPage = () => {
                     setProfiles(res.data.message.ids);
                     console.log(res);
                 }
+                else if(res.data.message==="you have not created a profile yet"){
+                    window.location = "/createprofile/"
+                }
                 else{
                     window.location = '/login';
-                }},[]);
+                }
+            },[]);
         }
         else if(accountType==='C'){
             axios.get('client/profile/',{ withCredentials: true}).then(res=>{
