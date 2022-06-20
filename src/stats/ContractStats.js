@@ -1,9 +1,9 @@
 
 const ContractStats = (props) => {
 
-    var inInterview = props.inInterview
-    var active = props.active
-    var archieved = props.archieved
+    var inInterview = props.num_interview_contracts
+    var active = props.num_active_contracts
+    var archieved = props.num_archived_contracts
 
 return(
 
