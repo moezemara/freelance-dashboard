@@ -37,11 +37,10 @@ const FreelancerNavbar = (props) => {
                     setActiveProfileId(res.data.message.active_id);
                     document.cookie = 'active_id='+res.data.message.active_id;
                 }
-                else{
-                    window.location = '/login';
-                }},[]);
-        }
-    },[accountType]);
+                else if(res.data.message!=="you have not created a profile yet"){
+                    window.location = '/login';                }
+        },[]);
+        }},[accountType]);
 
 
     return (
