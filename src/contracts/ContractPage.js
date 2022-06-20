@@ -75,6 +75,7 @@ const ContractPage = ()=>{
                 { (contractData.contract) && (contractData.contract.status==="Active") &&
                     <button onClick={endContract}>End</button>
                 }
+                <a href={`/chat/${contract_id}`}><button>Chat</button></a>
             </div>
 
         </div>
