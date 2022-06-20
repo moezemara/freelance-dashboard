@@ -12,7 +12,9 @@ const ClientProfileCard = (props) => {
     var totalSpent = props.totalSpent;
     var rating = props.rating;
 
-
+    if(profilePictureLink=='default'){
+        profilePictureLink = 'https://i.ibb.co/YNk40qC/668-6689202-avatar-profile-hd-png-download.png'
+    }
 
     return (  
         <div className="profilecard">
