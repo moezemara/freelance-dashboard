@@ -16,12 +16,12 @@ return(
 <div className="account-stats">
 <h2>Accounts stats</h2>
     <p>number of users: <b>{userNum}</b></p>
-    <p>percent of freelancers: <b>{freelancerPercent}</b></p>
-    <p>percent of clients: <b>{clientPercent}</b></p>
-    <p>Avg. clients rating: <b>{avgClientRating}</b></p>
-    <p>Avg. freelancers rating: <b>{avgFreelancerRating}</b></p>
-    <p>Percent of Male users: <b>{malePercent}</b></p>
-    <p>Percent of Female users: <b>{femalePercent}</b></p>
+    <p>percent of freelancers: <b>{freelancerPercent}%</b></p>
+    <p>percent of clients: <b>{clientPercent}%</b></p>
+    <p>Avg. clients rating: <b>{avgClientRating} stars</b></p>
+    <p>Avg. freelancers rating: <b>{avgFreelancerRating} stars</b></p>
+    <p>Percent of Male users: <b>{malePercent}%</b></p>
+    <p>Percent of Female users: <b>{femalePercent}%</b></p>
     <p>Num of banned accounts: <b>{bannedNum}</b></p>
 
 </div>

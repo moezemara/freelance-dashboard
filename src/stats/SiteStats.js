@@ -11,12 +11,12 @@ const SiteStats = () => {
   useEffect(() => {
     axios.get(`stats`).then((res) => {
       if (res.data.success === 1) {
-        setMyData(res.data.message);
+        setMyData(res.data.message[0]);
         console.log(res);
       } else {
         axios.get(`global/stats`).then((res) => {
           if (res.data.success) {
-            setMyData(res.data.message);
+            setMyData(res.data.message[0]);
             console.log(res);
           } else {
             console.log(res);

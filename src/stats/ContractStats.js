@@ -1,6 +1,7 @@
 
 const ContractStats = (props) => {
 
+
     var inInterview = props.stats.num_interview_contracts
     var active = props.stats.num_active_contracts
     var archieved = props.stats.num_archived_contracts
