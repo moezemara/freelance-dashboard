@@ -552,13 +552,24 @@ padding: 10px 200px 50px 200px;
   margin-top: 50px;
 }
 .homewide-content h3{
-  font-size: 25px;
+  font-size: 24px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 50px;
 }
+
+.feature-table h3{
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+}
+
+
+
 .homewide-content p{
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
