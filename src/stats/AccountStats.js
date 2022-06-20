@@ -1,6 +1,6 @@
 
 const AccountStats = (props) => {
-
+    
     var userNum = props.stats.num_users
     var freelancerPercent = props.stats.freelancers_percentage
     var clientPercent = props.stats.clients_percentage
@@ -15,14 +15,14 @@ return(
 
 <div className="account-stats">
 <h2>Accounts stats</h2>
-    <p>number of users: <b>{userNum}</b></p>
-    <p>percent of freelancers: <b>{freelancerPercent}%</b></p>
-    <p>percent of clients: <b>{clientPercent}%</b></p>
-    <p>Avg. clients rating: <b>{avgClientRating} stars</b></p>
-    <p>Avg. freelancers rating: <b>{avgFreelancerRating} stars</b></p>
-    <p>Percent of Male users: <b>{malePercent}%</b></p>
-    <p>Percent of Female users: <b>{femalePercent}%</b></p>
-    <p>Num of banned accounts: <b>{bannedNum}</b></p>
+    <p>number of users:&ensp;<b>{userNum}</b></p>
+    <p>percent of freelancers:&ensp;<b>{freelancerPercent}%</b></p>
+    <p>percent of clients:&ensp;<b>{clientPercent}%</b></p>
+    <p>Avg. clients rating:&ensp;<b>{"★".repeat(Math.floor(avgClientRating)+1)}</b></p>
+    <p>Avg. freelancers rating:&ensp;<b>{"★".repeat(Math.floor(avgFreelancerRating)+1)}</b></p>
+    <p>Percent of Male users:&ensp;<b>{malePercent}%</b></p>
+    <p>Percent of Female users:&ensp;<b>{femalePercent}%</b></p>
+    <p>Num of banned accounts:&ensp;<b>{bannedNum}</b></p>
 
 </div>
 
