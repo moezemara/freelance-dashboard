@@ -1,9 +1,9 @@
 
 const ProposalStats = (props) => {
 
-    var appliedNum = props.num_proposals
-    var activeNum = props.num_active_proposals
-    var archeivedNum = props.num_archived_proposals
+    var appliedNum = props.stats.num_proposals
+    var activeNum = props.stats.num_active_proposals
+    var archeivedNum = props.stats.num_archived_proposals
 
 return(
 <div className="proposal-stats">

@@ -1,11 +1,11 @@
 const JobStats = (props) => {
 
-    var allJobs = props.num_jobs
-    var activeJobs = props.num_active_jobs
-    var entryNum = props.num_entry_jobs
-    var intermediateNum = props.num_intermediate_jobs
-    var AdvancedNum = props.num_advanced_jobs
-    var expectedPriceAvg = props.avg_expected_price_jobs
+    var allJobs = props.stats.num_jobs
+    var activeJobs = props.stats.num_active_jobs
+    var entryNum = props.stats.num_entry_jobs
+    var intermediateNum = props.stats.num_intermediate_jobs
+    var AdvancedNum = props.stats.num_advanced_jobs
+    var expectedPriceAvg = props.stats.avg_expected_price_jobs
 
 
 return(
