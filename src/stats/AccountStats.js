@@ -1,14 +1,14 @@
 
 const AccountStats = (props) => {
 
-    var userNum = props.num_users
-    var freelancerPercent = props.freelancers_percentage
-    var clientPercent = props.clients_percentage
-    var avgClientRating = props.avg_client_rating
-    var avgFreelancerRating = props.avg_freelancer_rating
-    var femalePercent = props.female_percentage
-    var malePercent = props.male_percentage
-    var bannedNum = props.num_banned
+    var userNum = props.stats.num_users
+    var freelancerPercent = props.stats.freelancers_percentage
+    var clientPercent = props.stats.clients_percentage
+    var avgClientRating = props.stats.avg_client_rating
+    var avgFreelancerRating = props.stats.avg_freelancer_rating
+    var femalePercent = props.stats.female_percentage
+    var malePercent = props.stats.male_percentage
+    var bannedNum = props.stats.num_banned
 
 
 return(
