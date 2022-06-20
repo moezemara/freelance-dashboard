@@ -1,8 +1,11 @@
 var CategoriesList = ['web development', 'artificial intellegence', 'machine learning',
-'wireframing', 'communication','software development','front end', 'back end','Do any thing'
+'wireframing', 'communication','software development','front end', 'back end',
+'logo design', 'copywriting', 'content writing','andoid development', 'database managment',
+'web scrapping', 'automation', 'resume writing', 'game development', 'marketing', 'data analysis',
+'Do any thing'
 ];
 
-var GenderList = ['male','female','others'];
+var GenderList = ['male','female'];
 
 
 const getCategoriesList = ()=>{
