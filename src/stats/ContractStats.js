@@ -10,9 +10,9 @@ return(
 
 <div className="contract-stats">
 <h2>Contracts stats</h2>
-    <p>In-interview contracts: <b>{inInterview}</b></p>
-    <p>Active contracts: <b>{active}</b></p>
-    <p>Archieved contracts: <b>{archieved}</b></p>
+    <p>In-interview contracts:&ensp;<b>{inInterview}</b></p>
+    <p>Active contracts:&ensp;<b>{active}</b></p>
+    <p>Archieved contracts:&ensp;<b>{archieved}</b></p>
 
 </div>
 
