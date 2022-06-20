@@ -13,6 +13,10 @@ var payRate = props.payRate;
 var rating = props.rating;
 var description = props.description
 
+if(!profilePictureLink){
+    profilePictureLink = 'https://i.ibb.co/YNk40qC/668-6689202-avatar-profile-hd-png-download.png'
+}
+
 const convertSkillsToButtons = (skillsList)=>{
     return (  
         skillsList.map((skill)=>(<button className="attachments-buttons">{skill}</button>))
@@ -26,6 +30,7 @@ const convertSkillsToButtons = (skillsList)=>{
 
 <td>
 <img id="profile-picture" src={profilePictureLink} alt={profileName +" img"} />
+
 
 </td>
 
