@@ -12,6 +12,7 @@ const Chat = ()=>{
 
     useEffect(()=>{
         socket.connect();
+        socket.emit('add');
     },[]);
 
     return(

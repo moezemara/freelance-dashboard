@@ -48,7 +48,6 @@ const ClientNavbar = (props) => {
         <a href="/activitiespage">All Activities</a>
 
         <div className="links">
-            <a href={`/profilesettings/${profile_id}`}>Settings</a>
             <a onClick={handleLogOut}>Log Out</a>
         </div>
     </nav>
