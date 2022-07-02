@@ -50,8 +50,6 @@
   border-radius: 4px;
 }
 
-position: relative;
-top: -3px;
 
 .homewide-img {
   -webkit-animation: action 100ms 1s alternate;
