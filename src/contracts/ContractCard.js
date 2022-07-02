@@ -14,7 +14,7 @@ const ContractCard = (props) => {
             <p><b>Final Price: </b>{contract.final_price}$</p>
             <div style={{display:'flex'}}>
                 <label></label>
-                <a href={`contract/${contract.proposal_id}`}><img src={serviceImage}/></a>
+                <a href={`/contract/${contract.proposal_id}`}><img src={serviceImage}/></a>
             </div>
         </div>
     );
