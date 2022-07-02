@@ -52,7 +52,7 @@ const FreelancerNavbar = (props) => {
             <a href="/activitiespage">All Activities</a>
             <div className="links">
                 <button>
-                    <img id="notification-icon" src={bell} height="30px"/>
+                    <img id="notification-icon" src={bell} height="20px"/>
                 </button>
                 <a href={`/profilesettings/${profile_id}`}>Settings</a>
                 <a onClick={handleLogOut}>Log Out</a>

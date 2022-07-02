@@ -19,12 +19,11 @@ const Chat = ()=>{
     },[]);
 
     return(
-    <div className="chat">
+    <div>
         {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
         {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
-        <div style={{"display":"flex","width":"100%","height":"50"}}>
-            <input type="text" placeholder="Type something"/>
-            <button><img src={arrow} height="35px"/></button>
+        <div className="chat">
+          
         </div>
     </div>
     )

@@ -1951,3 +1951,36 @@ activities-page-content {
 }
 }
 
+
+.chat{
+  max-width: 800px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.chatbar{
+  display: flex;
+  max-width: 800px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+
+}
+
+
+.chatbar button{
+  width: 30%;
+  height: 100%;
+}
+.chatbar input{
+  width: 70%;
+  height: 100%;
+
+}

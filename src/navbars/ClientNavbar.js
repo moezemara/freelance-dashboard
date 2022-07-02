@@ -1,6 +1,8 @@
 import axios from "../axios.js"
 import { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
+import bell from "../src-images/bell.png"
+
 
 const ClientNavbar = (props) => {
 
@@ -48,6 +50,9 @@ const ClientNavbar = (props) => {
         <a href="/activitiespage">All Activities</a>
 
         <div className="links">
+            <button>
+                    <img id="notification-icon" src={bell} height="20px"/>
+            </button>
             <a onClick={handleLogOut}>Log Out</a>
         </div>
     </nav>
