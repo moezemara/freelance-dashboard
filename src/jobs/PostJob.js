@@ -1,6 +1,7 @@
 import {getCategoriesList} from '../Options'
 import { useState, useEffect, createRef } from "react";
 import axios from "../axios.js";
+import accountCheck from '../accountCheck';
 
 const PostJob = () => {
 
@@ -39,6 +40,10 @@ const PostJob = () => {
         }
 
     }
+
+    useEffect(()=>{
+        accountCheck();
+      },[]);
 
     return (
         <div className="postjob">

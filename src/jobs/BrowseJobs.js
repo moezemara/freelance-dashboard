@@ -3,6 +3,7 @@ import axios from "../axios.js"
 import Cookies from 'universal-cookie';
 import ProfileSidebar from "../profiles/ProfileSidebar";
 import JobCard from "./JobCard";
+import accountCheck from "../accountCheck.js";
 
 
 
@@ -17,7 +18,9 @@ import JobCard from "./JobCard";
 const BrowseJobs = () => {
 
     const [jobs,setJobs] = useState();
-
+    useEffect(()=>{
+        accountCheck();
+      },[]);
     useEffect(()=>{
         if(!jobs){
             axios.get('/job/browse',{ withCredentials: true}).then(res=>{

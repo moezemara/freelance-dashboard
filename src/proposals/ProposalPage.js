@@ -2,12 +2,16 @@ import dollarSymbol from "../src-images/dollar.png";
 import JobCardForProposal from "../jobs/JobCardForProposal";
 import { useState, useEffect, createRef } from "react";
 import axios from "../axios.js";
+import Cookies from "universal-cookie";
+import accountCheck from "../accountCheck";
 
 const ProposalPage = () => {
   const [cover_letter, setCoverLetter] = useState("");
   const [price, setPrice] = useState("");
   const [expected_date, setExpectedDate] = useState("");
   const [attachment, setAttachment] = useState("");
+  const cookies = new Cookies()
+  const accountType = cookies.getAll().type;
 
   async function handleSendProposal() {
     console.log(process.env.BASE_API_URL);
@@ -29,6 +33,10 @@ const ProposalPage = () => {
       console.log("failed");
     }
   }
+
+  useEffect(()=>{
+    accountCheck();
+  },[]);
 
   return (
     <div>

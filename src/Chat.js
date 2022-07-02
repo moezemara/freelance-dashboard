@@ -4,6 +4,7 @@ import FreelancerNavbar from "./navbars/FreelancerNavbar";
 import axios from "./axios.js";
 import { useEffect } from "react";
 import socket from "./socket.js"
+import accountCheck from "./accountCheck";
 
 const Chat = ()=>{
     const cookies = new Cookies();
@@ -11,6 +12,7 @@ const Chat = ()=>{
     const profile_id = cookies.getAll().active_id;
 
     useEffect(()=>{
+        accountCheck(accountType);
         socket.connect();
         socket.emit('add');
     },[]);
@@ -19,7 +21,6 @@ const Chat = ()=>{
     <div className="chat">
         {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
         {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
-        <h1>chat</h1>
     </div>
     )
 }

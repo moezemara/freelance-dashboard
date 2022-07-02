@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "../axios.js";
 import ContractCard from "./ContractCard";
 import Milestone from "../Milestone";
-
+import accountCheck from "../accountCheck"
 
 const ContractPage = ()=>{
     const contract_id = useParams().contract_id;
@@ -31,6 +31,7 @@ const ContractPage = ()=>{
     }
 
     useEffect(()=>{
+        accountCheck(accountType);
         axios.get(`contract/${contract_id}`,{withCredentials:true}).then((res)=>{
             setContractData(res.data.message);
             setMilestones(res.data.message.milestones);

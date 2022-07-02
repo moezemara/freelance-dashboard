@@ -1,4 +1,5 @@
 import axios from "../axios.js"
+import accountCheck from "../accountCheck.js";
 
 
 const FreelancerAppliedProposalCard = (props)=>{
@@ -9,6 +10,9 @@ const FreelancerAppliedProposalCard = (props)=>{
     const client_profile = props.client_profile;
     const proposal_id = props.proposal_id;
     
+    useEffect(()=>{
+      accountCheck();
+    },[]);
 
     const handleWidthdraw = ()=>{
         axios.post(`/proposal/${proposal_id}/withdraw`,{ withCredentials: true}).then((res)=>{

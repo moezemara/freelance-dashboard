@@ -8,7 +8,7 @@ import BriefProfileCard from "../profiles/BriefProfileCard";
 import axios from "../axios.js"
 import Cookies from 'universal-cookie';
 import ClientProfileCard from "./ClientProfileCard";
-
+import accountCheck from "../accountCheck";
 const cookies = new Cookies();
 
 
@@ -26,9 +26,8 @@ const ProfileMainPage = () => {
     
 
     useEffect(()=>{
-        if(accountType !== 'F' && accountType !== 'C'){
-            window.location="/login";
-        }
+        
+        accountCheck();
         
         if(accountType==='F'){
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{

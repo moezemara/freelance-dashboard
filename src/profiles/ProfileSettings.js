@@ -5,6 +5,7 @@ import FreelancerNavbar from "../navbars/FreelancerNavbar.js";
 import ClientNavbar from "../navbars/ClientNavbar.js";
 import { useParams } from "react-router-dom";
 import axios from "../axios.js";
+import accountCheck from "../accountCheck.js";
 
 const ProfileSettings = () => {
   const [accountType, setAccountType] = useState();
@@ -22,8 +23,11 @@ const ProfileSettings = () => {
   const [returnedMsg, setReturnedMsg] = useState({"color":"green","msg":""})
 
 
+
   useEffect(()=>{
-      ////we need to get that profile data so I sent the cokkies to send us the profile data
+
+    accountCheck();
+    ////we need to get that profile data so I sent the cokkies to send us the profile data
       ////but let's agree on one path
       axios.get('/freelancer/profile/',{ withCredentials: true}).then(res=>{ 
           if(res.data.success===1){

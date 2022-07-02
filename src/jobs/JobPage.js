@@ -8,6 +8,7 @@ import dollarSymbol from "../src-images/dollar.png";
 import axios from "../axios.js";
 import { useParams } from "react-router-dom";
 import AppliedProposalCard from "../proposals/AppliedProposalCard";
+import accountCheck from "../accountCheck";
 
 const JobPage = ()=>{
     const cookies = new Cookies();
@@ -25,6 +26,9 @@ const JobPage = ()=>{
     const [attachment, setAttachment] = useState("");
 
 
+  useEffect(()=>{
+    accountCheck();
+  },[]);
 
 
     useEffect(()=>{

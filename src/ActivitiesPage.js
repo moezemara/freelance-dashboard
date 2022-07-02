@@ -6,6 +6,7 @@ import axios from "./axios.js"
 import JobCard from "./jobs/JobCard";
 import FreelancerAppliedProposalCard from "./proposals/FreelancerAppliedProposalCard";
 import ContractCard from "./contracts/ContractCard";
+import accountCheck from "./accountCheck";
 
 
 
@@ -14,22 +15,13 @@ const ActivitiesPage = ()=>{
     const [prevContent, setPrevContent] = useState('');
     const [content, setContent] = useState();
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'','joboffers':'','activecontracts':'','finishedcontracts':'','jobsposted':''}) 
-    const [accountType, setAccountType] = useState();
     const cookies = new Cookies();
-    const [active_id,setActiveId] = useState('');
+    const  accountType = cookies.getAll().type;
+    const  active_id   = cookies.getAll().active_id;
     const [ButtonState,setButtonState] = useState('');
 
     useEffect(()=>{
-        console.log(cookies.getAll().active_id)
-        if(!cookies.getAll().active_id){
-            window.location = '/login';
-        }
-
-        if(accountType !== 'F' || accountType !=='C'){
-            setAccountType(cookies.getAll().type);
-            setActiveId(cookies.getAll().active_id);
-            
-        }
+        accountCheck(accountType);
     },[accountType]);
 
     
