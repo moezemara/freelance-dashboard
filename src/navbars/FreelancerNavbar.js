@@ -2,13 +2,13 @@ import axios from "../axios.js"
 import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
 
+
 const FreelancerNavbar = (props) => {
 
     const profile_id = props.profile_id;
     const [activeProfileId, setActiveProfileId] = useState('');
 
     const cookies = new Cookies();
-
     async function handleLogOut(){
         console.log(process.env.BASE_API_URL)
         axios.post('user/logout',{ withCredentials: true}).then((res)=>{

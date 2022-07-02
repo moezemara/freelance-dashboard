@@ -20,19 +20,14 @@ const ProfileMainPage = () => {
     const [buttonsClasses,setButtonClasses] = useState({'appliedproposals':'activebutton','joboffers':'','activecontracts':'','finishedcontracts':''}) 
     const [ButtonState,setButtonState] = useState('');
     const [content, setContent] = useState('');
-    const [accountType,setAccountType] = useState('');
-
-
+    const accountType = cookies.getAll().type;
     
-    async function getAccountType(){
-        const type = await cookies.getAll().type;
-        await setAccountType(type);
-    }
+    
     
 
     useEffect(()=>{
-        if(accountType !== 'F' || accountType !== 'C'){
-            getAccountType();
+        if(accountType !== 'F' && accountType !== 'C'){
+            window.location="/login";
         }
         
         if(accountType==='F'){
