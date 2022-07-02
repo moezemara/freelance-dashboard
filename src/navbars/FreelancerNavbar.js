@@ -1,6 +1,7 @@
 import axios from "../axios.js"
 import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
+import bell from "../src-images/bell.png"
 
 
 const FreelancerNavbar = (props) => {
@@ -50,6 +51,9 @@ const FreelancerNavbar = (props) => {
             <a href="/createprofile">Add Profile</a>
             <a href="/activitiespage">All Activities</a>
             <div className="links">
+                <button>
+                    <img id="notification-icon" src={bell} height="30px"/>
+                </button>
                 <a href={`/profilesettings/${profile_id}`}>Settings</a>
                 <a onClick={handleLogOut}>Log Out</a>
             </div>
