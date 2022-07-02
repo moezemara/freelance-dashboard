@@ -658,7 +658,7 @@ hr {
   height: 71px;
 }
 
-#homewide-img {
+/*#homewide-img {
   align-self: center;
   align-items: center;
   color: rgb(255, 255, 255);
@@ -669,9 +669,9 @@ hr {
   background-size: cover;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 30px;
-}
+}*/
 
-#homewide-footer-img {
+/* #homewide-footer-img {
   align-self: center;
   align-items: center;
   border: solid red;
@@ -683,7 +683,7 @@ hr {
   background-size: cover;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 30px;
-}
+} */
 .clientprofileview {
   display: flex;
 }
