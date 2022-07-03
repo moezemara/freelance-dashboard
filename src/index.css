@@ -1138,7 +1138,8 @@ for mobile view
 
 .signup,
 .login,
-.postjob {
+.postjob
+.payementpage {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 100px;
@@ -1487,15 +1488,7 @@ hr {
   padding-bottom: 0px;
 }
 
-.browsejobs {
-  max-width: 800px;
-  font-family: "Open Sans", sans-serif;
-  margin: 0 auto;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 1%;
-}
+
 
 .job-card-of-proposal {
   border-radius: 20px;

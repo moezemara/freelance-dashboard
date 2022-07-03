@@ -53,6 +53,7 @@ const ClientNavbar = (props) => {
             <button>
                     <img id="notification-icon" src={bell} height="20px"/>
             </button>
+            <a href="/payement/">Payement</a>
             <a onClick={handleLogOut}>Log Out</a>
         </div>
     </nav>

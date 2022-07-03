@@ -2,6 +2,8 @@ import axios from "../axios.js"
 import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
 import bell from "../src-images/bell.png"
+import logo from "../src-images/homie-logo-1.png";
+
 
 
 const FreelancerNavbar = (props) => {
@@ -54,6 +56,7 @@ const FreelancerNavbar = (props) => {
                 <button>
                     <img id="notification-icon" src={bell} height="20px"/>
                 </button>
+                <a href="/payement/">Payement</a>
                 <a href={`/profilesettings/${profile_id}`}>Settings</a>
                 <a onClick={handleLogOut}>Log Out</a>
             </div>

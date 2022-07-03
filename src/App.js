@@ -21,6 +21,7 @@ import ActivitiesPage from "./ActivitiesPage";
 import JobPage from "./jobs/JobPage";
 import ContractPage from "./contracts/ContractPage";
 import Chat from "./Chat";
+import PayementPage from "./PayementPage";
 
 function App() {
   return (
@@ -69,7 +70,9 @@ function App() {
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
-            
+            <Route exact path="/payement">
+              <PayementPage/>
+            </Route>
             <Route exact path="/activitiespage/">
               <ActivitiesPage/>
             </Route>
