@@ -3,7 +3,8 @@ import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
 import bell from "../src-images/bell.png"
 import logo from "../src-images/homie-logo-1.png";
-
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const FreelancerNavbar = (props) => {
@@ -47,20 +48,22 @@ const FreelancerNavbar = (props) => {
 
 
     return (
-        <nav className="navbar">
-            <a href="/profile"><h2>HomieLancer</h2></a>
-            <a href="/browsejobs">Find work</a>
-            <a href="/createprofile">Add Profile</a>
-            <a href="/activitiespage">All Activities</a>
-            <div className="links">
-                <button>
-                    <img id="notification-icon" src={bell} height="20px"/>
-                </button>
-                <a href="/payement/">Payement</a>
-                <a href={`/profilesettings/${profile_id}`}>Settings</a>
-                <a onClick={handleLogOut}>Log Out</a>
-            </div>
-        </nav>
+        <Navbar bg="white" expand="lg">
+            <Container>
+            <Navbar.Brand href="/profile/">HomieLancer</Navbar.Brand>            
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="justify-content-end">
+                <Nav.Link href="/browsejobs">Find work</Nav.Link>
+                <Nav.Link href="/createprofile">Add Profile</Nav.Link>
+                <Nav.Link href="/activitiespage">All Activities</Nav.Link>
+                <Nav.Link href="/payement">Payement</Nav.Link>
+                <Nav.Link href={`/profilesettings/${profile_id}`}>Settings</Nav.Link>
+                <Nav.Link onClick={handleLogOut}>Log Out</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
  

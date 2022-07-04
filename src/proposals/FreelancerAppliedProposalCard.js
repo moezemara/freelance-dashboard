@@ -1,5 +1,6 @@
 import axios from "../axios.js"
 import accountCheck from "../accountCheck.js";
+import { useEffect } from "react";
 
 
 const FreelancerAppliedProposalCard = (props)=>{

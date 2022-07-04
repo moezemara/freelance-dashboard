@@ -100,6 +100,7 @@ function App() {
           </Switch>
         </div>
         <div><h1 style={{"color":"white"}}>Hide</h1></div>
+        <div><h1 style={{"color":"white"}}>Hide</h1></div>
         <Footer/>
       </div>
     </Router>

@@ -108,8 +108,8 @@ const ProfileMainPage = () => {
             {(accountType==='C') && <ClientNavbar profile_id={activeProfileId}/>}
             {(accountType==='F') && <FreelancerNavbar profile_id={activeProfileId}/>}
             <div className="activitiespage">
-                <div style={{display:'flex',alignItems:'center'}}>
-                    <div style={{marginRight:10,minWidth:600}}>
+                <div style={{alignItems:'center',"justifyContent":"center"}}>
+                    <div style={{maxWidth:"800px","justifyContent":"center"}}>
                         {(accountType==='F') && profileData.profile.skills &&
                             <ProfileCard 
                             profileName={profileData.account.first_name + " " + profileData.account.last_name }
@@ -132,7 +132,7 @@ const ProfileMainPage = () => {
 
                     </div>
                     {(profiles) &&
-                        <div className="mainpagelistofprofiles">
+                        <div className="mainpagelistofprofiles" style={{"marginTop":"15px"}}>
                             <h2>Profiles:</h2>
                             { profiles.map((profile)=>(
                                 <BriefProfileCard title={profile.title} id={profile.profile_id} key={profile.profile_id}/>
