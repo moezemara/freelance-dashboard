@@ -11,7 +11,7 @@ import ProposalPage from "./proposals/ProposalPage";
 import ClientNavbar from "./navbars/ClientNavbar";
 import ProfileSettings from "./profiles/ProfileSettings";
 import SiteStats from "./stats/SiteStats";
-import Footer from "./footer";
+import Footer from "./footer/footer";
 import FreelancerNavbar from "./navbars/FreelancerNavbar";
 import BrowseJobs from "./jobs/BrowseJobs";
 import ProfileMainPage from "./profiles/ProfileMainPage";
@@ -99,7 +99,8 @@ function App() {
             
           </Switch>
         </div>
-        <Footer />
+        <div><h1 style={{"color":"white"}}>Hide</h1></div>
+        <Footer/>
       </div>
     </Router>
   );

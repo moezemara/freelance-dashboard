@@ -1,0 +1,27 @@
+.footerarea{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    margin-top: 50px;
+    height:70px;
+    border-top:1px solid #c8c8caea;
+    position:fixed;
+    width:100%;
+    bottom:0;  
+    background:#fff;
+}
+
+.footerarea h3{
+    padding-top: 12px;
+    text-align:center;
+}
+
+.footerarea h6{
+    text-align:center;
+    font-size:12px;
+    padding-bottom: 12px;
+    
+}
+
+
