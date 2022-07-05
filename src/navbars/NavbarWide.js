@@ -10,10 +10,12 @@ const NavbarWide = () => {
             <img id="logo-of-main-navbar" src={logo} height="70px" style={{marginTop:"10px"}} />
           </td>
           <td>
-            <h2>HomieLancer</h2>
+            <h2 id="HomieLancer-NavbarWide">HomieLancer</h2>
           </td>
         </table>
+        
       </a>
+      <hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr />
       <div className="links">
         <a id="signup-login-main-nav" href="/login">Log In</a>
         <a id="signup-login-main-nav" href="/signup">Sign Up</a>

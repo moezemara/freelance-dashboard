@@ -560,7 +560,7 @@ hr {
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
-  padding: calc(10px) calc(5vw) calc(50px) calc(5vw);
+  padding: calc(10px) calc(12vw) calc(50px) calc(10vw);
 }
 .homewide-content h2 {
   font-size: 40px;
@@ -972,6 +972,10 @@ for mobile view
 
 @media only screen and (max-width: 825px) 
 {
+  #HomieLancer-NavbarWide{
+    display: none;
+
+  }
 
 .homewide{
 
