@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
+body::-webkit-scrollbar {
+  display: none;
+}
 @media only screen and (min-width: 825px) 
 {
+
 .mobileHome{
   display : none;
 
@@ -516,7 +519,7 @@ hr {
   align-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 .browsejobs {
@@ -553,7 +556,7 @@ hr {
   background-image: url("/public/giphy.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0px 0px 0px 0px;
+  margin: -10px -10px 0px -8px; 
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
@@ -668,32 +671,6 @@ hr {
   height: 71px;
 }
 
-/*#homewide-img {
-  align-self: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  height: 800px;
-  width: 100%;
-  background-image: url("/public/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 30px;
-}*/
-
-/* #homewide-footer-img {
-  align-self: center;
-  align-items: center;
-  border: solid red;
-  color: rgb(255, 255, 255);
-  height: 800px;
-  width: 100%;
-  background-image: url("/public/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 30px;
-} */
 .clientprofileview {
   display: flex;
 }
@@ -1543,12 +1520,12 @@ hr {
   align-self: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  height: 800px;
-  width: 100%;
-  background-image: url("/public/giphy.gif");
+  height: 140vh;
+  width: 130vw;
+  background-image: url("/public/giphyMobile.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0px 0px 0px 0px;
+  margin: -10px 0px 0px -10px;
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
@@ -1557,7 +1534,7 @@ hr {
   padding: 0px 0px 0px 0px; 
 }
 .homewide-content h2 {
-  font-size: 40px;
+  font-size: 10vw;
   margin-top: 50px;
 }
 .homewide-content h3 {
@@ -1589,27 +1566,30 @@ hr {
 }
 
 #homewide-img-txt-1 {
-  font-size: 50px;
+  font-size: 6vw;
   font-weight: 900;
   margin: 0px 2vw 0px 2vw;
 }
 #homewide-img-txt-2 {
-  font-size: 100px;
+  font-size: 15vw;
   font-weight: 900;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 30px 0px 2vw;
 }
 #homewide-img-txt-3 {
-  font-size: 45px;
+  font-size: 6vw;
   font-weight: 900;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 30px 0px 2vw;
 }
 #homewide-img-txt-4 {
   max-width: 600px;
-  font-size: 20px;
+  font-size: 4vw;
   font-weight: 500;
-  margin: 20px 50vw 0px 2vw;
+  margin: 20px 5vw 0px 2vw;
 }
+.btn-table{
 
+  margin-top: 20vh;
+}
 #home-btn-1 {
   margin: 30px 0px 0px 35px;
   border-radius: 8px;
@@ -1651,12 +1631,12 @@ hr {
 
 
 #trusted-by img {
-  margin: 0px 0px 0px 4vw;
-  height: 6vw;
+  margin: 0px 2vw 0px 0vw;
+  height: 10vw;
 }
 #trusted-by p {
   text-align: center;
-  font-size: 25px;
+  font-size: 6vw;
   margin: 10px 30px 20px 20px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;

@@ -434,23 +434,25 @@ const HomeWide = () => {
             Tens of users used our HomieLancer website to hire freelancers to
             have their job done. Try it now!
           </p>
-          <p> </p>
-
-          <a href="/signup">
-            <button id="home-btn-1">Have your job done</button>
-          </a>
-          <a href="/signup">
-            <button id="home-btn-2">Earn money now</button>
-          </a>
+          <table className="btn-table">
+            <tr>
+              <a href="/signup">
+                <button id="home-btn-1">Have your job done</button>
+              </a>
+            </tr>
+            <tr>
+              <a href="/signup">
+                <button id="home-btn-2">Earn money now</button>
+              </a>
+            </tr>
+          </table>
         </div>
 
         <div className="homewide-content">
           <div id="trusted-by">
+            <p>Trusted by</p>
             <table border="0" cellspacing="0" cellpadding="2">
               <tr>
-                <td>
-                  <p>Trusted by</p>
-                </td>
                 <td>
                   <img src={img1} height="80" alt="logo" />
                 </td>
