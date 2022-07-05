@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-@media only screen and (min-width: 1000px) 
+@media only screen and (min-width: 825px) 
 {
+.mobileHome{
+  display : none;
 
+}
 .App {
   font-family: "Open Sans", sans-serif;
 }
@@ -50,8 +53,6 @@
   border-radius: 4px;
 }
 
-position: relative;
-top: -3px;
 
 .homewide-img {
   -webkit-animation: action 100ms 1s alternate;
@@ -551,7 +552,7 @@ hr {
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
-  padding: 10px 200px 50px 200px;
+  padding: calc(10px) calc(5vw) calc(50px) calc(5vw);
 }
 .homewide-content h2 {
   font-size: 40px;
@@ -646,7 +647,8 @@ hr {
 }
 
 #trusted-by img {
-  margin: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 4vw;
+  height: 6vw;
 }
 #trusted-by p {
   text-align: center;
@@ -986,7 +988,7 @@ for mobile view
 *
 */
 
-@media only screen and (max-width: 1000px) 
+@media only screen and (max-width: 825px) 
 {
 
 .App {
@@ -1487,7 +1489,13 @@ hr {
   width: 100%;
 }
 
+.mobileHome{
+  display : none;
+
+}
+
 .homewide {
+
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
   align-content: center;
@@ -1534,7 +1542,10 @@ hr {
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
-  padding: 10px 200px 50px 200px;
+  max-width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  /* padding: 10px 200px 50px 200px; */
 }
 .homewide-content h2 {
   font-size: 40px;
@@ -1572,7 +1583,7 @@ hr {
 #homewide-img-txt-1 {
   font-size: 50px;
   font-weight: 900;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 2vw 0px 2vw;
 }
 #homewide-img-txt-2 {
   font-size: 100px;
@@ -1588,7 +1599,7 @@ hr {
   max-width: 600px;
   font-size: 20px;
   font-weight: 500;
-  margin: 20px 300px 0px 30px;
+  margin: 20px 50vw 0px 2vw;
 }
 
 #home-btn-1 {
@@ -1629,7 +1640,8 @@ hr {
 }
 
 #trusted-by img {
-  margin: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 4vw;
+  height: 6vw;
 }
 #trusted-by p {
   text-align: center;
@@ -1644,32 +1656,6 @@ hr {
   height: 71px;
 }
 
-/*#homewide-img {
-  align-self: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  height: 800px;
-  width: 100%;
-  background-image: url("/public/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 30px;
-}*/
-
-/* #homewide-footer-img {
-  align-self: center;
-  align-items: center;
-  border: solid red;
-  color: rgb(255, 255, 255);
-  height: 800px;
-  width: 100%;
-  background-image: url("/public/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 30px;
-} */
 .clientprofileview {
   display: flex;
 }
