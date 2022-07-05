@@ -1552,10 +1552,9 @@ hr {
   padding: 0px 0px 0px 30px;
 }
 .homewide-content {
-  max-width: 80vw;
   margin-left: 10vw;
-  margin-right: 10vw;
-  /* padding: 10px 200px 50px 200px; */
+  
+  padding: 0px 0px 0px 0px; 
 }
 .homewide-content h2 {
   font-size: 40px;
@@ -1578,7 +1577,6 @@ hr {
 .homewide-content p {
   font-size: 17px;
   font-weight: 500;
-  margin-right: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
 }

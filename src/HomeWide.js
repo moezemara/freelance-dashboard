@@ -423,11 +423,6 @@ const HomeWide = () => {
       </div> */}
       </div>
 
-
-
-
-
-
       <div className="homewideMobile">
         <div class="homewide-img" id="homewide-img">
           <NavbarWide />
@@ -479,26 +474,20 @@ const HomeWide = () => {
 
           <div className="need-sth">
             <h2>Need something?</h2>
-
             <h3>Have your job done</h3>
-
             <p>
-                    It’s free and easy to post a job. Simply fill in a title,
-                    description and budget and competitive bids come within
-                    minutes. We've got freelancers for jobs of any size or
-                    budget, across 1800+ skills. No job is too complex. We can
-                    get it done!{" "}
-                  </p>
-
-                  <h3>Earn Money Now</h3>
-                  <p>
-                    You can find any work you can do here. come to us with your
-                    talent and show it here through a variety of jobs in many
-                    categories. Make your talents pay off through having jobs
-                    done and presenting your service here. Have money made
-                    easily..{" "}
-                  </p>{" "}
-
+              It’s free and easy to post a job. Simply fill in a title,
+              description and budget and competitive bids come within minutes.
+              We've got freelancers for jobs of any size or budget, across 1800+
+              skills. No job is too complex. We can get it done!
+            </p>
+            <h3>Earn Money Now</h3>
+            <p>
+              You can find any work you can do here. come to us with your talent
+              and show it here through a variety of jobs in many categories.
+              Make your talents pay off through having jobs done and presenting
+              your service here. Have money made easily..{" "}
+            </p>{" "}
           </div>
           <hr id="hr2" />
           <div className="why-using-us">
@@ -506,24 +495,21 @@ const HomeWide = () => {
 
             <h3>Pay safely</h3>
             <p>
-                    Only pay for work when it has been completed and you're 100%
-                    satisfied with the quality using our milestone payment
-                    system.{" "}
-                  </p>
+              Only pay for work when it has been completed and you're 100%
+              satisfied with the quality using our milestone payment system.{" "}
+            </p>
             <h3>Quality work</h3>
             <p>
-                    Find professionals you can trust by browsing their samples
-                    of previous work and reading their profile reviews.
-                    Homielancer have a big bool of proffessionals.{" "}
-                  </p>
+              Find professionals you can trust by browsing their samples of
+              previous work and reading their profile reviews. Homielancer have
+              a big bool of proffessionals.{" "}
+            </p>
             <h3>We’re here to help</h3>
             <p>
-                    Our talented team of recruiters can help you find the best
-                    freelancer for the job and our technical co-pilots can even
-                    manage the project for you.{" "}
-                  </p>
-
-
+              Our talented team of recruiters can help you find the best
+              freelancer for the job and our technical co-pilots can even manage
+              the project for you.{" "}
+            </p>
           </div>
           <hr id="hr2" />
           <div className="different-skills">
@@ -549,7 +535,6 @@ const HomeWide = () => {
                       <h3>Artificial intellegeance</h3>
                     </td>
                   </td>
-                  
                 </tr>
 
                 <tr>
@@ -571,7 +556,6 @@ const HomeWide = () => {
                       <h3>Wordpress</h3>
                     </td>
                   </td>
-                  
                 </tr>
 
                 <tr>
@@ -593,8 +577,6 @@ const HomeWide = () => {
                       <h3>Amazon web services</h3>
                     </td>
                   </td>
-                  
-                    
                 </tr>
 
                 <tr>
@@ -616,8 +598,6 @@ const HomeWide = () => {
                       <h3>Data analysis</h3>
                     </td>
                   </td>
-                  
-                    
                 </tr>
 
                 <tr>
@@ -639,7 +619,6 @@ const HomeWide = () => {
                       <h3>graphic design</h3>
                     </td>
                   </td>
-                  
                 </tr>
 
                 <tr>
@@ -661,7 +640,6 @@ const HomeWide = () => {
                       <h3>web scrapping</h3>
                     </td>
                   </td>
-                  
                 </tr>
 
                 <tr>
@@ -683,7 +661,6 @@ const HomeWide = () => {
                       <h3>Database administration</h3>
                     </td>
                   </td>
-                  
                 </tr>
 
                 <tr>
@@ -705,7 +682,6 @@ const HomeWide = () => {
                       <h3>Virtual Assistant</h3>
                     </td>
                   </td>
-                  
                 </tr>
               </table>
             </div>
@@ -716,10 +692,6 @@ const HomeWide = () => {
         
       </div> */}
       </div>
-
-
-
-
     </div>
   );
 };
