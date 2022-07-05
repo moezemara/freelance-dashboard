@@ -1526,8 +1526,14 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   margin: -10px 0px 0px -10px;
-  padding: 0px 0px 0px 30px;
+  padding: 0vh 0px 0px 30px;
 }
+
+.homewide-img-txt{
+
+  padding: 7vh 0px 0px 30px;
+}
+
 .homewide-content {
   margin-left: 10vw;
   
@@ -1566,51 +1572,54 @@ hr {
 }
 
 #homewide-img-txt-1 {
-  font-size: 6vw;
+  font-size: 9vw;
   font-weight: 900;
-  margin: 0px 2vw 0px 2vw;
+  margin: 1vh 1vh 0vh 1vh;
 }
 #homewide-img-txt-2 {
-  font-size: 15vw;
+  font-size: 19vw;
   font-weight: 900;
-  margin: 0px 30px 0px 2vw;
+  margin: 1vh 1vh 0vh 1vh;
 }
 #homewide-img-txt-3 {
-  font-size: 6vw;
+  font-size: 8vw;
   font-weight: 900;
-  margin: 0px 30px 0px 2vw;
+  margin: 1vh 1vh 0vh 1vh;
 }
 #homewide-img-txt-4 {
   max-width: 600px;
-  font-size: 4vw;
+  font-size: 6vw;
   font-weight: 500;
-  margin: 20px 5vw 0px 2vw;
+  margin: 5vh 1vh 0vh 1vh;
 }
 .btn-table{
-
+  width: 100%;
   margin-top: 20vh;
+  text-align:center
+
 }
+
 #home-btn-1 {
-  margin: 30px 0px 0px 35px;
+  margin: 0px 0px 0px 0px;
   border-radius: 8px;
   color: rgb(0, 0, 0);
   font-weight: 600;
   background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  height: 45px;
-  width: 250px;
+  font-size: 4vw;
+  height: 10vw;
+  width: 90vw;
 }
 #home-btn-2 {
-  margin: 30px 0px 0px 25px;
+  margin: 50px 0px 0px 0px;
   border-radius: 8px;
   box-sizing: border-box;
   border: 3px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0);
-  font-size: 18px;
-  height: 45px;
-  width: 250px;
+  font-size: 4vw;
+  height: 10vw;
+  width: 90vw;
 }
 
 #home-btn-1:hover {

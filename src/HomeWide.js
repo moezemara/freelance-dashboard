@@ -427,6 +427,7 @@ const HomeWide = () => {
         <div class="homewide-img" id="homewide-img">
           <NavbarWide />
           <br />
+          <div className="homewide-img-txt">
           <p id="homewide-img-txt-1">Hire the world-best</p>
           <p id="homewide-img-txt-2">Freelancers</p>
           <p id="homewide-img-txt-3">here, for any job you need.</p>
@@ -434,6 +435,7 @@ const HomeWide = () => {
             Tens of users used our HomieLancer website to hire freelancers to
             have their job done. Try it now!
           </p>
+          </div>
           <table className="btn-table">
             <tr>
               <a href="/signup">
