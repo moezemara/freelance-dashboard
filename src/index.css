@@ -505,6 +505,11 @@ hr {
   width: 100%;
 }
 
+.homewideMobile{
+
+  display: none;
+}
+
 .homewide {
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -990,6 +995,11 @@ for mobile view
 
 @media only screen and (max-width: 825px) 
 {
+
+.homewide{
+
+  display: none;
+}
 
 .App {
   font-family: "Open Sans", sans-serif;
@@ -1494,7 +1504,7 @@ hr {
 
 }
 
-.homewide {
+.homewideMobile {
 
   font-family: "Open Sans", sans-serif;
   margin: 0 auto;
@@ -1638,6 +1648,9 @@ hr {
   position: relative;
   top: -3px;
 }
+
+
+
 
 #trusted-by img {
   margin: 0px 0px 0px 4vw;
