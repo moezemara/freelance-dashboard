@@ -1594,9 +1594,11 @@ hr {
 }
 .btn-table{
   width: 100%;
-  margin-top: 20vh;
-  text-align:center
-
+  margin-top: 0vh;
+  text-align:center;
+  position: absolute;
+  bottom:7vh;
+  
 }
 
 #home-btn-1 {
