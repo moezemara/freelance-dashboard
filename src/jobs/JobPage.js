@@ -105,7 +105,8 @@ const JobPage = ()=>{
     {(accountType==='C' && (Array.isArray(appliedProposalsData))) &&
       <h3>Applied Proposals</h3>
     }
-    {(accountType==='C' && Array.isArray(appliedProposalsData)) &&
+    {
+    (accountType==='C' && Array.isArray(appliedProposalsData)) &&
       (appliedProposalsData.map((proposal)=>(
         <AppliedProposalCard proposal={proposal}/>
       )))
