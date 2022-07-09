@@ -33,9 +33,10 @@ function App() {
              <HomeWide/>
             </Route>
 
-            <Route exact path="/oldhome">
+            <Route exact path="/test">
               <Navbar/>
               <Home />
+
             </Route>
             <Route exact path="/signup">
               <Navbar />
