@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../axios.js";
 import ContractCard from "./ContractCard";
-import Milestone from "../Milestone";
+import Milestone from "../milestones/Milestone";
 import accountCheck from "../accountCheck"
 
 const ContractPage = ()=>{

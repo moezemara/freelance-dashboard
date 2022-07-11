@@ -3,8 +3,8 @@ import Home from "./Home";
 import HomeWide from "./HomeWide";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SignUp from "./SignUp";
-import Login from "./Login";
+import SignUp from "./auth-forms/SignUp";
+import Login from "./auth-forms/Login";
 import PostJob from "./jobs/PostJob";
 import Page404 from "./Page404";
 import ProposalPage from "./proposals/ProposalPage";
@@ -17,11 +17,11 @@ import BrowseJobs from "./jobs/BrowseJobs";
 import ProfileMainPage from "./profiles/ProfileMainPage";
 import MakeProfile from "./profiles/MakeProfile";
 import ProfilePage from "./profiles/ProfilePage";
-import ActivitiesPage from "./ActivitiesPage";
+import ActivitiesPage from "./activities/ActivitiesPage";
 import JobPage from "./jobs/JobPage";
 import ContractPage from "./contracts/ContractPage";
-import Chat from "./Chat";
-import PayementPage from "./PayementPage";
+import Chat from "./chat/Chat";
+import PayementPage from "./payement/PayementPage";
 
 function App() {
   return (
