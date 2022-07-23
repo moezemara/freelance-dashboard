@@ -169,7 +169,6 @@ body::-webkit-scrollbar {
 .signup,
 .login,
 .postjob {
-  max-width: 400px;
   margin: 0 auto;
   margin-top: 100px;
 
@@ -178,6 +177,21 @@ body::-webkit-scrollbar {
   padding: 20px;
   text-align: center;
 }
+
+.login{
+  max-width: 400px;
+
+}
+
+.signup,
+.postjob 
+{  
+  max-width: 600px;
+}
+
+
+
+
 
 .profilecard {
   max-width: 800px;
