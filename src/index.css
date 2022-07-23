@@ -205,7 +205,8 @@ body::-webkit-scrollbar {
 .postjob input,
 .proposalpage input,
 .profilesettings input,
-.freelancercontractpage input {
+.freelancercontractpage input,
+.accountsettings input{
   width: 100%;
   border-radius: 10px;
 
@@ -290,7 +291,8 @@ select:focus {
 .proposalpage button,
 .profilesettings button,
 .clientcontractpage button,
-.freelancercontractpage button {
+.freelancercontractpage button,
+.accountsettings button{
   margin-top: 10px;
   padding: 5px 10px 5px 10px;
   font-size: 15px;
@@ -306,7 +308,8 @@ select:focus {
 .proposalpage button:hover,
 .profilesettings button:hover,
 .clientcontractpage button:hover,
-.freelancercontractpage button:hover {
+.freelancercontractpage button:hover,
+.accountsettings button:hover{
   font-weight: 900;
 }
 
@@ -404,8 +407,9 @@ select:focus {
 .postjob,
 .proposalpage,
 .profilesettings,
-.job-card-of-proposal
-.appliedproposalcard
+.job-card-of-proposal,
+.appliedproposalcard,
+.accountsettings
 {
   border-radius: 20px;
   max-width: 800px;
@@ -438,7 +442,9 @@ select:focus {
   margin-bottom: 20px;
 }
 
-.profilesettings div {
+.profilesettings div,
+.accountsettings
+{
   padding-top: 1%;
 }
 
@@ -478,7 +484,9 @@ hr {
 
 .signup select,
 .profilesettings select,
-.postjob select {
+.postjob select,
+.accountsettings select
+{
   background-color: rgba(0, 0, 0, 0);
   border-radius: 20px;
   background-color: #f8f8f8;
@@ -1175,7 +1183,8 @@ for mobile view
 .postjob input,
 .proposalpage input,
 .profilesettings input,
-.freelancercontractpage input {
+.freelancercontractpage input,
+.accountsettings input{
   width: 100%;
   border-radius: 10px;
 
@@ -1260,7 +1269,8 @@ select:focus {
 .proposalpage button,
 .profilesettings button,
 .clientcontractpage button,
-.freelancercontractpage button {
+.freelancercontractpage button,
+.accountsettings button{
   margin-top: 10px;
   padding: 5px 10px 5px 10px;
   font-size: 15px;
@@ -1276,7 +1286,8 @@ select:focus {
 .proposalpage button:hover,
 .profilesettings button:hover,
 .clientcontractpage button:hover,
-.freelancercontractpage button:hover {
+.freelancercontractpage button:hover,
+.accountsettings button:hover{
   font-weight: 900;
 }
 
@@ -1374,8 +1385,10 @@ select:focus {
 .postjob,
 .proposalpage,
 .profilesettings,
-.job-card-of-proposal
-.appliedproposalcard{
+.job-card-of-proposal,
+.appliedproposalcard,
+.accountsettings
+{
   border-radius: 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -1407,7 +1420,9 @@ select:focus {
   margin-bottom: 20px;
 }
 
-.profilesettings div {
+.profilesettings div,
+.accountsettings div
+{
   padding-top: 1%;
 }
 
@@ -1447,7 +1462,8 @@ hr {
 
 .signup select,
 .profilesettings select,
-.postjob select {
+.postjob select,
+.accountsettings select{
   background-color: rgba(0, 0, 0, 0);
   border-radius: 20px;
   background-color: #f8f8f8;
