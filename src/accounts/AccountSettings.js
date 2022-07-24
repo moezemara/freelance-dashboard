@@ -17,11 +17,13 @@ const AccountSettings = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState('')
   const [email, setEmail] = useState("");
-  const [type, setType] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [country, setCountry] = useState("");
   const [sex, setSex] = useState("");
+
+  const [passwordChecked, setPasswordChecked] = useState(true);
+
 
   useEffect(() => {
     if (accountType !== "F" || accountType !== "C") {
@@ -101,14 +103,23 @@ const AccountSettings = () => {
             </select>
           </div>
 
+          <div className="name_part">
+                    <input type="checkbox" defaultChecked={passwordChecked} onChange={() => setPasswordChecked(!passwordChecked)} style={{width:30}}/>
+                    <label>I will change password</label>
+                </div>
 
+
+
+{ (passwordChecked)&&
+<div>
 <hr />
-<label >passwords</label>
+<label >Changing password</label>
 <input type="password" placeholder="Current Password" value={currentPassword} onInput={e=>setCurrentPassword(e.target.value)}/>
 <input type="password" placeholder="New Password" value={newPassword} onInput={e=>setNewPassword(e.target.value)}/>
 <input type="password" placeholder="Confirm New Password" value={confirmPassword} onInput={e=>setConfirmPassword(e.target.value)}/>
 { (confirmPassword!==newPassword) && <label style={{color:'red'}}>Password needs to be confirmed</label>}
-               
+</div>
+}
 
         </form>
       </div>
