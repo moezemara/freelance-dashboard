@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Cookies from "universal-cookie";
-
 import ClientNavbar from "../navbars/ClientNavbar";
 import FreelancerNavbar from "../navbars/FreelancerNavbar";
+import countries from '../data/countries.json'
 
 const AccountSettings = () => {
   const [accountType, setAccountType] = useState();
@@ -72,10 +72,7 @@ const AccountSettings = () => {
               onInput={(e) => setUsername(e.target.value)}
             />
 
-            {/*
-            
-            country??
-            */}
+           
           </div>
 
           <input
@@ -94,13 +91,21 @@ const AccountSettings = () => {
               onInput={(e) => setPhone(e.target.value)}
             />
 
-            <select value={sex} onInput={(e) => setSex(e.target.value)}>
+
+                <select value={country} onInput={e=>setCountry(e.target.value)}>
+                     {Object.keys(countries.Name).map((key,i)=>(
+                          <option value={countries.Code[key]} key={i}>{countries.Name[key]}</option>
+                      ))}      
+                </select>
+
+
+            {/* <select value={sex} onInput={(e) => setSex(e.target.value)}>
               <option value="" disabled selected hidden>
                 Gender
               </option>
               <option value="M">male</option>
               <option value="F">female</option>
-            </select>
+            </select> */}
           </div>
 
           <div className="name_part">
