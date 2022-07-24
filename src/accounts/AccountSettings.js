@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Cookies from "universal-cookie";
@@ -9,7 +10,7 @@ const AccountSettings = () => {
   const [accountType, setAccountType] = useState();
   const { profile_id } = useParams();
   const cookies = new Cookies();
-
+  const [profileData,setProfileData] = useState("")
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [username, setUsername] = useState("");
@@ -20,9 +21,7 @@ const AccountSettings = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [country, setCountry] = useState("");
-  const [sex, setSex] = useState("");
-
-  const [passwordChecked, setPasswordChecked] = useState(true);
+  const [passwordChecked, setPasswordChecked] = useState(false);
 
 
   useEffect(() => {
@@ -30,6 +29,29 @@ const AccountSettings = () => {
       setAccountType(cookies.getAll().type);
     }
   }, [accountType]);
+
+
+  useEffect(()=>{
+
+      axios.get(`/user/profile`,{ withCredentials: true}).then(res=>{ 
+        if(res.data.success===1){
+          setProfileData(res.data.message);
+          setFname(res.data.message.fname)
+          setLname(res.data.message.lname)
+          setAddress(res.data.message.address)
+          setEmail(res.data.message.email)
+          setUsername(res.data.message.username)
+          setPhone(res.data.message.phone)
+
+          console.log(res);
+        }
+        else{
+            console.log(res);
+                
+      }},[]);
+      
+  },[]);
+
 
   return (
     <div>
