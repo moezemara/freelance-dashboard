@@ -121,20 +121,19 @@ const AccountSettings = () => {
       }
 
 
-
-
-      const response = await axios.post(`account/update/password`, addressData, {withCredentials:true});
+      const response = await axios.post(`account/update/password`, passwordData, {withCredentials:true});
       console.log(response.data.success);
     }
     }
 
 
 
-  }
+  
 
 
 
   return (
+
     <div>
       {accountType === "F" && <FreelancerNavbar profile_id={profile_id} />}
       {accountType === "C" && <ClientNavbar profile_id={profile_id} />}
