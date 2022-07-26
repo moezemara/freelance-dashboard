@@ -30,7 +30,7 @@ const AccountSettings = () => {
   const [country, setCountry] = useState("");
   const [passwordChecked, setPasswordChecked] = useState(false);
   const [passwordFieldsOkay, setPasswordFieldsOkay] = useState(false);
-  
+  const [confirmPasswordStartedTypying, setConfirmPasswordStartedTypying] = useState(false)
 // const changeStateToTrue = (place) => {
 //  let updatedValue = {};
 //  updatedValue = {[place] : true};
@@ -71,10 +71,10 @@ const AccountSettings = () => {
   },[]);
 
 
-  async function handleSettings() {
+  async function handleUpdateSettings() {
 
 
-    if(fname===profileData.fname && lname===profileData.lname){
+    if(fname!= profileData.fname || lname != profileData.lname){
       const nameData = {
         fname:fname,
         lname:lname
@@ -83,7 +83,7 @@ const AccountSettings = () => {
       console.log(response.data.success);
     }
 
-    if(email===profileData.email){
+    if(email != profileData.email){
       const emailData = {
         email:email
       }
@@ -91,7 +91,7 @@ const AccountSettings = () => {
       console.log(response.data.success);
     }
     
-    if(phone===profileData.phone){
+    if(phone != profileData.phone){
       const phoneData = {
         phone:phone
       }
@@ -100,18 +100,33 @@ const AccountSettings = () => {
     }
 
 
-//address and country
-if(address===profileData.address && country===profileData.country)
-{
+    //address and country
+    if(address != profileData.address || country != profileData.country)
+    {
+      const addressData = {
+        address : address,
+        country : country
+      }
+      const response = await axios.post(`account/update/address`, addressData, {withCredentials:true});
+      console.log(response.data.success);
+    }
 
-}
+
+    //password
+    if(passwordChecked && passwordFieldsOkay)
+    {
+      const passwordData = {
+        currentPassword: currentPassword,
+        newPassword : newPassword
+      }
 
 
-//password
-if(passwordChecked && passwordFieldsOkay)
-{
 
-}
+
+      const response = await axios.post(`account/update/password`, addressData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+    }
 
 
 
@@ -194,15 +209,15 @@ if(passwordChecked && passwordFieldsOkay)
 <label ><b>Changing password</b></label>
 <input type="password" placeholder="Current Password" value={currentPassword} onInput={e=>setCurrentPassword(e.target.value)}/>
 <input type="password" placeholder="New Password" value={newPassword} onInput={e=>setNewPassword(e.target.value)}/>
-<input type="password" placeholder="Confirm New Password" value={confirmPassword} onInput={e=>setConfirmPassword(e.target.value)}/>
-{ (confirmPassword!==newPassword) && <label style={{color:'red'}}>Password needs to be confirmed</label>}
+<input type="password" placeholder="Confirm New Password" value={confirmPassword} onInput={e=>setConfirmPassword(e.target.value)} onChange={e=>setConfirmPasswordStartedTypying(true)}/>
+{ (confirmPasswordStartedTypying && confirmPassword!==newPassword) && <label style={{color:'red'}}>Passwords need to be identical to confirm password</label>}
 <hr />
 </div>
 }
 
 
 
-<button type="button" onClick={handleSettings}>Update Settings</button>
+<button type="button" onClick={handleUpdateSettings}>Update Settings</button>
         </form>
       </div>
     </div>
