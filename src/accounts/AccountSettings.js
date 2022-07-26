@@ -11,13 +11,13 @@ const AccountSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [profileData,setProfileData] = useState("")
-  const [dataChanged, setDataChanged] = useState({//to check where an input field have been changed or not
-'name':false,
-'email':false,
-'password':false,
-'address':false,
-'phone':false
-  })
+//   const [dataChanged, setDataChanged] = useState({//to check where an input field have been changed or not
+// 'name':false,
+// 'email':false,
+// 'password':false,
+// 'address':false,
+// 'phone':false
+//   })
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [username, setUsername] = useState("");
@@ -29,15 +29,16 @@ const AccountSettings = () => {
   const [address, setAddress] = useState("");
   const [country, setCountry] = useState("");
   const [passwordChecked, setPasswordChecked] = useState(false);
-
-const changeStateToTrue = (place) => {
- let updatedValue = {};
- updatedValue = {[place] : true};
- setDataChanged(dataChanged => ({
-      ...dataChanged,
-      ...updatedValue
-    }));
-  }
+  const [passwordFieldsOkay, setPasswordFieldsOkay] = useState(false);
+  
+// const changeStateToTrue = (place) => {
+//  let updatedValue = {};
+//  updatedValue = {[place] : true};
+//  setDataChanged(dataChanged => ({
+//       ...dataChanged,
+//       ...updatedValue
+//     }));
+//   }
 
 
 
@@ -73,7 +74,7 @@ const changeStateToTrue = (place) => {
   async function handleSettings() {
 
 
-    if(dataChanged.name){
+    if(fname===profileData.fname && lname===profileData.lname){
       const nameData = {
         fname:fname,
         lname:lname
@@ -82,7 +83,7 @@ const changeStateToTrue = (place) => {
       console.log(response.data.success);
     }
 
-    if(dataChanged.email){
+    if(email===profileData.email){
       const emailData = {
         email:email
       }
@@ -90,7 +91,7 @@ const changeStateToTrue = (place) => {
       console.log(response.data.success);
     }
     
-    if(dataChanged.phone){
+    if(phone===profileData.phone){
       const phoneData = {
         phone:phone
       }
@@ -100,10 +101,17 @@ const changeStateToTrue = (place) => {
 
 
 //address and country
+if(address===profileData.address && country===profileData.country)
+{
+
+}
 
 
 //password
+if(passwordChecked && passwordFieldsOkay)
+{
 
+}
 
 
 
@@ -120,6 +128,9 @@ const changeStateToTrue = (place) => {
         <h1>Account settings</h1>
 
         <form action="">
+        <hr />
+<label > <b>Basic info</b></label>
+
           <div className="name_part">
             <input
               type="text"
@@ -142,18 +153,7 @@ const changeStateToTrue = (place) => {
             value={email}
             onInput={(e) => setEmail(e.target.value)}
           />
-
-          <div className="name_part">
-            <input
-              type="text"
-              style={{ marginRight: 10 }}
-              placeholder="Username"
-              value={username}
-              onInput={(e) => setUsername(e.target.value)}
-            />
-
-           
-          </div>
+          
 
           <input
             type="text"
@@ -179,13 +179,6 @@ const changeStateToTrue = (place) => {
                 </select>
 
 
-            {/* <select value={sex} onInput={(e) => setSex(e.target.value)}>
-              <option value="" disabled selected hidden>
-                Gender
-              </option>
-              <option value="M">male</option>
-              <option value="F">female</option>
-            </select> */}
           </div>
 
           <div className="name_part">
@@ -198,14 +191,18 @@ const changeStateToTrue = (place) => {
 { (passwordChecked)&&
 <div>
 <hr />
-<label >Changing password</label>
+<label ><b>Changing password</b></label>
 <input type="password" placeholder="Current Password" value={currentPassword} onInput={e=>setCurrentPassword(e.target.value)}/>
 <input type="password" placeholder="New Password" value={newPassword} onInput={e=>setNewPassword(e.target.value)}/>
 <input type="password" placeholder="Confirm New Password" value={confirmPassword} onInput={e=>setConfirmPassword(e.target.value)}/>
 { (confirmPassword!==newPassword) && <label style={{color:'red'}}>Password needs to be confirmed</label>}
+<hr />
 </div>
 }
 
+
+
+<button type="button" onClick={handleSettings}>Update Settings</button>
         </form>
       </div>
     </div>
