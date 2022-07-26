@@ -11,6 +11,13 @@ const AccountSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [profileData,setProfileData] = useState("")
+  const [dataChanged, setDataChanged] = useState({//to check where an input field have been changed or not
+'name':false,
+'email':false,
+'password':false,
+'address':false,
+'phone':false
+  })
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [username, setUsername] = useState("");
@@ -22,6 +29,16 @@ const AccountSettings = () => {
   const [address, setAddress] = useState("");
   const [country, setCountry] = useState("");
   const [passwordChecked, setPasswordChecked] = useState(false);
+
+const changeStateToTrue = (place) => {
+ let updatedValue = {};
+ updatedValue = {[place] : true};
+ setDataChanged(dataChanged => ({
+      ...dataChanged,
+      ...updatedValue
+    }));
+  }
+
 
 
   useEffect(() => {
@@ -51,6 +68,47 @@ const AccountSettings = () => {
       }},[]);
       
   },[]);
+
+
+  async function handleSettings() {
+
+
+    if(dataChanged.name){
+      const nameData = {
+        fname:fname,
+        lname:lname
+      }
+      const response = await axios.post(`account/update/name`, nameData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+
+    if(dataChanged.email){
+      const emailData = {
+        email:email
+      }
+      const response = await axios.post(`account/update/email`, emailData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+    
+    if(dataChanged.phone){
+      const phoneData = {
+        phone:phone
+      }
+      const response = await axios.post(`account/update/phone`, phoneData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+
+
+//address and country
+
+
+//password
+
+
+
+
+  }
+
 
 
   return (
