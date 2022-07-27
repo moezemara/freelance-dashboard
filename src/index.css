@@ -320,6 +320,13 @@ select:focus {
   margin-right: 10px;
 }
 
+#profilePictureSettings{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align:center;
+}
+
 .signup button:hover,
 .login button:hover,
 .postjob button:hover,
@@ -1301,6 +1308,8 @@ select:focus {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+
 
 .signup button:hover,
 .login button:hover,

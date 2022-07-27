@@ -139,6 +139,10 @@ country=="" ||
 
         <form action="">
         <hr />
+
+  <input type="file" id="profilePictureSettings" />
+
+
 <label > <b>Basic info</b></label>
 
           <div className="name_part">
