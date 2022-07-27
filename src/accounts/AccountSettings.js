@@ -11,13 +11,7 @@ const AccountSettings = () => {
   const { profile_id } = useParams();
   const cookies = new Cookies();
   const [profileData,setProfileData] = useState("")
-//   const [dataChanged, setDataChanged] = useState({//to check where an input field have been changed or not
-// 'name':false,
-// 'email':false,
-// 'password':false,
-// 'address':false,
-// 'phone':false
-//   })
+
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [username, setUsername] = useState("");
@@ -31,15 +25,8 @@ const AccountSettings = () => {
   const [passwordChecked, setPasswordChecked] = useState(false);
   const [passwordFieldsOkay, setPasswordFieldsOkay] = useState(false);
   const [confirmPasswordStartedTypying, setConfirmPasswordStartedTypying] = useState(false)
-// const changeStateToTrue = (place) => {
-//  let updatedValue = {};
-//  updatedValue = {[place] : true};
-//  setDataChanged(dataChanged => ({
-//       ...dataChanged,
-//       ...updatedValue
-//     }));
-//   }
 
+  const [returnedMsg, setReturnedMsg] = useState({"color":"green","msg":""})
 
 
   useEffect(() => {
@@ -72,6 +59,20 @@ const AccountSettings = () => {
 
 
   async function handleUpdateSettings() {
+    if(
+fname=="" ||
+lname=="" ||
+email=="" ||
+address=="" ||
+phone=="" ||
+country=="" ||
+(passwordChecked && (currentPassword=="" || newPassword==""|| confirmPassword==""))
+){
+
+  setReturnedMsg({"color":"red","msg":"You can leave no field blank"});
+
+    }
+
 
 
     if(fname!= profileData.fname || lname != profileData.lname){
@@ -125,11 +126,6 @@ const AccountSettings = () => {
       console.log(response.data.success);
     }
     }
-
-
-
-  
-
 
 
   return (
@@ -217,7 +213,11 @@ const AccountSettings = () => {
 
 
 <button type="button" onClick={handleUpdateSettings}>Update Settings</button>
+<button type="button" onClick={()=>{window.location = "/settings/"}}>Reset</button>
+
         </form>
+        <label style={{ color: returnedMsg.color }}>{returnedMsg.msg}</label>
+
       </div>
     </div>
   );
