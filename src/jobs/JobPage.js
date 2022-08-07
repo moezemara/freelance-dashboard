@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import JobCard from "./JobCard";
 import JobCardForProposal from "./JobCardForProposal";
 import dollarSymbol from "../src-images/dollar.png";
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import { useParams } from "react-router-dom";
 import AppliedProposalCard from "../proposals/AppliedProposalCard";
-import accountCheck from "../accountCheck";
+import accountCheck from "../shared/accountCheck";
 
 const JobPage = ()=>{
     const cookies = new Cookies();

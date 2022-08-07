@@ -1,5 +1,5 @@
 import { useState, useEffect, createRef } from "react";
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import AccountStats from "./AccountStats.js";
 import ProposalStats from "./ProposalStats.js";
 import ContractStats from "./ContractStats.js";

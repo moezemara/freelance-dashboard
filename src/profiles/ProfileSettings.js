@@ -4,14 +4,16 @@ import Cookies from "universal-cookie";
 import FreelancerNavbar from "../navbars/FreelancerNavbar.js";
 import ClientNavbar from "../navbars/ClientNavbar.js";
 import { useParams } from "react-router-dom";
-import axios from "../axios.js";
-import accountCheck from "../accountCheck.js";
+import axios from "../shared/axios.js";
+import accountCheck from "../shared/accountCheck.js";
+
 
 const ProfileSettings = () => {
+  const cookies = new Cookies();
+
   const [accountType, setAccountType] = useState();
   const { profile_id } = useParams();
-  const cookies = new Cookies();
-  const [active_profile_id, setActiveId] = useState("")
+  const [active_profile_id, setActiveId] = useState(cookies.getAll().active_id)
   const [profile_data,setProfileData] = useState({profile:{}, account:{}});
 
 
@@ -27,35 +29,21 @@ const ProfileSettings = () => {
   useEffect(()=>{
 
     accountCheck();
-    ////we need to get that profile data so I sent the cokkies to send us the profile data
-      ////but let's agree on one path
-      axios.get('/freelancer/profile/',{ withCredentials: true}).then(res=>{ 
-          if(res.data.success===1){
-            setActiveId(res.data.message.active_id);
-            document.cookie = 'active_id='+res.data.message.active_id;
-            console.log(res);
-          }
-          else{
-              console.log(res);
-            }},[]);
+  
 
 
-      axios.get(`/freelancer/profile/${profile_id}`,{ withCredentials: true}).then(res=>{ 
-        if(res.data.success===1){
-          setProfileData(res.data.message);
-          setTitle(res.data.message.profile.title);
-          setCategory(res.data.message.profile.category);
-          const myskills = JSON.parse(res.data.message.profile.skills).join(",");
-          console.log(myskills);
-          setSkills(myskills);
-          setDescription(res.data.message.profile.description );
-          setPayRate(res.data.message.profile.pay_rate);
-          console.log(res);
-        }
-        else{
-            console.log(res);
-                
-      }},[]);
+    axios.get(`/freelancer/profile/${profile_id}`,{ withCredentials: true}).then(res=>{ 
+      if(res.data.success===1){
+        setProfileData(res.data.message);
+        setTitle(res.data.message.profile.title);
+        setCategory(res.data.message.profile.category);
+        const myskills = JSON.parse(res.data.message.profile.skills).join(",");
+        console.log(myskills);
+        setSkills(myskills);
+        setDescription(res.data.message.profile.description );
+        setPayRate(res.data.message.profile.pay_rate);
+      }
+      },[]);
       
   },[]);
 

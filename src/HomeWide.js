@@ -1,6 +1,6 @@
 import NavbarWide from "./navbars/NavbarWide";
 import { useEffect, useState } from "react";
-import axios from "./axios.js";
+import axios from "./shared/axios.js";
 
 import Cookies from "universal-cookie";
 import img1 from "./src-images/logo1.jpg";

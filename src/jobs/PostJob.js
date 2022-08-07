@@ -1,7 +1,7 @@
 import {getCategoriesList} from '../Options'
 import { useState, useEffect, createRef } from "react";
-import axios from "../axios.js";
-import accountCheck from '../accountCheck';
+import axios from "../shared/axios.js";
+import accountCheck from '../shared/accountCheck';
 
 const PostJob = () => {
 

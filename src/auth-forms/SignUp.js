@@ -2,7 +2,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import config from "../config.json"
 import countries from '../data/countries.json'
 import { useState, useEffect, createRef } from "react";
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import Cookies from "universal-cookie";
 
 

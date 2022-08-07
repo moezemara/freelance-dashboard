@@ -1,5 +1,5 @@
-import axios from "../axios.js"
-import accountCheck from "../accountCheck.js";
+import axios from "../shared/axios.js"
+import accountCheck from "../shared/accountCheck.js";
 import { useEffect } from "react";
 
 

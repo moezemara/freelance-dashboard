@@ -1,4 +1,4 @@
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import config from "../config.json"
 import { useState, useEffect, createRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";

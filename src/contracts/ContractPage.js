@@ -3,10 +3,10 @@ import ClientNavbar from "../navbars/ClientNavbar";
 import FreelancerNavbar from "../navbars/FreelancerNavbar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import ContractCard from "./ContractCard";
 import Milestone from "../milestones/Milestone";
-import accountCheck from "../accountCheck"
+import accountCheck from "../shared/accountCheck"
 
 const ContractPage = ()=>{
     const contract_id = useParams().contract_id;
@@ -17,6 +17,16 @@ const ContractPage = ()=>{
     const [milestones, setMilestones] = useState([]);
     const [milesontesNum, setMilestonesNum] = useState(0);
 
+
+    const GetData = async ()=>{
+        axios.get(`contract/${contract_id}`,{withCredentials:true}).then((res)=>{
+            setContractData(res.data.message);
+            setMilestones(res.data.message.milestones);
+            setMilestonesNum(res.data.message.milestones.length)
+            console.log(res);
+        });
+        
+    }
 
     const agreeOnContract = ()=>{
         axios.post(`/contract/${contract_id}/updatestatus`,{"input":"Accept"},{withCredentials:true}).then((res)=>{
@@ -32,12 +42,7 @@ const ContractPage = ()=>{
 
     useEffect(()=>{
         accountCheck(accountType);
-        axios.get(`contract/${contract_id}`,{withCredentials:true}).then((res)=>{
-            setContractData(res.data.message);
-            setMilestones(res.data.message.milestones);
-            setMilestonesNum(res.data.message.milestones.length)
-            console.log(res);
-    });
+        GetData();
     },[]);
 
     const addMileStone = ()=>{
@@ -48,15 +53,15 @@ const ContractPage = ()=>{
     }
 
     return(
-        <div>
+        <div className="contractpage">
             {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
             {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
             <div className="clientcontractpage">
                 {contractData.contract && <ContractCard contract={contractData.contract}/>}
                 <div className="clientcontractmilestones">
-                    <p><b>Miltstones</b>({milesontesNum})</p>
+                    <p><b>Miltstones</b>  ({milesontesNum})</p>
                     { (contractData.milestones) && milestones.map((milestone)=>(
-                        <Milestone milestone={milestone} contract_status={contractData.contract.status} status={contractData.permissions.special_status}/>
+                        <Milestone AfterAdd={GetData} milestone={milestone} contract_status={contractData.contract.status} status={contractData.permissions.special_status}/>
                     ))
 
                                         

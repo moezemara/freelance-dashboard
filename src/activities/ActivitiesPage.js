@@ -2,11 +2,11 @@ import {useState, useEffect } from "react";
 import Cookies from "universal-cookie";
 import FreelancerNavbar from "../navbars/FreelancerNavbar";
 import ClientNavbar from "../navbars/ClientNavbar";
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 import JobCard from "../jobs/JobCard";
 import FreelancerAppliedProposalCard from "../proposals/FreelancerAppliedProposalCard";
 import ContractCard from "../contracts/ContractCard";
-import accountCheck from "../accountCheck";
+import accountCheck from "../shared/accountCheck";
 
 
 

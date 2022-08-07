@@ -1,4 +1,4 @@
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 
 
 import { useState } from "react";
@@ -14,6 +14,7 @@ const Milestone = (props)=>{
     const initial = (props.milestone.description==="");
     const contractStatus = props.contract_status;
     const [addedSuccess, setAddedSuccess] = useState(false);
+    const GetData = props.AfterAdd;
 
     const handleAdd= ()=>{
         const data = {
@@ -22,10 +23,8 @@ const Milestone = (props)=>{
             "amount":money
         };
         axios.post(`/contract/${contract_id}/milestone/add`,data,{withCreditionals:true}).then((res)=>{
-            if(res.data.success){
-                window.location =  `/contract/${contract_id}`;
-            }
-        });;
+            GetData();
+        });
     }
 
     const handleEnd= ()=>{
@@ -47,7 +46,7 @@ const Milestone = (props)=>{
                         }
 
 
-
+                        
                         { (((status!=="NAN")) || (!initial)) &&
                             <label>{description}</label>
                         }

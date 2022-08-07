@@ -1797,6 +1797,13 @@ activities-page-content {
   align-items: center;
   text-align: center;
 }
+
+.milestoneinput button{
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
 .milestoneinput label {
   margin: 1%;
 }

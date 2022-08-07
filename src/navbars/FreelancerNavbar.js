@@ -1,4 +1,4 @@
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
 import bell from "../src-images/bell.png"

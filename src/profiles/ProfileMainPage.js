@@ -5,10 +5,10 @@ import ProfileCard from "./ProfileCard";
 import ClientNavbar from "../navbars/ClientNavbar";
 import FreelancerNavbar from "../navbars/FreelancerNavbar";
 import BriefProfileCard from "../profiles/BriefProfileCard";
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 import Cookies from 'universal-cookie';
 import ClientProfileCard from "./ClientProfileCard";
-import accountCheck from "../accountCheck";
+import accountCheck from "../shared/accountCheck";
 const cookies = new Cookies();
 
 

@@ -7,7 +7,6 @@ import SignUp from "./auth-forms/SignUp";
 import Login from "./auth-forms/Login";
 import PostJob from "./jobs/PostJob";
 import Page404 from "./Page404";
-import ProposalPage from "./proposals/ProposalPage";
 import ClientNavbar from "./navbars/ClientNavbar";
 import ProfileSettings from "./profiles/ProfileSettings";
 import SiteStats from "./stats/SiteStats";

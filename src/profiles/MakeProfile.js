@@ -1,8 +1,8 @@
 import FreelancerNavbar from "../navbars/FreelancerNavbar.js";
 import { getCategoriesList, getGenderList } from "../Options.js";
 import { useState, useEffect, createRef } from "react";
-import axios from "../axios.js";
-import accountCheck from "../accountCheck.js";
+import axios from "../shared/axios.js";
+import accountCheck from "../shared/accountCheck.js";
 
 const MakeProfile = () => {
   const [title, setTitle] = useState("");

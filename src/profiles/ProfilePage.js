@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FreelancerNavbar from "../navbars/FreelancerNavbar";
 import ProfileCard from "./ProfileCard";
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 
 
 const ProfilePage = ()=>{

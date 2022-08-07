@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 
 const JobCard = (props) => {
     const title = props.job.title;

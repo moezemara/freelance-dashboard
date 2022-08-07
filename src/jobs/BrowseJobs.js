@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "../axios.js"
+import axios from "../shared/axios.js"
 import Cookies from 'universal-cookie';
 import JobCard from "./JobCard";
-import accountCheck from "../accountCheck.js";
+import accountCheck from "../shared/accountCheck.js";
 
 
 

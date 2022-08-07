@@ -1,10 +1,10 @@
-import axios from "../axios.js";
+import axios from "../shared/axios.js";
 import config from "../config.json"
 import { useState, useEffect, createRef } from "react";
 import Cookies from "universal-cookie";
 import FreelancerNavbar from "../navbars/FreelancerNavbar.js";
 import ClientNavbar from "../navbars/ClientNavbar.js";
-import accountCheck from "../accountCheck.js";
+import accountCheck from "../shared/accountCheck.js";
 
 const PayementPage = () => {
 
