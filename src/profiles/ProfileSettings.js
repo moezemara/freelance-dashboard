@@ -74,6 +74,7 @@ const ProfileSettings = () => {
       setReturnedMsg({"color":"red","msg":response.data.message});
     }
   }
+  
 
   const handleActivate = () => {
     var urlRoot = "";

@@ -9,6 +9,7 @@ import PostJob from "./jobs/PostJob";
 import Page404 from "./Page404";
 import ClientNavbar from "./navbars/ClientNavbar";
 import ProfileSettings from "./profiles/ProfileSettings";
+import AccountSettings from "./accounts/AccountSettings";
 import SiteStats from "./stats/SiteStats";
 import Footer from "./footer/footer";
 import FreelancerNavbar from "./navbars/FreelancerNavbar";
@@ -70,9 +71,15 @@ function App() {
             <Route exact path="/profilesettings/:profile_id">
               <ProfileSettings />
             </Route>
+
+            <Route exact path="/settings">
+              <AccountSettings />
+            </Route>
+
             <Route exact path="/payement">
               <PayementPage/>
             </Route>
+            
             <Route exact path="/activitiespage/">
               <ActivitiesPage/>
             </Route>

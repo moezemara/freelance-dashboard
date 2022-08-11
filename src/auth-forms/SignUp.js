@@ -109,6 +109,8 @@ const SignUp = () => {
                 <input type="text" style={{marginRight:10}} placeholder="Username" value={username} onInput={e=>setUsername(e.target.value)}/>
                 
                 <select value={country} onInput={e=>setCountry(e.target.value)}>
+                <option value="" disabled selected hidden>Country</option>                        
+
                      {Object.keys(countries.Name).map((key,i)=>(
                           <option value={countries.Code[key]} key={i}>{countries.Name[key]}</option>
                       ))}      
