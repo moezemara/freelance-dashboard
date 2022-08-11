@@ -5,7 +5,7 @@ import axios from "../shared/axios.js";
 import { useEffect } from "react";
 import socket from "./socket.js"
 import accountCheck from "../shared/accountCheck";
-import arrow from "../src-images/service-logo.png";
+import {Grid, GridItem} from "@chakra-ui/react"
 
 const Chat = ()=>{
     const cookies = new Cookies();
@@ -23,7 +23,10 @@ const Chat = ()=>{
         {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
         {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
         <div className="chat">
-          
+            <Grid templateColumns={"repeat(10, lfr)"}>
+                <GridItem></GridItem>
+                <GridItem></GridItem>
+            </Grid>
         </div>
     </div>
     )
