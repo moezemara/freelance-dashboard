@@ -100,9 +100,15 @@ function App() {
               <SiteStats/>
             </Route>
 
+            
+            <Route exact path="/chat">
+              <Chat/>
+            </Route>
+
             <Route path="*">
               <Page404 />
             </Route>
+
             
           </Switch>
         </div>

@@ -5,8 +5,12 @@ import axios from "../shared/axios.js";
 import { useEffect } from "react";
 import socket from "./socket.js"
 import accountCheck from "../shared/accountCheck";
-import {Grid, GridItem} from "@chakra-ui/react"
-
+import { Grid, GridItem, Tabs } from "@chakra-ui/react";
+import {Text,Circle,Divider, Heading, HStack,  VStack} from "@chakra-ui/layout"
+import ChatBox from "./ChatBox";
+import "./Chat.css";
+import ChatHeading from "./ChatHeading";
+import ChatSideBar from "./ChatSideBar";
 const Chat = ()=>{
     const cookies = new Cookies();
     const accountType = cookies.getAll().type;
@@ -20,15 +24,20 @@ const Chat = ()=>{
 
     return(
     <div>
-        {(accountType==='F') && <FreelancerNavbar profile_id={profile_id}/>}
-        {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
+       
         <div className="chat">
-            <Grid templateColumns={"repeat(10, lfr)"}>
-                <GridItem>
-                    
+            <Grid templateColumns="repeat(10, 1fr)" h="100vh">
+                <GridItem colSpan="3" borderRight="1px solid gray">
+                    <ChatSideBar/>
                 </GridItem>
-                <GridItem></GridItem>
+                <GridItem colSpan="7">
+                    <VStack padding={"1%"} justify="space-evenly" w="100%">
+                        <ChatHeading/>
+                        <Divider bg="gray"/>
+                    </VStack>
+                </GridItem>
             </Grid>
+            
         </div>
     </div>
     )
