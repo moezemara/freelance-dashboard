@@ -1,14 +1,14 @@
 import axios from "../shared/axios.js"
 import Cookies from "universal-cookie";
 import { useEffect, useState } from "react";
-import bell from "../src-images/bell.png"
-import logo from "../src-images/homie-logo-1.png";
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useHistory } from "react-router-dom";
 
 
 const FreelancerNavbar = (props) => {
 
+    const history  = useHistory(); 
     const profile_id = props.profile_id;
     const [activeProfileId, setActiveProfileId] = useState('');
 
@@ -36,14 +36,17 @@ const FreelancerNavbar = (props) => {
         }
         
         if(accountType==='F'){
+            
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
+                console.log(res);
                 if(res.data.success===1){
                     setActiveProfileId(res.data.message.active_id);
                     document.cookie = 'active_id='+res.data.message.active_id;
                 }
                 else if(res.data.message!=="you have not created a profile yet"){
-                    window.location = '/login';                }
-        },[]);
+                    history.push("/login");
+                }
+        });
         }},[accountType]);
 
 

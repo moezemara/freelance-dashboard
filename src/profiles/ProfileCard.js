@@ -13,7 +13,7 @@ var payRate = props.payRate;
 var rating = props.rating;
 var description = props.description
 
-if(profilePictureLink=='default'){
+if(profilePictureLink==='default'){
     profilePictureLink = 'https://i.ibb.co/YNk40qC/668-6689202-avatar-profile-hd-png-download.png'
 }
 

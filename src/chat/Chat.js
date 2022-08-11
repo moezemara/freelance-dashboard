@@ -24,7 +24,9 @@ const Chat = ()=>{
         {(accountType==='C') && <ClientNavbar profile_id={profile_id}/>}
         <div className="chat">
             <Grid templateColumns={"repeat(10, lfr)"}>
-                <GridItem></GridItem>
+                <GridItem>
+                    
+                </GridItem>
                 <GridItem></GridItem>
             </Grid>
         </div>
