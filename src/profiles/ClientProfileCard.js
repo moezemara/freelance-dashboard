@@ -8,11 +8,10 @@ const ClientProfileCard = (props) => {
     var profileName = props.profileName;
     var country = props.country;
     var profilePictureLink = props.profilePictureLink;
-    var description = props.description
     var totalSpent = props.totalSpent;
     var rating = props.rating;
 
-    if(profilePictureLink=='default'){
+    if(profilePictureLink==='default'){
         profilePictureLink = 'https://i.ibb.co/YNk40qC/668-6689202-avatar-profile-hd-png-download.png'
     }
 

@@ -17,7 +17,7 @@ const Login = () => {
         const data = {
             username: username,
             password: password,
-            'g-recaptcha-response': recaptchaRef.current.getValue()
+            'g-recaptcha-response': "some shit" //recaptchaRef.current.getValue()
         }
 
         const response = await axios.post('user/login', data)
@@ -36,7 +36,7 @@ const Login = () => {
     }
 
     const cookies = new Cookies();
-    const [accountType,setAccountType] = useState('');
+    const [accountType, setAccountType] = useState('');
 
 
     
