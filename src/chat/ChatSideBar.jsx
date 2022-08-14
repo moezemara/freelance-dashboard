@@ -6,9 +6,12 @@ const ChatSideBar = ()=>{
     return (
         <VStack padding={"1%"} justify="space-evenly" w="100%" >
             <HStack justify="space-evenly"> 
-                <Text fontSize={22} size="3xl">Details</Text>
+                <Heading size="lg">Job Details</Heading>
             </HStack>
-            <Divider  bg="gray"/>
+            <Divider/>
+            <VStack justify="space-evenly" w="100%" >
+                <Text size="md">Job Title: Develop a website</Text>
+            </VStack>
 
         </VStack>
     );

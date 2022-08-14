@@ -5,10 +5,10 @@ const ChatHeading = ()=>{
 
     return (
         <HStack justify="space-evenly" w="100%">
-            <Heading size="3xl">Username</Heading>
+            <Heading size="lg">Username</Heading>
             <HStack justify="space-evenly">
                 <Heading as="h2" size='md'>Active</Heading>
-                <Circle bg="green" w="20px" h="20px"/>
+                <Circle bg="red.500" w="20px" h="20px"/>
             </HStack>
         </HStack>
     );
