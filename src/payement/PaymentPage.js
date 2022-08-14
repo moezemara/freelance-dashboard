@@ -6,7 +6,7 @@ import FreelancerNavbar from "../navbars/FreelancerNavbar.js";
 import ClientNavbar from "../navbars/ClientNavbar.js";
 import accountCheck from "../shared/accountCheck.js";
 
-const PayementPage = () => {
+const PaymentPage = () => {
 
     const recaptchaRef = createRef();
     const [availableBalance, setAvailableBalance] = useState(0);
@@ -41,4 +41,4 @@ const PayementPage = () => {
 
  
 //export default Login
-export default PayementPage;
+export default PaymentPage;
