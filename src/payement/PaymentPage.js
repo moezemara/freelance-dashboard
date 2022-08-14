@@ -33,12 +33,28 @@ const PaymentPage = () => {
             }},[]);    
     }
 
+    
+    const getMoney = () => {
+        const data = {
+            'option':paymentOption,
+            'amount':paymentAmount
+        }
+
+        axios.post('pay/',data,{ withCredentials: true}).then(res=>{
+            if(res.data.success===1){
+              window.location = '/pay/';
+            }},[]);    
+    }
+
+
     return (
         <div>
             {(accountType=="F") && <FreelancerNavbar/>}
             {(accountType=="C") && <ClientNavbar/>}
             
-            
+
+
+            {(accountType=="C") &&
             <div className="signup">
                 <h2>Payement</h2>
                 <form>
@@ -51,9 +67,24 @@ const PaymentPage = () => {
                     <input type="text" value ={paymentAmount} onInput={e=>setPaymentAmount(e.target.value)} placeholder="amount" />
                     <button type="button" onClick={proceedPayment}>Pay</button>
                 </form>
-            </div>
+            </div>}
 
-            
+            {(accountType=="F") &&
+            <div className="signup">
+                <h2>Payement</h2>
+                <form>
+                    <p><b>Available balance:</b> {availableBalance} $</p>
+                    <select value={paymentOption} onInput={e=>setPaymentOption(e.target.value)}>
+                        <option value="" disabled selected hidden>Select Payement Method</option> 
+                        <option value="paypal" >Paypal</option>                        
+                       
+                    </select>
+                    <input type="text" value ={paymentAmount} onInput={e=>setPaymentAmount(e.target.value)} placeholder="amount" />
+                    <button type="button" onClick={getMoney}>Receive</button>
+                </form>
+            </div>}
+
+
         </div>
     );
 }
