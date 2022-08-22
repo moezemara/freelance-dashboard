@@ -21,7 +21,7 @@ import ActivitiesPage from "./activities/ActivitiesPage";
 import JobPage from "./jobs/JobPage";
 import ContractPage from "./contracts/ContractPage";
 import Chat from "./chat/Chat";
-import PaymentPage from "./payement/PaymentPage";
+import PaymentNew from "./payement/PaymentNew";
 
 function App() {
   return (
@@ -77,7 +77,7 @@ function App() {
             </Route>
 
             <Route exact path="/pay">
-              <PaymentPage/>
+              <PaymentNew/>
             </Route>
             
             <Route exact path="/activitiespage/">
