@@ -21,7 +21,7 @@ import ActivitiesPage from "./activities/ActivitiesPage";
 import JobPage from "./jobs/JobPage";
 import ContractPage from "./contracts/ContractPage";
 import Chat from "./chat/Chat";
-import PayementPage from "./payement/PayementPage";
+import PaymentPayPal from "./payement/PaymentPayPal";
 
 function App() {
   return (
@@ -76,8 +76,8 @@ function App() {
               <AccountSettings />
             </Route>
 
-            <Route exact path="/payement">
-              <PayementPage/>
+            <Route exact path="/pay">
+              <PaymentPayPal/>
             </Route>
             
             <Route exact path="/activitiespage/">
@@ -100,9 +100,15 @@ function App() {
               <SiteStats/>
             </Route>
 
+            
+            <Route exact path="/chat">
+              <Chat/>
+            </Route>
+
             <Route path="*">
               <Page404 />
             </Route>
+
             
           </Switch>
         </div>

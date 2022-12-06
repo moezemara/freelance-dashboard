@@ -27,7 +27,7 @@ const ProfileMainPage = () => {
 
     useEffect(()=>{
         
-        accountCheck();
+        //accountCheck();
         
         if(accountType==='F'){
             axios.get('freelancer/profile/',{ withCredentials: true}).then(res=>{
@@ -42,9 +42,9 @@ const ProfileMainPage = () => {
                     window.location = "/createprofile/"
                 }
                 else{
-                    window.location = '/login';
+                    //window.location = '/login';
                 }
-            },[]);
+            });
         }
         else if(accountType==='C'){
             axios.get('client/profile/',{ withCredentials: true}).then(res=>{
@@ -53,8 +53,8 @@ const ProfileMainPage = () => {
                     console.log(res);
                 }
                 else{
-                    window.location = '/login';
-                }},[]);
+                    //window.location = '/login';
+                }});
         }
     },[accountType]);
 

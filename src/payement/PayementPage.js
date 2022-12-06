@@ -10,6 +10,7 @@ const PayementPage = () => {
 
     const recaptchaRef = createRef();
     const [availableBalance, setAvailableBalance] = useState(0);
+    const [escrowBalance, setEscrowBalance] = useState(0);
 
 
     const cookies = new Cookies();
@@ -28,6 +29,7 @@ const PayementPage = () => {
                 <h2>Payement</h2>
                 <form>
                     <p><b>Available balance:</b> {availableBalance} $</p>
+                    <p><b>Escrow balance:</b> {escrowBalance} $</p>
                     <select>
                         <option value="" disabled selected hidden>Select Payement Method</option>                        
                     </select>

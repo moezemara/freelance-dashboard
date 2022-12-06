@@ -75,10 +75,19 @@ country=="" ||
 
 
 
-    if(fname!= profileData.fname || lname != profileData.lname){
+    if(fname!= profileData.fname){
       const nameData = {
-        fname:fname,
-        lname:lname
+        "attribute": "first_name",
+    "data": fname
+      }
+      const response = await axios.post(`account/update/name`, nameData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+
+    if( lname != profileData.lname){
+      const nameData = {
+        "attribute": "last_name",
+        "data": lname      
       }
       const response = await axios.post(`account/update/name`, nameData, {withCredentials:true});
       console.log(response.data.success);
@@ -86,7 +95,8 @@ country=="" ||
 
     if(email != profileData.email){
       const emailData = {
-        email:email
+        "attribute": "email",
+        "data": email      
       }
       const response = await axios.post(`account/update/email`, emailData, {withCredentials:true});
       console.log(response.data.success);
@@ -94,23 +104,37 @@ country=="" ||
     
     if(phone != profileData.phone){
       const phoneData = {
-        phone:phone
-      }
+        "attribute": "phone",
+        "data": phone
+            }
       const response = await axios.post(`account/update/phone`, phoneData, {withCredentials:true});
       console.log(response.data.success);
     }
 
 
-    //address and country
-    if(address != profileData.address || country != profileData.country)
+    //address
+    if(address != profileData.address )
     {
       const addressData = {
-        address : address,
-        country : country
+        "attribute": "address",
+    "data": address
       }
       const response = await axios.post(`account/update/address`, addressData, {withCredentials:true});
       console.log(response.data.success);
     }
+
+    //country
+    if( country != profileData.country)
+    {
+      const addressData = {
+        "attribute": "country",
+    "data": country
+      }
+      const response = await axios.post(`account/update/address`, addressData, {withCredentials:true});
+      console.log(response.data.success);
+    }
+
+
 
 
     //password
