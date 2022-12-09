@@ -700,6 +700,9 @@ hr {
   filter: drop-shadow(0px 0px 3px white);
   height: 71px;
 }
+#logo-of-main-navbar{
+  height: 71px;
+}
 
 .clientprofileview {
   display: flex;
@@ -1703,6 +1706,9 @@ hr {
 
 #logo-of-main-navbar:hover {
   filter: drop-shadow(0px 0px 3px white);
+  height: 71px;
+}
+#logo-of-main-navbar{
   height: 71px;
 }
 
